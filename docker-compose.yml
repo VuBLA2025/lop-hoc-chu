@@ -1,0 +1,22 @@
+services:
+  app:
+    # Build từ Dockerfile Node trong bộ này (xem DEPLOY.md) — Dokploy build
+    # image này từ repo rồi chạy, không pull image có sẵn.
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: lop-hoc-chu:1.0.0
+    environment:
+      PORT: "4181"
+      NODE_ENV: "production"
+      # Mật khẩu panel — đặt giá trị thật trong phần Environment của Dokploy,
+      # KHÔNG ghi mật khẩu thật vào file này.
+      PANEL_KEY: "${PANEL_KEY}"
+    volumes:
+      # Sổ lớp (data/so-lop.json) + báo cáo ngày (data/bao-cao/) không mất
+      # mỗi lần redeploy.
+      - lop-hoc-chu-data:/app/data
+    restart: unless-stopped
+
+volumes:
+  lop-hoc-chu-data:

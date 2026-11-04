@@ -92,15 +92,35 @@ Kiểm tra:
 
 ## Deploy
 
-Push lên `VuBLA2025/lop-hoc-chu` nhánh `master` (112 file text qua GitHub
-connector + 25 ảnh PNG trong `nhan-vat/` tải lên bằng trình duyệt), rồi tạo
-project `Lop Hoc Chu LIVE` + compose `lop-hoc-chu` trên Dokploy
+Push lên `VuBLA2025/lop-hoc-chu` nhánh `master` (75 file text qua GitHub
+connector + 66 file nhị phân tải lên bằng trình duyệt: 41 file webp trong
+`public/assets/` — ảnh nhân vật + nền lớp học mà stage dùng lúc chạy — và
+25 ảnh PNG gốc trong `nhan-vat/`, chỉ dùng làm nguồn cho `tools/tach-nen.py`),
+rồi tạo project `Lop Hoc Chu LIVE` + compose `lop-hoc-chu` trên Dokploy
 (sourceType github, owner VuBLA2025, repo lop-hoc-chu, branch master,
 composePath `./docker-compose.yml`, domain `lophoc.bla.io.vn` port 4181,
 env `PANEL_KEY`) và deploy bằng **`compose.deploy`** (KHÔNG dùng
 `compose.redeploy` — bài học từ DamCuoi: redeploy rebuild từ composeFile cũ
 lưu trong Dokploy; push GitHub cũng không tự kích hoạt deploy dù autoDeploy
 true). Theo dõi deployment tới `done` rồi kiểm tra live:
+
+## Trạng thái deploy 2026-11-04 (buổi tối)
+
+- File text: đã push đủ 75/75 lên nhánh `master`, commit
+  `1df0828cb505288382288ece9d367aa5b04f1796` (đối chiếu cây file GitHub khớp
+  100% với local). Provider tự tạo thêm nhánh `main` chỉ có 1 file
+  `README.md` mẫu — không dùng, nhánh deploy là `master`.
+- Dokploy: project `Lop Hoc Chu LIVE` (`fg5xfSqrgDG5Tdxac_lXm`,
+  environment production `PgRCIPb5k0ObpTE700I1k`), compose `lop-hoc-chu`
+  (`9db--2J0QEqjSOK73mIbe`, sourceType github, repo VuBLA2025/lop-hoc-chu
+  nhánh master, composePath `./docker-compose.yml`, `PANEL_KEY` đã đặt trong
+  env), domain `lophoc.bla.io.vn` (`32sS3IP6YIJIKZRhD9xNN`, port 4181,
+  Let's Encrypt). **Chưa deploy** — đang chờ 66 file nhị phân lên GitHub
+  (GitHub connector chỉ đẩy được file text, không đẩy được PNG/webp).
+- Còn lại để lên live: tải 66 file nhị phân lên repo bằng trình duyệt
+  (25 PNG `nhan-vat/` + 41 file webp trong `public/assets/`; 2 file
+  `public/assets/nv/*/head.json` là text nên đã push xong cùng 75 file),
+  đối chiếu cây file khớp 100% rồi chạy `compose.deploy` và kiểm tra live.
 
 - https://lophoc.bla.io.vn/ — panel Lớp Học Chữ (nhập mật khẩu panel ở ô
   "Mật khẩu panel" rồi mới Kết nối / Đọc ngay / Giả lập)

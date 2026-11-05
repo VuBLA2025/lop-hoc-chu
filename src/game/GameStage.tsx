@@ -69,7 +69,7 @@ export function GameStage({ game }: { game: GameState }) {
   if (!v) {
     return (
       <div className="flex h-full items-center justify-center bg-black/60 p-20 text-center text-[48px] text-white">
-        Chưa mở trang stage (lvh.me:3000/?view=stage) nên chưa có gì để xem trước
+        Chưa mở trang stage ({window.location.host}/?view=stage) nên chưa có gì để xem trước
       </div>
     );
   }

@@ -104,23 +104,47 @@ env `PANEL_KEY`) và deploy bằng **`compose.deploy`** (KHÔNG dùng
 lưu trong Dokploy; push GitHub cũng không tự kích hoạt deploy dù autoDeploy
 true). Theo dõi deployment tới `done` rồi kiểm tra live:
 
-## Trạng thái deploy 2026-11-04 (buổi tối)
+## Trạng thái deploy 2026-11-04 (buổi tối) — ĐÃ LIVE
 
 - File text: đã push đủ 75/75 lên nhánh `master`, commit
   `1df0828cb505288382288ece9d367aa5b04f1796` (đối chiếu cây file GitHub khớp
   100% với local). Provider tự tạo thêm nhánh `main` chỉ có 1 file
   `README.md` mẫu — không dùng, nhánh deploy là `master`.
+- File nhị phân: 41 file webp `public/assets/` (4 commit: bg `df289b6`,
+  nv/co-giao `a8d73d5`, nv/nam `7961de9`, nv/nu `12d8279`) + 25 ảnh PNG
+  `nhan-vat/` (4 commit: nhan-vat `bd257e5`, co-giao-ao-dai-trang `09ffaa6`,
+  hoc-sinh-nam `0573808`, hoc-sinh-nu `67134c3`). Đối chiếu cây file bằng
+  GitHub API: remote 141/141 file khớp 100% với local (75 text + 66 nhị
+  phân), không thiếu không thừa. Head master: `67134c3`.
 - Dokploy: project `Lop Hoc Chu LIVE` (`fg5xfSqrgDG5Tdxac_lXm`,
   environment production `PgRCIPb5k0ObpTE700I1k`), compose `lop-hoc-chu`
   (`9db--2J0QEqjSOK73mIbe`, sourceType github, repo VuBLA2025/lop-hoc-chu
   nhánh master, composePath `./docker-compose.yml`, `PANEL_KEY` đã đặt trong
   env), domain `lophoc.bla.io.vn` (`32sS3IP6YIJIKZRhD9xNN`, port 4181,
-  Let's Encrypt). **Chưa deploy** — đang chờ 66 file nhị phân lên GitHub
-  (GitHub connector chỉ đẩy được file text, không đẩy được PNG/webp).
-- Còn lại để lên live: tải 66 file nhị phân lên repo bằng trình duyệt
-  (25 PNG `nhan-vat/` + 41 file webp trong `public/assets/`; 2 file
-  `public/assets/nv/*/head.json` là text nên đã push xong cùng 75 file),
-  đối chiếu cây file khớp 100% rồi chạy `compose.deploy` và kiểm tra live.
+  Let's Encrypt).
+- Deploy 1: `f5SZzMka17wMHjGvfjjiD` (commit `67134c3`) status `done`
+  2026-11-04 17:05:49 UTC — container chạy ngay, nhưng HTTPS 404 trong khi
+  HTTP 200 đúng panel. Nguyên nhân: domain lúc tạo có `https: false` nên
+  Traefik không tạo router HTTPS. Đã sửa bằng `domain.update`
+  (`https: true`, kèm host/port/serviceName/certificateType) rồi chạy
+  `compose.deploy` lần 2 để Traefik tạo lại router.
+- Deploy 2: `qMdrEvOCcE6HNIRnOgbAb` status `done` 2026-11-04 17:19:27 UTC.
+  **LIVE: https://lophoc.bla.io.vn/ — kiểm chứng cùng ngày:**
+  panel `/` 200 `<title>Lớp Học Chữ</title>`, bundle JS chứa ô
+  "Mật khẩu panel" + link stage `?view=stage`; stage `/?view=stage` 200;
+  `/api/tiktok/status` 200 JSON (`isConnected: false` — chưa nối TikTok);
+  gate mật khẩu: test/emit không key 403, sai key 403
+  (`{"success":false,"error":"Sai mật khẩu panel"}`), đúng key 200;
+  `/api/control` đúng key 200; `/api/tts` 200 audio/mpeg MP3 hợp lệ
+  24.480 byte; ảnh webp live 200 (`/assets/nv/co-giao/01-dung.webp`,
+  `/assets/bg/lop.webp`, `/assets/nv/nam/sau-01-dung.webp`);
+  POST `/api/game/state` không key 200 `{"success":true}` (stage tự lưu
+  sổ lớp được). 4 game còn lại kiểm tra cùng lúc vẫn 200
+  (Chùa, Sàn Vui, Xuyên Việt, Đám Cưới).
+- **Bài học:** khi tạo domain trên Dokploy, nhớ bật `https: true` ngay từ
+  đầu (mặc định tạo qua API là `false`); nếu quên, sửa bằng
+  `domain.update` rồi chạy lại `compose.deploy` (KHÔNG dùng
+  `compose.redeploy`) để Traefik tạo router HTTPS.
 
 - https://lophoc.bla.io.vn/ — panel Lớp Học Chữ (nhập mật khẩu panel ở ô
   "Mật khẩu panel" rồi mới Kết nối / Đọc ngay / Giả lập)

@@ -173,6 +173,26 @@ true). Theo dõi deployment tới `done` rồi kiểm tra live:
   `compose.deploy` lần 2 để Traefik tạo lại router.
 - Deploy 2: `qMdrEvOCcE6HNIRnOgbAb` status `done` 2026-11-04 17:19:27 UTC.
   **LIVE: https://lophoc.bla.io.vn/ — kiểm chứng cùng ngày:**
+
+## Trạng thái deploy 2026-11-05 — Mục "Quản lý — Quà & Điểm" ĐÃ LIVE
+
+- Code: commit `159f35582568e4858c13548c5690468b4f86a1b1` trên nhánh `master`
+  (9 file: `server.ts`, `src/game/gameSettings.ts` mới, `src/game/useGame.ts`,
+  `src/live/ManageGifts.tsx` mới, `src/live/Dashboard.tsx`,
+  `src/live/chatter.ts`, `src/live/types.ts`, `src/live/useLiveEvents.ts`,
+  `DEPLOY.md`).
+- Deploy: `compose.deploy` cho compose `9db--2J0QEqjSOK73mIbe`, deployment
+  `kEXUvY_Fe8LHt2EJCSxJp` status `done` 2026-11-05 01:04:19 UTC.
+- Kiểm chứng live cùng ngày: panel `/` 200 `<title>Lớp Học Chữ</title>`,
+  bundle JS chứa "Quản lý" + `api/settings`; `GET /api/settings` 200 trả đúng
+  14 giá trị mặc định; `POST /api/settings` không key 403, sai key 403, đúng
+  key lưu `hintGiftCoins=45, latePoints=2` rồi `GET` trả đúng giá trị mới,
+  sau đó trả về mặc định (`hintGiftCoins=30, latePoints=1`) và `GET` xác nhận;
+  stage `/?view=stage` 200; 4 game còn lại vẫn 200 (Chùa, Sàn Vui, Xuyên Việt,
+  Đám Cưới).
+- Lưu ý: file `data/game-settings.json` trên live hiện chỉ chứa overrides bằng
+  đúng mặc định (30/1) do bước trả giá trị test về mặc định; hành vi game
+  không đổi so với trước khi thêm mục Quản lý.
   panel `/` 200 `<title>Lớp Học Chữ</title>`, bundle JS chứa ô
   "Mật khẩu panel" + link stage `?view=stage`; stage `/?view=stage` 200;
   `/api/tiktok/status` 200 JSON (`isConnected: false` — chưa nối TikTok);

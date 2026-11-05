@@ -44,10 +44,11 @@ app.use(express.json());
 // Nhận qua header Authorization: Bearer <key> hoặc x-panel-key.
 // Khi PANEL_KEY không đặt (chạy local) thì cho qua để test dễ.
 // Các endpoint ĐỌC (/api/tiktok/status, /api/tiktok/events, /api/tts, /,
-// /api/game/state, /api/game/save, /api/game/attend) vẫn mở vì trang stage
-// (OBS/LIVE Studio, không có mật khẩu) cần gọi để lưu sổ lớp và báo cáo.
+// /api/game/state, /api/game/save, /api/game/attend, GET /api/settings) vẫn mở
+// vì trang stage (OBS/LIVE Studio, không có mật khẩu) cần gọi để lưu sổ lớp và
+// đọc cài đặt Quà & Điểm.
 const PANEL_KEY = (process.env.PANEL_KEY || '').trim();
-const PANEL_WRITE_PATHS = new Set(['/api/control', '/api/test/emit', '/api/tiktok/connect', '/api/tiktok/disconnect']);
+const PANEL_WRITE_PATHS = new Set(['/api/control', '/api/test/emit', '/api/tiktok/connect', '/api/tiktok/disconnect', '/api/settings']);
 function panelAuth(req: express.Request, res: express.Response, next: express.NextFunction) {
   if (req.method !== 'POST' || !PANEL_WRITE_PATHS.has(req.path)) return next();
   if (!PANEL_KEY) return next();
@@ -673,6 +674,83 @@ app.post('/api/game/attend', (req, res) => {
   soLop.attend[key] = cur;
   saveSoon();
   res.json({ days: cur.streak, total: cur.total });
+});
+
+// ---------- Cài đặt Quà & Điểm (panel "Quản lý — Quà & Điểm") ----------
+// Lưu overrides vào data/game-settings.json (nằm trong volume Dokploy nên
+// deploy lại không mất). GET mở (stage đọc không cần key); POST yêu cầu đúng
+// PANEL_KEY (đã có trong PANEL_WRITE_PATHS). Server validate y hệt client
+// (src/game/gameSettings.ts); mặc định dưới đây phải khớp src/game/config.ts.
+const GAME_SETTINGS_FILE = path.join(DATA_DIR, 'game-settings.json');
+const GAME_SETTING_DEFAULTS = {
+  hintGiftCoins: 30,
+  bigGiftCoins: 99,
+  likesPerClap: 300,
+  heartTarget: 300,
+  heartBoost: 5,
+  giftThanksCooldownSec: 30,
+  rankPoints: [10, 7, 5, 3, 3, 3, 3, 3, 3, 3],
+  latePoints: 1,
+  streakEvery: 3,
+  streakBonus: 5,
+  rpsPoints: 2,
+  callUpPoints: 5,
+  rollPoints: 3,
+  rollWinners: 10,
+};
+const clampSetting = (v: unknown, min: number, max: number): number | null => {
+  const n = Math.round(Number(v));
+  return Number.isFinite(n) ? Math.min(max, Math.max(min, n)) : null;
+};
+function sanitizeGameSettings(input: any): Record<string, unknown> {
+  if (!input || typeof input !== 'object') return {};
+  const out: Record<string, unknown> = {};
+  const num = (k: string, min: number, max: number) => {
+    const v = clampSetting(input[k], min, max);
+    if (v !== null) out[k] = v;
+  };
+  num('hintGiftCoins', 1, 10000);
+  num('bigGiftCoins', 1, 10000);
+  num('likesPerClap', 10, 100000);
+  num('heartTarget', 10, 100000);
+  num('heartBoost', 1, 100);
+  num('giftThanksCooldownSec', 1, 300);
+  num('latePoints', 0, 100);
+  num('streakEvery', 2, 20);
+  num('streakBonus', 0, 100);
+  num('rpsPoints', 0, 100);
+  num('callUpPoints', 0, 100);
+  num('rollPoints', 0, 100);
+  num('rollWinners', 1, 30);
+  if (Array.isArray(input.rankPoints) && input.rankPoints.length === 10 && input.rankPoints.every((n: unknown) => Number.isFinite(Number(n)))) {
+    out.rankPoints = input.rankPoints.map((n: unknown) => clampSetting(n, 0, 100));
+  }
+  return out;
+}
+let gameSettingOverrides: Record<string, unknown> = {};
+try {
+  gameSettingOverrides = sanitizeGameSettings(JSON.parse(fs.readFileSync(GAME_SETTINGS_FILE, 'utf8')));
+} catch {
+  // chưa có file: dùng mặc định
+}
+const mergedGameSettings = () => ({ ...GAME_SETTING_DEFAULTS, ...gameSettingOverrides });
+const writeGameSettings = () => {
+  try {
+    fs.mkdirSync(path.dirname(GAME_SETTINGS_FILE), { recursive: true });
+    fs.writeFileSync(GAME_SETTINGS_FILE, JSON.stringify(gameSettingOverrides, null, 2));
+  } catch (err) {
+    console.error('Không lưu được game-settings.json:', err);
+  }
+};
+app.get('/api/settings', (_req, res) => res.json({ success: true, data: mergedGameSettings() }));
+app.post('/api/settings', (req, res) => {
+  const clean = sanitizeGameSettings(req.body || {});
+  if (!Object.keys(clean).length) return res.status(400).json({ success: false, error: 'Không có giá trị hợp lệ để lưu' });
+  gameSettingOverrides = { ...gameSettingOverrides, ...clean };
+  writeGameSettings();
+  const merged = mergedGameSettings();
+  broadcast('settings', merged); // stage đang mở tải lại rồi áp dụng ngay
+  res.json({ success: true, data: merged });
 });
 
 // Trang báo cáo sau buổi live: http://localhost:3006/bao-cao (thêm ?ngay=2026-11-04 để xem ngày khác)

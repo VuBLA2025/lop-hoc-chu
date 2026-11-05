@@ -60,5 +60,6 @@ export interface LiveHandlers {
   onViewers?: (count: number) => void;
   onControl?: (c: ControlCommand) => void;
   onGameState?: (s: any) => void; // ảnh chụp trạng thái game từ trang stage
+  onSettings?: () => void; // panel Quản lý vừa lưu cài đặt Quà & Điểm mới: stage tải lại rồi áp dụng
   onSpeaker?: (d: { id: string | null; count: number }) => void; // trang stage nào đang được phát tiếng
 }

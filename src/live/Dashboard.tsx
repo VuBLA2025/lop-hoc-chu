@@ -1,6 +1,7 @@
 import { useState, type ReactNode } from 'react';
 import type { LiveStatus } from './types';
 import { emitTest, sendControl, getPanelKey, setPanelKey, panelHeaders } from './page';
+import { ManageGifts } from './ManageGifts';
 
 const FAKE_NAMES = ['Lan Anh', 'Minh Tuấn', 'Bé Na 🌸', 'Hoàng Long', 'Thu Trang', 'Quốc Bảo', 'duyanh99', '𝑵𝒈𝒐̣𝒄 𝑨𝒏𝒉'];
 const pick = () => {
@@ -154,6 +155,8 @@ export function Dashboard({
               </Btn>
             </div>
           </Card>
+
+          <ManageGifts />
 
           {extra}
 

@@ -26,6 +26,11 @@ export class GiftThanker {
     private bigCoins = 99,
     private maxWaiting = 6,
   ) {}
+  /** Đổi ngưỡng giữa live (panel Quản lý lưu cài đặt mới): giữ lại lịch sử cảm ơn cũ. */
+  update(cooldownMs = this.cooldownMs, bigCoins = this.bigCoins) {
+    this.cooldownMs = cooldownMs;
+    this.bigCoins = bigCoins;
+  }
   shouldThank(username: string, coins: number, giftLinesWaiting: number, now = Date.now()) {
     const key = username.toLowerCase();
     const big = coins >= this.bigCoins;

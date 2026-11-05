@@ -37,6 +37,7 @@ export function useLiveEvents(handlers: LiveHandlers) {
       on('roomUser', (d) => ref.current.onViewers?.(d.viewerCount));
       on('control', (d) => ref.current.onControl?.(d));
       on('gamestate', (d) => ref.current.onGameState?.(d));
+      on('settings', () => ref.current.onSettings?.());
       on('speaker', (d) => {
         // trang stage bị trang mới hơn thay chỗ: im lặng hẳn (cả giọng lẫn nhạc)
         if (IS_STAGE) {

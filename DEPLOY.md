@@ -57,6 +57,49 @@ và được ngồi bàn đầu. 2.076 câu hỏi tiếng Việt, 30 chủ đề
    lỗi nếu thiếu file này — lockfile đã được tạo local bằng `npm install`
    (npm 10.9.4, 186 packages) và commit kèm trong repo này để Docker build
    được bằng `npm ci` như Cưới Liền Tay.
+9. **Mục "🎁 Quản lý — Quà & Điểm"** (2026-11-05, theo yêu cầu của chủ kênh):
+   Card mới trong Dashboard cho đổi các số quà/điểm mà trước đây cứng trong
+   `src/game/config.ts`, lưu lên máy chủ nên deploy lại không mất:
+   - Quà & tim: `hintGiftCoins` (30 — quà từ từng này xu thì mở thêm 1 chữ),
+     `bigGiftCoins` (99 — quà lớn, cô khen to), `likesPerClap` (300 — đủ tim thì
+     cả lớp vỗ tay), `heartTarget` (300 — thử thách thả tim), `heartBoost` (5 —
+     mỗi tim thật tính thành từng này tim), `giftThanksCooldownSec` (30 —
+     cùng 1 người chỉ cảm ơn 1 lần mỗi từng này giây).
+   - Điểm: `rankPoints` (10,7,5,3,3,3,3,3,3,3 — hạng 1..10), `latePoints` (1 —
+     đúng sau hạng 10), `streakEvery` (3) + `streakBonus` (5), `rpsPoints` (2),
+     `callUpPoints` (5), `rollPoints` (3), `rollWinners` (10).
+   - Server: `GET /api/settings` (mở, stage đọc không cần key) trả về cài đặt
+     đã gộp với mặc định; `POST /api/settings` yêu cầu đúng `PANEL_KEY`
+     (đã thêm vào `PANEL_WRITE_PATHS`, cùng mẫu gate với `/api/control`),
+     validate số trong khoảng hợp lý (số ngoài khoảng bị kẹp vào khoảng,
+     `rankPoints` phải đúng 10 số 0..100), lưu overrides vào
+     `data/game-settings.json` (nằm trong volume `lop-hoc-chu-data` nên giữ
+     được qua deploy), rồi broadcast SSE `settings` để stage đang mở áp dụng
+     ngay. Khi chưa có cài đặt lưu thì mọi giá trị đúng y mặc định cũ.
+   - Client: `src/game/gameSettings.ts` (`fetchGameSettings` /
+     `applyGameSettings` gộp lên đối tượng `GAME` bằng `Object.assign` nên
+     `quiz.ts`/`Classroom` thấy giá trị mới cho câu/quà tiếp theo; stage tải
+     cài đặt trước khi tạo lớp học, nghe sự kiện SSE `settings`, và poll lại
+     mỗi 60 giây dự phòng khi SSE rớt; `GiftThanker.update()` để ngưỡng
+     `bigGiftCoins`/cooldown đổi giữa live). Panel: `src/live/ManageGifts.tsx`
+     (ô nhập số + nút Lưu / Về mặc định, gửi kèm panel key qua
+     `panelHeaders()`, báo đã lưu/thất bại rõ ràng).
+
+## Kết quả test local (2026-11-05, mục Quản lý — Quà & Điểm)
+
+Chạy `NODE_ENV=production PORT=4182 PANEL_KEY=testkey123 DATA_DIR=/tmp/lhc-settings-test`
+(`tsc --noEmit` sạch, `vite build` xong, bundle chứa "Quản lý — Quà & Điểm"):
+`GET /api/settings` trả đúng 14 giá trị mặc định; `POST` không key 403, sai key
+403, đúng key lưu `hintGiftCoins=50, latePoints=2` rồi `GET` trả đúng giá trị mới;
+`POST` sai (`hintGiftCoins=0`, `rankPoints` chỉ 2 số) → kẹp thành 1, `rankPoints`
+giữ nguyên; tắt rồi mở lại server thì giá trị đã lưu vẫn còn (đọc từ
+`data/game-settings.json`); panel + stage 200. Test lõi game bằng
+`npx tsx /tmp/lhc-game-test.ts` (8/8 đạt): quà 20 xu với ngưỡng 30 không mở chữ,
+đổi ngưỡng xuống 10 thì quà 20 xu mở chữ ngay; `pointsForRank` đổi theo
+`rankPoints`/`latePoints` mới; `giftThanksCooldownSec=60` thành 60000ms;
+`GiftThanker.update()` đổi ngưỡng quà lớn giữa live; giá trị sai bị kẹp/bỏ.
+`npx tsx src/game/quiz.check.ts` gốc vẫn đạt (không hồi quy). Dữ liệu test ở
+`/tmp` đã xóa; server live không bị động tới trong lúc test.
 
 ## Kết quả test local (2026-11-04, trước khi push)
 

@@ -7,6 +7,7 @@ import { NameBatcher } from '../live/scoreboard';
 import { GiftThanker, OncePerPerson } from '../live/chatter';
 import { IS_STAGE } from '../live/page';
 import { GAME } from './config';
+import { fetchGameSettings } from './gameSettings';
 import { QUESTIONS } from './bank';
 import { Classroom, plain, type ClassView, type RecessGame, type Say } from './quiz';
 import { sfx } from './sfx';
@@ -104,6 +105,14 @@ export function useGame() {
     onSpeaker: (d) => setStageCount(d.count),
     onGameState: (s) => {
       if (!IS_STAGE) setView(s as StageView);
+    },
+
+    // Panel Quản lý vừa lưu cài đặt Quà & Điểm: stage tải lại rồi áp dụng cho câu/quà tiếp theo
+    onSettings: () => {
+      if (!IS_STAGE) return;
+      fetchGameSettings()
+        .then(() => talk.gifts.update(GAME.giftThanksCooldownMs, GAME.bigGiftCoins))
+        .catch(() => {});
     },
 
     onChat: (e) => {
@@ -207,6 +216,14 @@ export function useGame() {
     };
 
     (async () => {
+      // Tải cài đặt Quà & Điểm đã lưu trên server TRƯỚC khi tạo lớp học,
+      // để tiết đầu tiên đã chạy đúng số chủ kênh đã chỉnh (lỗi thì giữ mặc định).
+      try {
+        await fetchGameSettings();
+        talk.gifts.update(GAME.giftThanksCooldownMs, GAME.bigGiftCoins);
+      } catch {
+        // giữ mặc định trong config.ts
+      }
       let used: Record<string, number> = {};
       let banned: string[] = [];
       try {
@@ -252,6 +269,12 @@ export function useGame() {
         }, 200),
         setInterval(() => say([room.share()]), GAME.shareReminderEveryMs),
         setInterval(save, 20_000),
+        // Dự phòng khi SSE rớt: 60 giây tải lại cài đặt 1 lần (nhẹ, 1 request nhỏ)
+        setInterval(() => {
+          fetchGameSettings()
+            .then(() => talk.gifts.update(GAME.giftThanksCooldownMs, GAME.bigGiftCoins))
+            .catch(() => {});
+        }, 60_000),
       );
     })();
 

@@ -510,7 +510,7 @@ app.get('/api/tts', async (req, res) => {
       }
       // giọng dự phòng không lưu: lần sau đọc lại câu này thì thử Edge trước
       if (!fallback) ttsCache.set(key, audio);
-      if (ttsCache.size > 200) ttsCache.delete(ttsCache.keys().next().value!);
+      if (ttsCache.size > 500) ttsCache.delete(ttsCache.keys().next().value!); // 1 tiết ~100 câu nói, giữ đủ cho cả buổi live
     }
     res.setHeader('Content-Type', 'audio/mpeg');
     res.setHeader('Cache-Control', fallback ? 'no-store' : 'public, max-age=86400');

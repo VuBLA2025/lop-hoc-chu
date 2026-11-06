@@ -36,6 +36,8 @@ class Voice {
   enabled = IS_STAGE;
   /** báo MC nào đang nói (để nhân vật MC trên sân khấu nhún nhảy) */
   onSpeaker?: (who: 'M' | 'F' | null) => void;
+  /** đếm dòng giọng đã phát / bị bỏ (gỡ lỗi khi giọng im giữa live): xem ở console __lophocVoice.stats */
+  readonly stats = { played: 0, dropped: 0, guardDrops: 0, errors: 0 };
 
   /** `done`: gọi khi câu đọc xong, bị bỏ, hoặc trang này không phát tiếng */
   say(text: string, priority = false, done?: () => void, keep = false, start?: () => void, valid?: () => boolean) {
@@ -114,10 +116,12 @@ class Voice {
     let line: Line | undefined;
     while ((line = this.priority.shift() ?? this.normal.shift())) {
       if (line.valid && !line.valid()) {
+        this.stats.dropped++;
         line.done?.();
         continue;
       }
       if (line.keep || now - line.at < MAX_WAIT_MS) break;
+      this.stats.dropped++;
       line.done?.();
     }
     if (!line) return;
@@ -131,20 +135,44 @@ class Voice {
         this.current = audio;
         await new Promise<void>((resolve) => {
           // Tự gỡ kẹt: 1 câu treo (không tải xong, không báo lỗi) sẽ làm MC im cả buổi live.
-          // Chưa phát được sau 8 giây thì bỏ câu; đang phát thì cắt khi quá độ dài câu + 4 giây.
-          let guard = setTimeout(finish, 8000);
-          function finish() {
+          // Nhưng đừng bỏ câu chỉ vì giọng về chậm: lúc Edge bị chặn (429) server phải thử
+          // lại tới 17 giây mới có file giọng, trình duyệt vẫn đang tải thì chờ thêm
+          // (tối đa 40 giây); chỉ bỏ câu khi đã quá hạn, sang phần khác rồi, hoặc tải lỗi hẳn.
+          let started = false;
+          const waitedSince = Date.now();
+          const MAX_WAIT_MS = 40_000;
+          const finish = () => {
             clearTimeout(guard);
+            if (!started) this.stats.guardDrops++;
             if (!audio.ended) audio.pause();
             resolve();
-          }
+          };
+          const checkGuard = () => {
+            if (started) return;
+            if (line.valid && !line.valid()) return finish(); // sang phần khác: bỏ câu cũ
+            if (Date.now() - waitedSince >= MAX_WAIT_MS) return finish(); // treo thật: bỏ
+            // vẫn đang tải giọng từ server, hoặc đã có dữ liệu mà chưa phát: chờ thêm
+            if (audio.networkState === 2 || audio.readyState >= 2) {
+              guard = setTimeout(checkGuard, 4000);
+              return;
+            }
+            return finish(); // không tải nữa mà cũng không phát: bỏ
+          };
+          let guard = setTimeout(checkGuard, 8000);
           audio.onplaying = () => {
+            if (!started) {
+              started = true;
+              this.stats.played++;
+            }
             clearTimeout(guard);
             const ms = Number.isFinite(audio.duration) ? audio.duration * 1000 + 4000 : 40_000;
             guard = setTimeout(finish, ms);
           };
           audio.onended = finish;
-          audio.onerror = finish;
+          audio.onerror = () => {
+            this.stats.errors++;
+            finish();
+          };
           // trình duyệt chặn tự phát tiếng: thử lại vài lần thay vì bỏ câu
           const tryPlay = (left: number) =>
             audio.play().catch(() => (left > 0 ? setTimeout(() => tryPlay(left - 1), 1500) : finish()));

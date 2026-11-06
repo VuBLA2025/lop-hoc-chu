@@ -833,11 +833,15 @@ export class Classroom {
     const top = this.seats(3).filter((s) => s.score > 0);
     this.setPhase('praise', now, GAME.praiseSec);
     const keys = ['praiseFirst', 'praiseSecond', 'praiseThird'] as const;
-    return this.mainOf([
-      this.line0('praiseIntro'),
-      ...top.map((s, i) => this.t(this.line(keys[i], s.spoken, String(s.score), this.giveGift(s, now)))),
-      this.line0('praiseOutro'),
-    ]);
+    // Gộp cả phần khen thành 1 câu nói (1 lần tải giọng thay vì 5): 5 câu rời rạc
+    // xếp hàng chờ nhau lúc Edge chậm rồi bị bỏ vì quá 8 giây, cả tiết im luôn
+    // (mất giọng ở tiết 2 câu 5-6, 2026-11-06). Nội dung đọc vẫn y nguyên.
+    const bits = [
+      this.lines.pick('praiseIntro', LINES.praiseIntro as string[]),
+      ...top.map((s, i) => this.line(keys[i], s.spoken, String(s.score), this.giveGift(s, now))),
+      this.lines.pick('praiseOutro', LINES.praiseOutro as string[]),
+    ];
+    return this.mainOf([this.t(bits.join(' '))]);
   }
 
   private startResults(now: number, outOfQuestions = false): Say[] {

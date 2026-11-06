@@ -265,6 +265,20 @@ hình lúc chuyển câu → làm cả 3:
   (theo ý đại ca từ 2026-11-05: trang quản lí không cần view tạm). Panel
   giờ là 1 cột quản lí cuộn dọc, có link "Mở stage thật (tab mới)" ở thẻ
   Kết nối. Stage thật vẫn chạy riêng ở `/?view=stage`.
+- **2026-11-06 (chiều): sửa mất giọng ở tiết 2 câu 5-6** (đại ca báo):
+  nguyên nhân — giọng Edge tổng hợp chậm dần trong buổi live (đo local
+  292 câu qua 2 tiết: trung bình 1,4 giây, p90 3,4 giây, chậm nhất 12,6
+  giây, 0 lỗi) mà hàng đợi tổng hợp của server chỉ chạy nối tiếp từng
+  câu; phần khen thưởng cứ 5 câu lại xếp 5 câu mới cùng lúc, câu sau
+  chờ 6-15 giây mới có file giọng, nhưng trình phát cũ bỏ câu nào chưa
+  phát được sau 8 giây → cô im luôn trong khi game vẫn chạy. Sửa 3 chỗ:
+  (1) `voice.ts`: chưa phát được mà trình duyệt vẫn đang tải giọng thì
+  chờ thêm (tối đa 40 giây), chỉ bỏ câu khi quá hạn / sang phần khác /
+  tải lỗi hẳn; thêm `voice.stats` (played/dropped/guardDrops/errors,
+  xem ở console `__lophocVoice.stats`); (2) `quiz.ts` startPraise:
+  gộp 5 câu khen thành 1 câu nói (1 lần tải giọng), nội dung đọc y
+  nguyên; (3) `server.ts`: bộ nhớ đệm giọng 200 → 500 câu. Không mở
+  thêm kết nối Edge song song (dễ bị chặn 429 hơn).
 
 ## Chưa kiểm chứng
 

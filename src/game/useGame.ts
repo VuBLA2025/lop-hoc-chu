@@ -201,6 +201,7 @@ export function useGame() {
     sfx.loadFiles();
     // gỡ lỗi nhanh từ console trình duyệt: __lophocMusic.ctx.state, gain...
     (window as unknown as { __lophocMusic?: unknown }).__lophocMusic = music;
+    (window as unknown as { __lophocVoice?: unknown }).__lophocVoice = voice;
     // nhạc nền chỉ bắt đầu sau 1 lần chạm lên stage (trình duyệt cấm tự phát tiếng)
     const unlockMusic = () => music.start();
     window.addEventListener('pointerdown', unlockMusic, { once: true });

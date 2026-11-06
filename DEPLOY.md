@@ -282,5 +282,9 @@ hình lúc chuyển câu → làm cả 3:
 
 ## Chưa kiểm chứng
 
-- Nghe giọng cô giáo + nhạc nền bằng tai trên thiết bị thật.
-- Quà thật theo tên, mốc 100 xu và câu vàng trong live thật.
+- Nghe giọng cô giáo + nhạc nền bằng tai trên thiết bị thật (đặc biệt qua
+  tiết 2 câu 5-6, chỗ giọng từng mất).
+- Quà thật theo tên, mốc 30 xu và câu vàng trong live thật.
+- Bản sửa giọng 2026-11-06 (commit 7a0fd7f3) đã kiểm chứng local qua 2
+  tiết thật (199 câu đọc, 2 bỏ, 6 chờ quá hạn, 0 lỗi JS) và đã deploy
+  live (bundle mới index-BZ3R1AXw.js, /api/tts 200).

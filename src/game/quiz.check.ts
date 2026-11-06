@@ -201,10 +201,12 @@ for (const lv of [1, 2, 3, 4] as const) {
   assert.ok(LINES.go.includes(start[start.length - 1].text.slice(3)), 'câu cuối lúc ra đề là hô bắt đầu');
   assert.ok(start[start.length - 1].go);
   assert.ok(start.every((l) => l.main));
-  // cô đang đọc đề (đồng hồ dừng): chưa hiện bảng chữ; hô bắt đầu mới hiện
+  // bảng chữ hiện ngay khi sang câu mới (sửa đứng hình 2026-11-06):
+  // không đợi cô hô bắt đầu nữa, vì file giọng tải chậm làm màn hình đứng ở câu cũ
+  assert.equal(c.view(t).boardShown, true, 'sang câu mới là hiện chữ ngay');
   c.hold(3000);
   c.tick(t);
-  assert.equal(c.view(t).boardShown, false, 'đang đọc đề: chưa hiện chữ');
+  assert.equal(c.view(t).boardShown, true);
   c.showBoard();
   assert.equal(c.view(t).boardShown, true);
   assert.ok(!c.tick((t = c.phaseEndsAt - GAME.warnLeftSec * 1000 - 500)).some((l) => l.warn));

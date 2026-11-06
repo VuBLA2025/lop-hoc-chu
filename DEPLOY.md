@@ -224,7 +224,39 @@ true). Theo dõi deployment tới `done` rồi kiểm tra live:
   thả tim), lớp trưởng mỗi tiết, bảng học sinh xuất sắc trong ngày, bảng vàng tuần.
 - Trang báo cáo sau buổi live: `/bao-cao` (câu khó, câu quá dễ).
 
+## 2026-11-06: Gói quà + sửa đứng hình + nhạc nền
+
+Buổi live đầu tiên (112 người vào, 103 chat, 0 quà) + đại ca thấy stage đứng
+hình lúc chuyển câu → làm cả 3:
+
+- **Thu hút quà (Gói 1+2+3):**
+  - Stage có bảng "🎁 Tặng quà được gì" (góc phải trên): 1 xu hoa lên bàn cô,
+    30 xu cô mở 1 chữ, 99 xu khen to + 5 điểm danh dự; thanh mục tiêu quà
+    cả lớp (mặc định 100 xu) + top 3 người tặng hôm nay.
+  - Đủ mục tiêu quà → câu tiếp theo thành câu vàng nhân đôi điểm (chỉ 1 câu).
+    Tặng quà lúc ra chơi được điểm.
+  - Cô rủ tặng quà khi câu khó quá nửa giờ chưa ai đúng; cuối tiết vinh danh
+    người tặng nhiều nhất hôm nay. Tổng xu + top tặng quà lưu ở localStorage
+    của stage (qua ngày làm lại).
+  - Số quà/điểm/nhạc đổi được ở panel "Quản lý — Quà & Điểm" (không cần build
+    lại): `giftGoalXu` (100), `giftHonorPoints` (5), `giftRecessPoints` (2),
+    `musicVolume` (12). MC nhắc quyền lợi quà mỗi 5 phút (watch_lophoc.mjs).
+- **Sửa đứng hình khi chuyển câu:** nguyên nhân là bảng chữ câu mới chỉ hiện
+  khi giọng cô bắt đầu đọc câu hô "bắt đầu", mà file giọng phải tải từ server
+  (Edge TTS, lúc chậm thì chờ mấy giây, có khi thử lại tới 10 giây); trong lúc
+  cô đọc thì đồng hồ cũng dừng, nên màn hình đứng ở câu cũ. Sửa 3 chỗ:
+  (1) hiện bảng chữ ngay khi sang câu mới; (2) tải sẵn giọng câu tiếp theo
+  trong lúc hiện đáp án (prefetch, dùng chung cache `/api/tts`);
+  (3) câu chính đã cũ (sang phần khác rồi) thì bỏ, không đọc dồn.
+  Kiểm chứng local bằng Chrome headless + giả lập chat/quà: chuyển câu trong
+  402 ms, bảng hiện ngay ở sự kiện đầu tiên của câu mới.
+- **Nhạc nền:** tự tạo bằng WebAudio, không cần file, không lo bản quyền
+  (đệm hợp âm Đô–La thứ–Fa–Sol + nốt nhạc hộp ngũ cung, lặp lại). Mặc định
+  12% âm lượng, tự nhỏ xuống khi cô đang nói, to lên khi cô im. Bắt đầu sau
+  1 lần chạm lên stage (giống giọng cô). Tắt bằng cách chỉnh "Nhạc nền" về 0
+  ở panel. Kiểm chứng local: AudioContext chạy, có sóng âm thật (RMS ~0.005).
+
 ## Chưa kiểm chứng
 
-- Kết nối TikTok live thật (cần tài khoản đang live + username thật).
-- Nghe giọng cô giáo bằng tai trên thiết bị thật.
+- Nghe giọng cô giáo + nhạc nền bằng tai trên thiết bị thật.
+- Quà thật theo tên, mốc 100 xu và câu vàng trong live thật.

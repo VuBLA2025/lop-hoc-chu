@@ -11,6 +11,7 @@ import { fetchGameSettings } from './gameSettings';
 import { QUESTIONS } from './bank';
 import { Classroom, plain, type ClassView, type RecessGame, type Say } from './quiz';
 import { sfx } from './sfx';
+import { music } from '../live/music';
 
 // ?view=stage&mute=1: xem thử trang stage không phát tiếng
 const MUTED = new URLSearchParams(window.location.search).get('mute') === '1';
@@ -46,6 +47,7 @@ export function useGame() {
   const todayTop = useRef<WeekRow[]>([]); // điểm cả ngày (server), cho bảng Học sinh xuất sắc hôm nay
   const likeBase = useRef<number | null>(null);
   const dirty = useRef(true);
+  const prefetchKey = useRef(''); // câu đã tải sẵn giọng, để không tải lại 1 câu 2 lần
 
   const [talk] = useState(() => ({
     greeter: new NameBatcher(
@@ -75,7 +77,11 @@ export function useGame() {
               dirty.current = true;
             }
           : undefined;
-        voice.say(l.text, true, () => mainSpeaking.current--, false, onStart);
+        // câu chính thuộc về phần đang chạy lúc xếp hàng: sang phần khác rồi thì bỏ,
+        // để giọng không đọc chuyện đã cũ rồi mới sang câu mới (sửa đứng hình)
+        const phase = roomRef.current?.phase;
+        const valid = phase !== undefined ? () => roomRef.current?.phase === phase : undefined;
+        voice.say(l.text, true, () => mainSpeaking.current--, false, onStart, valid);
       } else if (l.warn) {
         voice.say(l.text, true); // nhắc sắp hết giờ: chen lên đọc liền, đồng hồ vẫn chạy
       } else {
@@ -111,7 +117,10 @@ export function useGame() {
     onSettings: () => {
       if (!IS_STAGE) return;
       fetchGameSettings()
-        .then(() => talk.gifts.update(GAME.giftThanksCooldownMs, GAME.bigGiftCoins))
+        .then(() => {
+          talk.gifts.update(GAME.giftThanksCooldownMs, GAME.bigGiftCoins);
+          music.setVolume(GAME.musicVolume);
+        })
         .catch(() => {});
     },
 
@@ -187,8 +196,14 @@ export function useGame() {
     if (MUTED) {
       voice.volume = 0;
       sfx.volume = 0;
+      music.setVolume(0);
     }
     sfx.loadFiles();
+    // gỡ lỗi nhanh từ console trình duyệt: __lophocMusic.ctx.state, gain...
+    (window as unknown as { __lophocMusic?: unknown }).__lophocMusic = music;
+    // nhạc nền chỉ bắt đầu sau 1 lần chạm lên stage (trình duyệt cấm tự phát tiếng)
+    const unlockMusic = () => music.start();
+    window.addEventListener('pointerdown', unlockMusic, { once: true });
     let prevView: StageView | null = null;
     let stop = false;
     const timers: ReturnType<typeof setInterval>[] = [];
@@ -221,6 +236,7 @@ export function useGame() {
       try {
         await fetchGameSettings();
         talk.gifts.update(GAME.giftThanksCooldownMs, GAME.bigGiftCoins);
+        music.setVolume(GAME.musicVolume);
       } catch {
         // giữ mặc định trong config.ts
       }
@@ -254,6 +270,16 @@ export function useGame() {
           }
           lastTick = now;
           say(room.tick(now));
+          // tải sẵn giọng câu tiếp theo trong lúc hiện đáp án / khen thưởng, tới lượt là đọc liền
+          if (room.phase === 'reveal' || room.phase === 'praise') {
+            const next = room.peekNextIntro();
+            if (next && next !== prefetchKey.current) {
+              prefetchKey.current = next;
+              voice.prefetch(next);
+            }
+          }
+          // nhạc nhỏ xuống khi cô đang nói, to lên khi cô im
+          music.update(voice.busy || mainSpeaking.current > 0);
           flushChatter(room, now);
           sfx.clock(room.phase, room.boardShown, room.phaseEndsAt, now);
           if (!dirty.current && now - lastSent < 1000) return;
@@ -272,7 +298,10 @@ export function useGame() {
         // Dự phòng khi SSE rớt: 60 giây tải lại cài đặt 1 lần (nhẹ, 1 request nhỏ)
         setInterval(() => {
           fetchGameSettings()
-            .then(() => talk.gifts.update(GAME.giftThanksCooldownMs, GAME.bigGiftCoins))
+            .then(() => {
+              talk.gifts.update(GAME.giftThanksCooldownMs, GAME.bigGiftCoins);
+              music.setVolume(GAME.musicVolume);
+            })
             .catch(() => {});
         }, 60_000),
       );
@@ -283,6 +312,8 @@ export function useGame() {
       stop = true;
       timers.forEach(clearInterval);
       window.removeEventListener('beforeunload', save);
+      window.removeEventListener('pointerdown', unlockMusic);
+      music.stop();
     };
   }, []);
 

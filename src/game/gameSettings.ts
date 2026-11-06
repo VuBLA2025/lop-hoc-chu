@@ -11,6 +11,10 @@ import { GAME } from './config';
 export interface GameSettings {
   hintGiftCoins: number;
   bigGiftCoins: number;
+  giftGoalXu: number;
+  giftHonorPoints: number;
+  giftRecessPoints: number;
+  musicVolume: number;
   likesPerClap: number;
   heartTarget: number;
   heartBoost: number;
@@ -28,6 +32,10 @@ export interface GameSettings {
 export const GAME_SETTING_DEFAULTS: GameSettings = {
   hintGiftCoins: GAME.hintGiftCoins,
   bigGiftCoins: GAME.bigGiftCoins,
+  giftGoalXu: GAME.giftGoalXu,
+  giftHonorPoints: GAME.giftHonorPoints,
+  giftRecessPoints: GAME.giftRecessPoints,
+  musicVolume: GAME.musicVolume,
   likesPerClap: GAME.likesPerClap,
   heartTarget: GAME.heartTarget,
   heartBoost: GAME.heartBoost,
@@ -46,6 +54,10 @@ export const GAME_SETTING_DEFAULTS: GameSettings = {
 const LIMITS: Record<string, [number, number]> = {
   hintGiftCoins: [1, 10000],
   bigGiftCoins: [1, 10000],
+  giftGoalXu: [10, 100000],
+  giftHonorPoints: [0, 100],
+  giftRecessPoints: [0, 100],
+  musicVolume: [0, 100],
   likesPerClap: [10, 100000],
   heartTarget: [10, 100000],
   heartBoost: [1, 100],
@@ -93,6 +105,10 @@ export function currentGameSettings(): GameSettings {
   return {
     hintGiftCoins: GAME.hintGiftCoins,
     bigGiftCoins: GAME.bigGiftCoins,
+    giftGoalXu: GAME.giftGoalXu,
+    giftHonorPoints: GAME.giftHonorPoints,
+    giftRecessPoints: GAME.giftRecessPoints,
+    musicVolume: GAME.musicVolume,
     likesPerClap: GAME.likesPerClap,
     heartTarget: GAME.heartTarget,
     heartBoost: GAME.heartBoost,

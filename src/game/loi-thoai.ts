@@ -563,6 +563,28 @@ export const LINES = {
     (n) => `Cảm ơn ${n}! Thêm một chữ trên bảng rồi, ai đoán ra nào?`,
     (n) => `${n} bao cả lớp một chữ. Cảm ơn bạn đi các bạn nhỏ.`,
   ] as L1,
+  // Câu khó chưa ai đúng: cô rủ cả lớp tặng quà mở chữ (nói chen, 1 lần mỗi câu)
+  giftPromptHard: [
+    'Câu này khó quá, chưa ai đúng. Bạn nào tặng cô 30 xu là cô mở thêm một chữ nè.',
+    'Cả lớp bí rồi nè. Tặng cô 30 xu, cô mở chữ giúp các bạn nhỏ nha.',
+    'Câu khó này, bạn nào thương cô thì tặng quà, cô mở thêm một chữ liền.',
+  ],
+  // Đủ mục tiêu quà cả lớp: câu tiếp theo thành câu vàng
+  giftGoal: [
+    (n) => `Nhờ ${n}, cả lớp đủ mục tiêu quà rồi! Câu tiếp theo là câu vàng, nhân đôi điểm nha.`,
+    (n) => `Hoan hô ${n}! Quà đủ mốc rồi, câu sau nhân đôi điểm, ai nhanh thì thắng lớn!`,
+  ] as L1,
+  // Quà lớn lúc đang hỏi: mở chữ + cộng điểm danh dự cho người tặng
+  giftHonor: [
+    (n, p) => `${n} tặng quà lớn, cô mở thêm một chữ và thưởng bạn ${p} điểm danh dự.`,
+    (n, p) => `Quà to của ${n}! Cô mở chữ cho cả lớp và cộng ${p} điểm cho bạn nhỏ.`,
+    (n, p) => `${n} chơi lớn quá, cô thưởng ${p} điểm danh dự và mở thêm một chữ nè.`,
+  ] as L2,
+  // Cuối tiết: vinh danh người tặng quà nhiều nhất hôm nay
+  giftTop: [
+    (n, x) => `Mạnh Thường Quân hôm nay là ${n}, tặng cả lớp ${x} xu. Cả lớp cảm ơn bạn đi!`,
+    (n, x) => `${n} tặng nhiều nhất hôm nay, ${x} xu. Cô nhớ ơn bạn nhỏ lắm.`,
+  ] as L2,
   thankFollow: [
     (n) => `Cô cảm ơn ${n} đã theo dõi kênh nha.`,
     (n) => `${n} vừa theo dõi lớp mình. Chào học sinh mới!`,

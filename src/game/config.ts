@@ -95,6 +95,10 @@ export const GAME = {
   clapSec: 5,
   giftThanksCooldownMs: 30_000,
   bigGiftCoins: 99,
+  giftGoalXu: 100, // đủ từng này xu quà cả lớp: câu tiếp theo thành câu vàng nhân đôi điểm
+  giftHonorPoints: 5, // tặng từ quà lớn lúc đang hỏi: cộng từng này điểm danh dự cho người tặng
+  giftRecessPoints: 2, // tặng quà lúc ra chơi: cộng từng này điểm cho người tặng
+  musicVolume: 12, // nhạc nền: % âm lượng (0 là tắt nhạc)
 
   // ---------- Nói chuyện ----------
   greetEveryMs: 8000,

@@ -79,6 +79,7 @@ export function GameStage({ game }: { game: GameState }) {
       <Motto />
       <Board v={v} now={now} />
       <DayTop v={v} />
+      <GiftPerks v={v} />
       <Vase v={v} />
       <Teacher v={v} now={now} />
       <Punished v={v} />
@@ -490,6 +491,41 @@ function DayTop({ v }: { v: StageView }) {
           </motion.div>
         ))}
       </div>
+    </div>
+  );
+}
+
+// Góc phải trên: bảng "Tặng quà được gì" + thanh mục tiêu quà cả lớp + top người tặng hôm nay
+function GiftPerks({ v }: { v: StageView }) {
+  const pct = Math.min(100, Math.round((v.giftXu / Math.max(1, v.giftGoal)) * 100));
+  return (
+    <div className="absolute right-[14px] top-[14px] z-20 w-[264px] -rotate-1 rounded-[14px] border-[3px] border-[#c9a45c] bg-[#fff8e1]/95 px-3 pb-2 pt-3 text-[#4a2c0e] shadow-[0_6px_10px_rgba(0,0,0,0.3)]">
+      <div className="absolute -top-[18px] left-1/2 -translate-x-1/2 text-[30px]">🎁</div>
+      <div className="whitespace-nowrap text-center text-[20px] font-extrabold leading-tight text-[#b45309]">Tặng quà được gì</div>
+      <div className="mt-1 space-y-[2px] text-[19px] leading-[24px]">
+        <div>🌸 1 xu: hoa lên bàn cô</div>
+        <div>💡 {GAME.hintGiftCoins} xu: cô mở 1 chữ</div>
+        <div>
+          👑 {GAME.bigGiftCoins} xu: khen to + {GAME.giftHonorPoints} điểm
+        </div>
+      </div>
+      <div className="mt-2 h-[22px] overflow-hidden rounded-full bg-[#e8d5a8]">
+        <div className="h-full rounded-full bg-[#ff9f1c] transition-all duration-500" style={{ width: `${pct}%` }} />
+      </div>
+      <div className="mt-1 text-center text-[18px] font-bold leading-[22px] text-[#c2410c]">
+        {v.giftGoalHit ? '🎉 Đủ mục tiêu — câu vàng!' : `🎯 Mục tiêu quà: ${v.giftXu}/${v.giftGoal} xu`}
+      </div>
+      {v.topGifters.length > 0 && (
+        <div className="mt-1 border-t-2 border-dashed border-[#c9a45c] pt-1 text-[18px] leading-[23px]">
+          {v.topGifters.map((g, i) => (
+            <div key={i} className="flex items-center gap-1">
+              <span>{['🥇', '🥈', '🥉'][i]}</span>
+              <span className="min-w-0 flex-1 truncate font-semibold">{g.nickname}</span>
+              <b className="text-[#c2410c]">{g.xu} xu</b>
+            </div>
+          ))}
+        </div>
+      )}
     </div>
   );
 }

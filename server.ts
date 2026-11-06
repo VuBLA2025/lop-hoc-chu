@@ -685,6 +685,10 @@ const GAME_SETTINGS_FILE = path.join(DATA_DIR, 'game-settings.json');
 const GAME_SETTING_DEFAULTS = {
   hintGiftCoins: 30,
   bigGiftCoins: 99,
+  giftGoalXu: 100,
+  giftHonorPoints: 5,
+  giftRecessPoints: 2,
+  musicVolume: 12,
   likesPerClap: 300,
   heartTarget: 300,
   heartBoost: 5,
@@ -711,6 +715,10 @@ function sanitizeGameSettings(input: any): Record<string, unknown> {
   };
   num('hintGiftCoins', 1, 10000);
   num('bigGiftCoins', 1, 10000);
+  num('giftGoalXu', 10, 100000);
+  num('giftHonorPoints', 0, 100);
+  num('giftRecessPoints', 0, 100);
+  num('musicVolume', 0, 100);
   num('likesPerClap', 10, 100000);
   num('heartTarget', 10, 100000);
   num('heartBoost', 1, 100);

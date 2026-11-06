@@ -52,6 +52,12 @@ class Voice {
     void this.next();
   }
 
+  /** Tải sẵn giọng của 1 câu (để tới lượt đọc là phát liền): dùng chung cache với phát thật */
+  prefetch(text: string) {
+    if (!this.enabled || !text.trim()) return;
+    for (const p of this.parts(text)) fetch(this.urlOf(p)).catch(() => {});
+  }
+
   stop() {
     for (const l of [...this.normal, ...this.priority]) l.done?.();
     this.normal = [];

@@ -8,6 +8,9 @@ type NumKey = Exclude<keyof GameSettings, 'rankPoints'>;
 const GIFT_FIELDS: Array<{ key: NumKey; label: string; hint: string; min: number; max: number }> = [
   { key: 'hintGiftCoins', label: 'Quà mở chữ', hint: 'xu — quà từ từng này xu thì cô mở thêm 1 chữ', min: 1, max: 10000 },
   { key: 'bigGiftCoins', label: 'Quà lớn', hint: 'xu — từ từng này xu cô khen to', min: 1, max: 10000 },
+  { key: 'giftGoalXu', label: 'Mục tiêu quà', hint: 'xu — đủ từng này xu cả lớp thì câu tiếp theo thành câu vàng', min: 10, max: 100000 },
+  { key: 'giftHonorPoints', label: 'Thưởng quà lớn', hint: 'điểm danh dự khi tặng từ quà lớn lúc đang hỏi', min: 0, max: 100 },
+  { key: 'musicVolume', label: 'Nhạc nền', hint: '% âm lượng — 0 là tắt nhạc', min: 0, max: 100 },
   { key: 'likesPerClap', label: 'Tim vỗ tay', hint: 'tim — đủ từng này tim cả lớp vỗ tay', min: 10, max: 100000 },
   { key: 'heartTarget', label: 'Thử thách thả tim', hint: 'tim — mục tiêu lúc ra chơi', min: 10, max: 100000 },
   { key: 'heartBoost', label: 'Nhân tim thật', hint: 'mỗi tim thật tính thành từng này tim', min: 1, max: 100 },
@@ -20,6 +23,7 @@ const POINT_FIELDS: Array<{ key: NumKey; label: string; hint: string; min: numbe
   { key: 'streakBonus', label: 'Thưởng chuỗi', hint: 'điểm thưởng thêm', min: 0, max: 100 },
   { key: 'rpsPoints', label: 'Oẳn tù tì thắng', hint: 'điểm', min: 0, max: 100 },
   { key: 'callUpPoints', label: 'Kiểm tra miệng đúng', hint: 'điểm', min: 0, max: 100 },
+  { key: 'giftRecessPoints', label: 'Quà giờ ra chơi', hint: 'điểm — tặng quà lúc ra chơi được từng này điểm', min: 0, max: 100 },
   { key: 'rollPoints', label: 'Điểm danh', hint: 'điểm', min: 0, max: 100 },
   { key: 'rollWinners', label: 'Điểm danh được điểm', hint: 'bạn — số bạn đầu tiên được điểm', min: 1, max: 30 },
 ];

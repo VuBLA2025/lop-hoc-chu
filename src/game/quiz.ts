@@ -199,6 +199,14 @@ export class Classroom {
   stats = { received: 0, attempts: 0 };
   flowers = 0;
   lastFlowerAt = 0;
+  /** Quà hôm nay: tổng xu + top người tặng (lưu localStorage để tải lại stage không mất) */
+  giftXu = 0;
+  giftGoalHit = false;
+  private giftGoalNext = false;
+  private forceGolden = false;
+  topGifters = new Map<string, { nickname: string; xu: number }>();
+  private giftPrompted = false;
+  private giftDay = '';
   clapUntil = 0;
   private lastChatAt: number;
   /** lần cuối có người xem làm gì (bình luận, tặng quà, thả tim): lâu quá thì coi là lớp vắng */
@@ -257,11 +265,51 @@ export class Classroom {
     this.lastChatAt = now;
     this.lastSeenAt = now;
     this.lastLoveAt = now;
+    this.loadGiftDay(now);
   }
 
   /** Lớp vắng: quá GAME.emptyRoomMs không ai bình luận, tặng quà hay thả tim */
   isEmpty(now: number) {
     return now - this.lastSeenAt > GAME.emptyRoomMs;
+  }
+
+  /** Đọc số quà hôm nay đã lưu (stage tải lại thì không mất); qua ngày thì làm lại */
+  private loadGiftDay(now: number) {
+    try {
+      if (typeof localStorage === 'undefined') return;
+      // giờ Việt Nam = UTC+7
+      this.giftDay = new Date(now + 7 * 3600_000).toISOString().slice(0, 10);
+      const raw = localStorage.getItem('lophoc-gift-day');
+      if (!raw) return;
+      const d = JSON.parse(raw) as { day?: string; xu?: number; top?: { username: string; nickname: string; xu: number }[] };
+      if (d.day !== this.giftDay) return;
+      this.giftXu = d.xu ?? 0;
+      this.giftGoalHit = this.giftXu >= GAME.giftGoalXu;
+      for (const t of d.top ?? []) this.topGifters.set(t.username, { nickname: t.nickname, xu: t.xu });
+    } catch {
+      // đọc không được thì chơi bình thường, đếm lại từ 0
+    }
+  }
+  private saveGiftDay() {
+    try {
+      if (typeof localStorage === 'undefined') return;
+      localStorage.setItem(
+        'lophoc-gift-day',
+        JSON.stringify({ day: this.giftDay, xu: this.giftXu, top: [...this.topGifters.entries()].map(([username, v]) => ({ username, ...v })) }),
+      );
+    } catch {
+      // lưu không được thì thôi
+    }
+  }
+  /** Người tặng quà nhiều nhất hôm nay */
+  topGifter(): { nickname: string; xu: number } | null {
+    return [...this.topGifters.values()].sort((a, b) => b.xu - a.xu)[0] ?? null;
+  }
+  /** Câu hỏi tiếp theo (để tải sẵn giọng trong lúc hiện đáp án): null nếu hết tiết */
+  peekNextIntro(): string | null {
+    const q = this.roundQs[this.qNo]; // câu hiện tại là roundQs[qNo - 1], câu sau ở chỉ số qNo
+    if (!q) return null;
+    return `Câu ${this.qNo + 1}. ${this.intro(q)} ${q.clue}`;
   }
 
   /** 1 câu cô nói (giọng nữ) */
@@ -427,7 +475,7 @@ export class Classroom {
   }
 
   get golden() {
-    return this.qNo > 0 && this.qNo === this.roundQs.length && this.roundQs.length >= GAME.questionsPerRound;
+    return this.forceGolden || (this.qNo > 0 && this.qNo === this.roundQs.length && this.roundQs.length >= GAME.questionsPerRound);
   }
 
   private lettersOf(q: Question | null) {
@@ -526,7 +574,14 @@ export class Classroom {
     this.q = this.roundQs[this.qNo - 1] ?? null;
     if (!this.q) return this.startResults(now, true);
     this.tiles = this.q.math ? [] : scramble(this.q.answer, this.rand);
-    this.boardShown = false;
+    // hiện bảng chữ NGAY khi sang câu mới (đừng đợi cô đọc xong câu hô):
+    // trước đây bảng chỉ hiện khi giọng cô bắt đầu đọc "bắt đầu", mà file giọng
+    // phải tải từ server nên lúc mạng chậm màn hình đứng hình ở câu cũ.
+    this.boardShown = true;
+    // câu vàng do đủ mục tiêu quà: chỉ 1 câu, dùng xong thì thôi
+    this.forceGolden = this.giftGoalNext;
+    this.giftGoalNext = false;
+    this.giftPrompted = false;
     this.revealed = new Set();
     this.bonusUsed = false;
     this.quietSaid = false;
@@ -539,7 +594,7 @@ export class Classroom {
     if (this.golden) out.push(this.line0('goldenIntro'));
     else if (this.q.math) out.push(this.line0('mathIntro'));
     out.push(this.t(`Câu ${this.qNo}. ${this.intro(this.q)} ${this.q.clue}`));
-    // đọc đề xong cô hô bắt đầu (lúc đó mới hiện bảng chữ); đồng hồ dừng trong lúc cô nói nên hô xong mới đếm giờ
+    // cô đọc đề xong thì hô bắt đầu; đồng hồ dừng trong lúc cô nói nên hô xong mới đếm giờ
     out.push({ ...this.line0('go'), go: true });
     return this.mainOf(out);
   }
@@ -647,14 +702,41 @@ export class Classroom {
     return [...this.mainOf([this.line0('banned')]), ...this.afterQuestion(now)];
   }
 
-  /** Quà: luôn là hoa tặng cô; quà to lúc chưa ai đúng thì cô mở thêm 1 chữ cho cả lớp */
+  /** Quà: luôn là hoa tặng cô; quà mở chữ / quà lớn / mục tiêu quà cả lớp */
   gift(e: Person, coins: number, now: number): Say[] {
-    this.touch(e, now);
+    const s = this.touch(e, now);
     this.flowers++;
     this.lastFlowerAt = now;
+    // đếm xu quà hôm nay + top người tặng (hiện trên bảng "Tặng quà được gì")
+    this.giftXu += coins;
+    const g = this.topGifters.get(e.username) ?? { nickname: s.spoken, xu: 0 };
+    g.nickname = s.spoken;
+    g.xu += coins;
+    this.topGifters.set(e.username, g);
+    this.saveGiftDay();
     // bạn nhỏ đi lên bục đưa hoa cho cô (đang có bạn đi thì thôi, tránh combo quà chen nhau)
     if (!this.walk || now - this.walk.at > GAME.walkMs) this.walk = { username: e.username, at: now };
+    // đủ mục tiêu quà cả lớp: câu tiếp theo thành câu vàng nhân đôi điểm
+    if (!this.giftGoalHit && this.giftXu >= GAME.giftGoalXu) {
+      this.giftGoalHit = true;
+      this.giftGoalNext = true;
+      // người tặng chạm mốc mà quà lớn thì vẫn được mở chữ + điểm danh dự
+      if (coins >= GAME.bigGiftCoins && (this.phase === 'question' || this.phase === 'bonus') && this.correct.length === 0 && this.revealOne()) {
+        this.award(s, GAME.giftHonorPoints, now, true);
+      }
+      return this.mainOf([this.t(this.line('giftGoal', e.spoken), true)]);
+    }
+    // giờ ra chơi: tặng quà được điểm (cô cảm ơn bằng câu cảm ơn quà thường)
+    if (this.phase === 'recess') {
+      this.award(s, GAME.giftRecessPoints, now, false);
+      return [];
+    }
     const asking = this.phase === 'question' || this.phase === 'bonus';
+    // quà lớn lúc chưa ai đúng: mở 1 chữ + cộng điểm danh dự cho người tặng
+    if (asking && coins >= GAME.bigGiftCoins && this.correct.length === 0 && this.revealOne()) {
+      this.award(s, GAME.giftHonorPoints, now, true);
+      return this.mainOf([this.t(this.line('giftHonor', e.spoken, String(GAME.giftHonorPoints)), true)]);
+    }
     if (asking && coins >= GAME.hintGiftCoins && this.correct.length === 0 && this.revealOne()) {
       return this.mainOf([this.t(this.line('giftHint', e.spoken), true)]);
     }
@@ -758,6 +840,9 @@ export class Classroom {
     }
     if (outOfQuestions) lines.push(this.t('Hết câu hỏi rồi, cô tổng kết luôn nha.'));
     lines.push(best && best.score > 0 ? this.t(this.line('results', best.spoken, String(best.score))) : this.line0('resultsNobody'));
+    // vinh danh người tặng quà nhiều nhất hôm nay
+    const tg = this.topGifter();
+    if (tg && tg.xu > 0) lines.push(this.t(this.line('giftTop', tg.nickname, String(tg.xu))));
     if (this.weekLeader && this.round % 3 === 0) lines.push(this.t(this.line('weekBoard', this.weekLeader)));
     return this.mainOf(lines);
   }
@@ -943,6 +1028,11 @@ export class Classroom {
       this.warned = true;
       extra.push({ ...this.line0('timeWarn'), warn: true });
     }
+    // câu khó, quá nửa giờ chưa ai đúng: cô rủ tặng quà mở chữ (1 lần mỗi câu)
+    if (asking && this.correct.length === 0 && !this.giftPrompted && now - this.phaseStartedAt > GAME.questionSec * 600) {
+      this.giftPrompted = true;
+      extra.push({ ...this.line0('giftPromptHard'), ttl: 6000 });
+    }
     // phòng giọng hỏng / tắt tiếng: đồng hồ đã chạy hơn 1 giây (cô đọc xong) thì vẫn hiện bảng chữ
     if (asking && !this.boardShown && now - this.phaseStartedAt > 1000) this.boardShown = true;
     if (now < this.phaseEndsAt) return extra;
@@ -1122,7 +1212,7 @@ export class Classroom {
       poll: this.poll && this.poll.opts.map((o) => ({ ...o, n: [...this.poll!.votes.values()].filter((k) => k === o.key).length })),
       birthday: this.birthday && now - this.birthday.at < GAME.birthdayBannerSec * 1000 ? this.birthday : null,
       players: this.activePlayers(now),
-      // cô đang đọc đề: chưa hiện chữ xáo / phép tính / ô đáp án, hô bắt đầu mới hiện
+      // bảng chữ hiện ngay khi sang câu mới (trước đây đợi cô hô bắt đầu mới hiện, gây đứng hình)
       boardShown: this.phase !== 'question' || this.boardShown,
       // dừng giữa tiết: 3 bạn nhỏ điểm cao nhất kèm quà trên bàn
       praiseTop: this.phase === 'praise' ? this.seats(3).filter((s) => s.score > 0).map(({ username, nickname, score, desk }) => ({ username, nickname, score, desk })) : [],
@@ -1136,6 +1226,12 @@ export class Classroom {
       stats: this.stats,
       flowers: this.flowers,
       lastFlowerAt: this.lastFlowerAt,
+      // quà hôm nay: tổng xu, mục tiêu, top người tặng (bảng "Tặng quà được gì")
+      giftXu: this.giftXu,
+      giftGoal: GAME.giftGoalXu,
+      giftGoalHit: this.giftGoalHit,
+      giftGoalNext: this.giftGoalNext || this.forceGolden,
+      topGifters: [...this.topGifters.values()].sort((a, b) => b.xu - a.xu).slice(0, 3),
       clapping: now < this.clapUntil,
       recess: r && {
         game: r.game,

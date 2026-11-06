@@ -146,7 +146,7 @@ export function useGame() {
       const p = person(e);
       const coins = e.diamondCount * e.repeatCount;
       setLastGift({ ...e, nickname: p.nickname, at: Date.now() });
-      const hint = room.gift(p, coins, Date.now());
+      const hint = room.gift(p, coins, Date.now(), e.giftName);
       say(hint);
       // combo / tặng liên tục chỉ cảm ơn 1 lần mỗi 30 giây; quà to luôn cảm ơn
       if (!hint.length && talk.gifts.shouldThank(e.username, coins, chatter.current.filter((c) => c.priority).length)) say([room.thank(p, e.giftName, coins)]);

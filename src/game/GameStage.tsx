@@ -504,7 +504,9 @@ function GiftPerks({ v }: { v: StageView }) {
       <div className="whitespace-nowrap text-center text-[20px] font-extrabold leading-tight text-[#b45309]">Tặng quà được gì</div>
       <div className="mt-1 space-y-[2px] text-[19px] leading-[24px]">
         <div>🌸 1 xu: hoa lên bàn cô</div>
+        <div>💬 {GAME.giftThankCoins} xu: cô gọi tên cảm ơn</div>
         <div>💡 {GAME.hintGiftCoins} xu: cô mở 1 chữ</div>
+        <div>⭐ {GAME.giftDoubleCoins} xu: cô mở 2 chữ</div>
         <div>
           👑 {GAME.bigGiftCoins} xu: khen to + {GAME.giftHonorPoints} điểm
         </div>

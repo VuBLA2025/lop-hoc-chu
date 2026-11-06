@@ -683,9 +683,11 @@ app.post('/api/game/attend', (req, res) => {
 // (src/game/gameSettings.ts); mặc định dưới đây phải khớp src/game/config.ts.
 const GAME_SETTINGS_FILE = path.join(DATA_DIR, 'game-settings.json');
 const GAME_SETTING_DEFAULTS = {
-  hintGiftCoins: 30,
-  bigGiftCoins: 99,
-  giftGoalXu: 100,
+  hintGiftCoins: 10,
+  giftDoubleCoins: 20,
+  giftThankCoins: 5,
+  bigGiftCoins: 30,
+  giftGoalXu: 30,
   giftHonorPoints: 5,
   giftRecessPoints: 2,
   musicVolume: 12,
@@ -714,6 +716,8 @@ function sanitizeGameSettings(input: any): Record<string, unknown> {
     if (v !== null) out[k] = v;
   };
   num('hintGiftCoins', 1, 10000);
+  num('giftDoubleCoins', 1, 10000);
+  num('giftThankCoins', 1, 10000);
   num('bigGiftCoins', 1, 10000);
   num('giftGoalXu', 10, 100000);
   num('giftHonorPoints', 0, 100);

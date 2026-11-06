@@ -19,16 +19,11 @@ export default function App() {
     );
   }
 
-  // Trang điều khiển: xem trước = ảnh chụp từ trang stage, im lặng
+  // Trang điều khiển: chỉ panel quản lí (xem stage thật ở tab riêng)
   return (
     <Dashboard
       status={game.status}
       channelName={game.channelName}
-      preview={
-        <StageFrame maxHeight={window.innerHeight - 40}>
-          <GameStage game={game} />
-        </StageFrame>
-      }
       extra={<GameControls view={game.view} stageCount={game.stageCount} />}
     />
   );

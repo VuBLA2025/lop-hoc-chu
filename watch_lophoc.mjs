@@ -6,10 +6,10 @@
 // vo tay du 300 tim), nen watcher ngoai nay noi THUA, ngan, cach nhau it nhat
 // 45s, chi lam nhung viec game KHONG lam:
 // - Share: game khong cam on theo ten -> watcher cam on (15 phut/lan).
-// - Qua lon >= 99 xu: hoan ho them mot cau.
+// - Qua lon >= 30 xu: hoan ho them mot cau.
 // - Chat: chi tra loi chao hoi / hoi cach choi / goi co (10 phut/nguoi).
 //   Dap an quiz thi game tu xu ly, watcher khong chen vao.
-// - Moi 5 phut: nhac cach choi (dap an, qua goi y 30 xu / qua lon 99 xu,
+// - Moi 5 phut: nhac cach choi (dap an, thang qua 5/10/20/30 xu,
 //   vo tay 300 tim, diem chuyen can).
 // - Het live (mat ket noi qua 60s): in TOM TAT roi thoat. Toi da 6 gio.
 import { execFile } from 'node:child_process';
@@ -39,7 +39,7 @@ let questionsSeen = 0;
 
 const REMINDERS = [
   'Các bạn nhỏ ơi, cô đang hỏi rồi đấy, gõ đáp án vào chat nhé, ai trả lời nhanh nhất được nhiều điểm nhất!',
-  'Tặng quà 30 xu là cô mở 1 chữ cho cả lớp, quà 99 xu là cô khen to và cộng 5 điểm danh dự, đủ 100 xu cả lớp mở câu vàng nhé!',
+  'Tặng quà 5 xu là cô gọi tên cảm ơn, 10 xu cô mở 1 chữ, 20 xu mở 2 chữ, 30 xu cô khen to và cộng 5 điểm danh dự, đủ 30 xu cả lớp mở câu vàng nhé!',
   'Thả tim đủ 300 là cả lớp cùng vỗ tay, các bạn nhớ thả tim và follow lớp nhé!',
   'Bạn nào mới vào thì chào cô một tiếng nhé, comment là có tên trong lớp, đi học đều được điểm chuyên cần!',
 ];
@@ -133,7 +133,7 @@ async function onEvent(type, data) {
     const t = norm(text);
     let reply = '';
     if (t.includes('cach choi') || t.includes('choi sao') || t.includes('luat') || t.includes('huong dan') || t.includes('thi sao') || t.includes('lam sao')) {
-      reply = `${name} ơi, cô đọc câu hỏi rồi các bạn gõ đáp án vào chat nhé, ai nhanh nhất được nhiều điểm nhất, tặng 30 xu là cô gợi ý cho cả lớp đấy!`;
+      reply = `${name} ơi, cô đọc câu hỏi rồi các bạn gõ đáp án vào chat nhé, ai nhanh nhất được nhiều điểm nhất, tặng 10 xu là cô mở chữ gợi ý cho cả lớp đấy!`;
     } else if (t.includes('co oi') || t === 'co' || t.includes('chao co')) {
       reply = `Cô chào ${name} nhé, vào lớp ngồi ngay ngắn nào, câu hỏi tiếp theo sắp tới rồi!`;
     } else if (t.includes('chao') || t.startsWith('hello') || t === 'hi' || t.includes('xin chao')) {
@@ -149,7 +149,7 @@ async function onEvent(type, data) {
     giftXu += xu;
     console.log(`[${ts()}] GIFT: ${name} - ${data?.giftName} x${data?.repeatCount || 1} (${xu} xu)`);
     if (!wasLive) return;
-    if (xu >= 99) {
+    if (xu >= 30) {
       await say(`Hoan hô! Cảm ơn ${name} đã tặng ${data?.giftName}, ${xu} xu, quà lớn của lớp! Cô cảm ơn bạn nhiều lắm, cả lớp vỗ tay nào!`);
     }
   } else if (type === 'share') {

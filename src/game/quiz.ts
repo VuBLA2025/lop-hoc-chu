@@ -702,8 +702,8 @@ export class Classroom {
     return [...this.mainOf([this.line0('banned')]), ...this.afterQuestion(now)];
   }
 
-  /** Quà: luôn là hoa tặng cô; quà mở chữ / quà lớn / mục tiêu quà cả lớp */
-  gift(e: Person, coins: number, now: number): Say[] {
+  /** Quà: luôn là hoa tặng cô; thang quà 1/5/10/20/30 xu (2026-11-06) */
+  gift(e: Person, coins: number, now: number, giftName = ''): Say[] {
     const s = this.touch(e, now);
     this.flowers++;
     this.lastFlowerAt = now;
@@ -737,8 +737,18 @@ export class Classroom {
       this.award(s, GAME.giftHonorPoints, now, true);
       return this.mainOf([this.t(this.line('giftHonor', e.spoken, String(GAME.giftHonorPoints)), true)]);
     }
+    // 20 xu lúc chưa ai đúng: mở 2 chữ cho cả lớp
+    if (asking && coins >= GAME.giftDoubleCoins && this.correct.length === 0) {
+      const opened = (this.revealOne() ? 1 : 0) + (this.revealOne() ? 1 : 0);
+      if (opened > 0) return this.mainOf([this.t(this.line('giftDouble', e.spoken), true)]);
+    }
+    // 10 xu lúc chưa ai đúng: mở 1 chữ cho cả lớp
     if (asking && coins >= GAME.hintGiftCoins && this.correct.length === 0 && this.revealOne()) {
       return this.mainOf([this.t(this.line('giftHint', e.spoken), true)]);
+    }
+    // 5 xu trở lên: cô gọi tên cảm ơn (trả về đây thì useGame không cảm ơn thêm lần nữa)
+    if (coins >= GAME.giftThankCoins) {
+      return [this.thank(e, giftName || 'quà', coins)];
     }
     return [];
   }

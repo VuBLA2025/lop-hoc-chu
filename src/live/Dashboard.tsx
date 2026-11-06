@@ -14,17 +14,15 @@ const pick = () => {
  * - Kết nối phòng live
  * - Gõ câu cho giọng đọc trên stage
  * - Nút giả lập sự kiện để test khi chưa live
- * `preview`: bản xem trước của stage (im lặng)
+ * Không có xem trước: stage thật mở ở tab riêng (xem link ở thẻ Kết nối).
  */
 export function Dashboard({
   status,
   channelName,
-  preview,
   extra,
 }: {
   status: LiveStatus | null;
   channelName: string;
-  preview: ReactNode;
   extra?: ReactNode;
 }) {
   const [user, setUser] = useState(() => localStorageGet('tiktokUser'));
@@ -66,10 +64,9 @@ export function Dashboard({
   };
 
   return (
-    // Gọn trong 1 màn hình: cột trái là nút (tự cuộn nếu thiếu chỗ), cột phải là bản xem trước cao bằng màn hình
-    <div className="h-screen overflow-hidden bg-slate-950 p-3 text-sm text-slate-100">
-      <div className="mx-auto flex h-full max-w-[1500px] gap-3">
-        <div className="min-w-0 flex-1 space-y-3 overflow-y-auto pr-1">
+    // Chỉ panel quản lí, không xem trước: trang cuộn dọc bình thường (mở stage thật ở tab riêng)
+    <div className="min-h-screen bg-slate-950 p-3 text-sm text-slate-100">
+      <div className="mx-auto max-w-[800px] space-y-3">
           <Card title="Kết nối TikTok LIVE">
             <div className="flex gap-2">
               <input
@@ -96,9 +93,14 @@ export function Dashboard({
               ) : (
                 <span className="text-slate-400">● Chưa kết nối</span>
               )}
-              <span className="text-slate-500">
-                LIVE Studio: <b className="text-slate-300 select-all">{`${window.location.protocol}//${window.location.host}/?view=stage`}</b> · 1080×1920
-              </span>
+              <a
+                className="text-sky-400 underline"
+                href={`${window.location.protocol}//${window.location.host}/?view=stage`}
+                target="_blank"
+                rel="noreferrer"
+              >
+                Mở stage thật (tab mới, 1080×1920)
+              </a>
             </div>
             {(msg || status?.error) && <div className="mt-1 text-xs text-amber-300">{msg || status?.error}</div>}
           </Card>
@@ -181,12 +183,6 @@ export function Dashboard({
             </div>
             <p className="mt-2 text-xs text-slate-500">Sự kiện giả đi tới mọi trang đang mở, kể cả stage trong LIVE Studio.</p>
           </details>
-        </div>
-
-        <div className="flex flex-none flex-col items-center">
-          <div className="mb-1 text-xs text-slate-400">Xem trước (im lặng)</div>
-          <div className="overflow-hidden rounded-2xl ring-1 ring-slate-700">{preview}</div>
-        </div>
       </div>
     </div>
   );

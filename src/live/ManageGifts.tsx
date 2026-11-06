@@ -7,6 +7,8 @@ type NumKey = Exclude<keyof GameSettings, 'rankPoints'>;
 
 const GIFT_FIELDS: Array<{ key: NumKey; label: string; hint: string; min: number; max: number }> = [
   { key: 'hintGiftCoins', label: 'Quà mở chữ', hint: 'xu — quà từ từng này xu thì cô mở thêm 1 chữ', min: 1, max: 10000 },
+  { key: 'giftDoubleCoins', label: 'Quà mở 2 chữ', hint: 'xu — quà từ từng này xu cô mở 2 chữ', min: 1, max: 10000 },
+  { key: 'giftThankCoins', label: 'Quà cảm ơn tên', hint: 'xu — quà từ từng này xu cô gọi tên cảm ơn', min: 1, max: 10000 },
   { key: 'bigGiftCoins', label: 'Quà lớn', hint: 'xu — từ từng này xu cô khen to', min: 1, max: 10000 },
   { key: 'giftGoalXu', label: 'Mục tiêu quà', hint: 'xu — đủ từng này xu cả lớp thì câu tiếp theo thành câu vàng', min: 10, max: 100000 },
   { key: 'giftHonorPoints', label: 'Thưởng quà lớn', hint: 'điểm danh dự khi tặng từ quà lớn lúc đang hỏi', min: 0, max: 100 },

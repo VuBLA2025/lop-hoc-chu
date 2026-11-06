@@ -10,6 +10,8 @@ import { GAME } from './config';
  */
 export interface GameSettings {
   hintGiftCoins: number;
+  giftDoubleCoins: number;
+  giftThankCoins: number;
   bigGiftCoins: number;
   giftGoalXu: number;
   giftHonorPoints: number;
@@ -31,6 +33,8 @@ export interface GameSettings {
 
 export const GAME_SETTING_DEFAULTS: GameSettings = {
   hintGiftCoins: GAME.hintGiftCoins,
+  giftDoubleCoins: GAME.giftDoubleCoins,
+  giftThankCoins: GAME.giftThankCoins,
   bigGiftCoins: GAME.bigGiftCoins,
   giftGoalXu: GAME.giftGoalXu,
   giftHonorPoints: GAME.giftHonorPoints,
@@ -53,6 +57,8 @@ export const GAME_SETTING_DEFAULTS: GameSettings = {
 // Giới hạn hợp lý — server (server.ts, sanitizeGameSettings) validate y hệt.
 const LIMITS: Record<string, [number, number]> = {
   hintGiftCoins: [1, 10000],
+  giftDoubleCoins: [1, 10000],
+  giftThankCoins: [1, 10000],
   bigGiftCoins: [1, 10000],
   giftGoalXu: [10, 100000],
   giftHonorPoints: [0, 100],
@@ -104,6 +110,8 @@ export function applyGameSettings(patch: Partial<GameSettings>) {
 export function currentGameSettings(): GameSettings {
   return {
     hintGiftCoins: GAME.hintGiftCoins,
+    giftDoubleCoins: GAME.giftDoubleCoins,
+    giftThankCoins: GAME.giftThankCoins,
     bigGiftCoins: GAME.bigGiftCoins,
     giftGoalXu: GAME.giftGoalXu,
     giftHonorPoints: GAME.giftHonorPoints,

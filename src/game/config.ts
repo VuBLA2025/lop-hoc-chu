@@ -90,12 +90,14 @@ export const GAME = {
   joinKeywords: ['vaolop'],
 
   // ---------- Quà / tim ----------
-  hintGiftCoins: 30, // quà từ 30 xu: cô mở thêm 1 chữ cho cả lớp (khi chưa ai đúng)
+  hintGiftCoins: 10, // quà từ 10 xu: cô mở thêm 1 chữ cho cả lớp (khi chưa ai đúng)
+  giftDoubleCoins: 20, // quà từ 20 xu: cô mở 2 chữ cho cả lớp (khi chưa ai đúng)
+  giftThankCoins: 5, // quà từ 5 xu: cô gọi tên cảm ơn (không cần chờ lượt)
   likesPerClap: 300, // đủ 300 tim: cả lớp vỗ tay
   clapSec: 5,
   giftThanksCooldownMs: 30_000,
-  bigGiftCoins: 99,
-  giftGoalXu: 100, // đủ từng này xu quà cả lớp: câu tiếp theo thành câu vàng nhân đôi điểm
+  bigGiftCoins: 30, // quà từ 30 xu: quà lớn — khen to + điểm danh dự
+  giftGoalXu: 30, // đủ từng này xu quà cả lớp: câu tiếp theo thành câu vàng nhân đôi điểm
   giftHonorPoints: 5, // tặng từ quà lớn lúc đang hỏi: cộng từng này điểm danh dự cho người tặng
   giftRecessPoints: 2, // tặng quà lúc ra chơi: cộng từng này điểm cho người tặng
   musicVolume: 12, // nhạc nền: % âm lượng (0 là tắt nhạc)

@@ -256,6 +256,16 @@ hình lúc chuyển câu → làm cả 3:
   1 lần chạm lên stage (giống giọng cô). Tắt bằng cách chỉnh "Nhạc nền" về 0
   ở panel. Kiểm chứng local: AudioContext chạy, có sóng âm thật (RMS ~0.005).
 
+- **2026-11-06 (chiều): thang quà hạ xuống 1/5/10/20/30 xu** (đại ca dặn):
+  1 xu hoa lên bàn cô, 5 xu cô gọi tên cảm ơn, 10 xu mở 1 chữ, 20 xu mở
+  2 chữ, 30 xu quà lớn (khen to + 5 điểm danh dự); mục tiêu quà cả lớp hạ
+  từ 100 xuống 30 xu → câu vàng. Thêm 2 số chỉnh được ở panel: "Quà mở
+  2 chữ" (20) và "Quà cảm ơn tên" (5).
+- **2026-11-06 (chiều): bỏ hẳn phần "Xem trước (im lặng)" khỏi panel**
+  (theo ý đại ca từ 2026-11-05: trang quản lí không cần view tạm). Panel
+  giờ là 1 cột quản lí cuộn dọc, có link "Mở stage thật (tab mới)" ở thẻ
+  Kết nối. Stage thật vẫn chạy riêng ở `/?view=stage`.
+
 ## Chưa kiểm chứng
 
 - Nghe giọng cô giáo + nhạc nền bằng tai trên thiết bị thật.

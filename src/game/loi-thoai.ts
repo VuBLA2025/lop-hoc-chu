@@ -565,14 +565,20 @@ export const LINES = {
   ] as L1,
   // Câu khó chưa ai đúng: cô rủ cả lớp tặng quà mở chữ (nói chen, 1 lần mỗi câu)
   giftPromptHard: [
-    'Câu này khó quá, chưa ai đúng. Bạn nào tặng cô 30 xu là cô mở thêm một chữ nè.',
-    'Cả lớp bí rồi nè. Tặng cô 30 xu, cô mở chữ giúp các bạn nhỏ nha.',
+    'Câu này khó quá, chưa ai đúng. Bạn nào tặng cô 10 xu là cô mở thêm một chữ nè.',
+    'Cả lớp bí rồi nè. Tặng cô 10 xu, cô mở chữ giúp các bạn nhỏ nha.',
     'Câu khó này, bạn nào thương cô thì tặng quà, cô mở thêm một chữ liền.',
   ],
   // Đủ mục tiêu quà cả lớp: câu tiếp theo thành câu vàng
   giftGoal: [
     (n) => `Nhờ ${n}, cả lớp đủ mục tiêu quà rồi! Câu tiếp theo là câu vàng, nhân đôi điểm nha.`,
     (n) => `Hoan hô ${n}! Quà đủ mốc rồi, câu sau nhân đôi điểm, ai nhanh thì thắng lớn!`,
+  ] as L1,
+  // Quà mở 2 chữ (từ 20 xu): cô mở thêm 2 chữ cho cả lớp
+  giftDouble: [
+    (n) => `Nhờ quà của ${n}, cô mở thêm 2 chữ cho cả lớp nè.`,
+    (n) => `${n} tặng quà to, cô thưởng cả lớp 2 chữ gợi ý.`,
+    (n) => `Cảm ơn ${n}! Thêm 2 chữ trên bảng rồi, ai đoán ra nào?`,
   ] as L1,
   // Quà lớn lúc đang hỏi: mở chữ + cộng điểm danh dự cho người tặng
   giftHonor: [

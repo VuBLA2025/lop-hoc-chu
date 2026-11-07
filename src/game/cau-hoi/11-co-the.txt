@@ -16,7 +16,7 @@ VAI | Đeo cặp sách lên đây. | 1 | BỜ VAI
 TAY | Dùng để cầm nắm. | 1 | BÀN TAY
 NGÓN TAY | Mỗi bàn tay có năm cái. | 1
 MÓNG TAY | Cắt ngắn cho sạch, thợ nail sơn. | 2
-KHUỶU TAY | Chỗ gập giữa cánh tay. | 3 | CÙI CHỎ, KHUỶU
+KHUỶU TAY | Khớp hay bị viêm ở dân chơi tennis, va vào cạnh bàn thì tê buốt lan xuống các ngón. | 3 | CÙI CHỎ, KHUỶU
 CHÂN | Dùng để đi. | 1 | BÀN CHÂN
 ĐẦU GỐI | Chỗ gập giữa chân, ngã hay bị trầy. | 2
 GÓT CHÂN | Phần sau bàn chân. | 2
@@ -37,9 +37,9 @@ MỒ HÔI | Chảy ra khi nóng hay chạy nhiều. | 2
 NƯỚC MẮT | Chảy ra khi khóc. | 1
 > Đây là chuyện cơ thể, sức khỏe.
 NỤ CƯỜI | Thứ đẹp nhất trên gương mặt. | 1
-LÚM ĐỒNG TIỀN | Vết lõm xinh trên má khi cười. | 3
+LÚM ĐỒNG TIỀN | Vết lõm xuất hiện khi cười, do cơ mặt ngắn hơn bình thường, di truyền từ cha mẹ sang con. | 3
 NỐT RUỒI | Chấm nhỏ trên da, người ta bảo có duyên. | 2
-TÀN NHANG | Đốm nâu nhỏ trên mặt. | 3
+TÀN NHANG | Đốm nâu li ti xuất hiện nhiều sau mùa hè, do da tăng sắc tố melanin để chống nắng. | 3
 MỤN | Nổi trên mặt tuổi dậy thì. | 1 | MỤN TRỨNG CÁ
 SỐT | Người nóng, đo nhiệt kế ba mươi chín độ. | 1 | BỊ SỐT
 CẢM CÚM | Hắt xì, sổ mũi, đau đầu. | 2 | CẢM, CÚM
@@ -53,7 +53,7 @@ KHẨU TRANG | Đeo che miệng mũi tránh bụi. | 2
 THUỐC | Uống khi ốm, có viên, có siro. | 1
 BỆNH VIỆN | Nơi khám chữa bệnh, có xe cứu thương. | 1
 TIÊM PHÒNG | Chích vắc xin để không bị bệnh. | 2 | TIÊM CHỦNG
-BĂNG CÁ NHÂN | Dán lên vết đứt tay. | 3 | URGO
+BĂNG CÁ NHÂN | Miếng dán nhỏ có lớp gạc giữa, y tá Earl Dickson sáng chế năm 1920 cho vợ hay đứt tay nấu ăn. | 3 | URGO
 VITAMIN | Chất cần thiết có nhiều trong rau quả. | 2
 CHIỀU CAO | Đo bằng thước, uống sữa để tăng. | 2
 CÂN NẶNG | Đứng lên cân để đo. | 2
@@ -67,11 +67,21 @@ TẮM | Làm mỗi tối cho sạch sẽ. | 1
 NGÁP | Há miệng to khi buồn ngủ. | 1
 HẮT HƠI | Hắt xì một cái. | 2 | HẮT XÌ
 NẤC CỤT | Ăn vội bị cái này, hức hức. | 2 | NẤC
-CHUỘT RÚT | Bơi lâu bị co cứng bắp chân. | 3
+CHUỘT RÚT | Cơn co cứng bất ngờ ở bắp chân khi bơi lâu, do thiếu nước và muối khoáng, phải duỗi thẳng ra mới hết. | 3
 TÊ CHÂN | Ngồi xổm lâu đứng dậy bị kiến bò. | 2
 VÂN TAY | Đường nét riêng trên đầu ngón, mở khóa điện thoại. | 2
-NHÓM MÁU | A, B, AB hoặc O. | 3
-TẾ BÀO | Đơn vị nhỏ nhất của cơ thể sống. | 3
+NHÓM MÁU | Ký hiệu A, B, AB, O do bác sĩ Karl Landsteiner phân loại năm 1900, quyết định ai cho ai nhận được. | 3
+TẾ BÀO | Đơn vị nhỏ nhất tạo nên cơ thể, Robert Hooke nhìn thấy lần đầu năm 1665 qua kính hiển vi thô sơ. | 3
 CƠ BẮP | Tập gym cho to lên. | 2
-SIX PACK | Cơ bụng sáu múi. | 3 | CƠ BỤNG
-HUYẾT ÁP | Đo bằng máy bó tay. | 3
+SIX PACK | Thành quả dân tập gym khoe sau nhiều tháng ăn kiêng, gập bụng và chạy bộ mỗi sáng. | 3 | CƠ BỤNG
+HUYẾT ÁP | Chỉ số 120/80 chuẩn lý tưởng, đo bằng vòng bít quấn quanh cánh tay, tăng cao dễ gây đột quỵ. | 3
+XƯƠNG SƯỜN | Khung cong ôm quanh lồng ngực, gãy một thanh thì hít thở cũng đau nhói. | 3
+CƠ HOÀNH | Tấm màng mỏng ngăn ngực với bụng, thu lại khi hít vào, thắt bất ngờ gây ra tiếng nấc. | 3
+TUYẾN GIÁP | Nội tiết hình bướm ở cổ, điều khiển tốc độ trao đổi chất, thiếu iốt sẽ sưng to thành bướu cổ. | 3
+DÂY CHẰNG | Sợi chắc nối xương với xương ở khớp, cầu thủ đá bóng hay bị đứt sợi chéo trước ở gối. | 3
+MÀNG NHĨ | Lớp mỏng rung khi âm thanh tới, thủng thì nghe kém, bác sĩ soi tai thấy ngay. | 3
+TUỶ SỐNG | Sợi trắng chạy dọc bên trong cột xương lưng, truyền lệnh từ não xuống tay chân, tổn thương gây liệt. | 3
+HUYẾT SẮC TỐ | Chất đỏ trong hồng cầu, mang oxy đi khắp cơ thể, thiếu nó thì xanh xao chóng mặt. | 3
+LOÃNG XƯƠNG | Bệnh làm khung cơ thể giòn dễ gãy ở người già, thiếu canxi và vitamin D, đo mật độ mới biết. | 3
+ĐỘT QUỴ | Cơn nguy kịch khi mạch máu não tắc hoặc vỡ, dấu hiệu mặt méo, tay yếu, nói khó, cần cấp cứu ngay. | 3
+MIỄN DỊCH | Hệ thống phòng thủ của cơ thể, vắc xin tập cho nó nhận diện kẻ xâm nhập trước khi bệnh thật tới. | 3

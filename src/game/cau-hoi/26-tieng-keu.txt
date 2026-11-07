@@ -35,3 +35,19 @@ SẤM | Ầm ầm vang trên trời lúc sắp mưa to. | 2 | TIẾNG SẤM, S�
 MƯA | Lộp độp trên mái tôn. | 1 | CƠN MƯA, TIẾNG MƯA
 GIÓ | Vi vu thổi qua rặng tre. | 2 | CƠN GIÓ, TIẾNG GIÓ
 SÓNG BIỂN | Rì rào vỗ vào bờ cát. | 2 | SÓNG, TIẾNG SÓNG
+# Thêm câu khó (độ 3) — tiếng kêu ít quen.
+CON CÚ | Trong đêm tối, từ tán cây vang lên tiếng hú dài, đôi mắt to tròn nhìn xuống. | 3 | CÚ
+CON CÁ VOI | Tiếng hát trầm dưới biển sâu, thuyền viên bảo nghe như khúc nhạc của đại dương. | 3 | CÁ VOI
+CON CÀO CÀO | Tiếng kêu như tiếng cưa nhỏ trong ruộng lúa, chân dài nhảy xa khỏi tay người. | 3 | CÀO CÀO
+CON CÓC | Tiếng ồm ộp vang trong đêm mưa, người xưa bảo nghe thấy là trời sắp mưa to. | 3 | CÓC
+CON TẮC KÈ | Đêm khuya, từ vách nhà vang lên ba tiếng rõ ràng, ai nghe đủ thì bảo là điềm may. | 3 | TẮC KÈ
+CON RẮN | Tiếng xì xì trong bụi cỏ, nghe thấy ai cũng giật mình lùi lại. | 3 | RẮN
+CON DƠI | Tiếng chít chít trong hang tối, nó bay bằng tai chứ không bằng mắt. | 3 | DƠI
+CON CÁ HEO | Tiếng chíp chíp dưới mặt nước, nó nhảy lên khỏi sóng, miệng như đang cười. | 3 | CÁ HEO
+CON HƯƠU | Trong rừng thu, vang lên tiếng kêu khàn như tiếng sáo vỡ, lúc giao mùa. | 3 | HƯƠU
+CON GẤU | Tiếng gầm trầm trong rừng sâu, nghe như gió rít qua hang đá. | 3 | GẤU
+CON CHIM CU | Tiếng kêu hai âm vang lên từ mái nhà, người xưa bảo nghe thấy là khách sắp tới. | 3 | CHIM CU
+CON QUẠ | Tiếng kêu khàn khàn trên cành khô, người xưa nghe thấy thì bảo là điềm chẳng lành. | 3 | QUẠ
+CON GÀ MÁI | Tiếng cục tác gọi bầy nhỏ về tổ, sau khi vừa đẻ trứng xong. | 3 | GÀ MÁI
+CHUÔNG GIÓ | Leng keng bên hiên nhà mỗi chiều, treo lủng lẳng dưới mái ngói. | 3 | CÁI CHUÔNG GIÓ
+LỬA CHÁY | Lách tách trong bếp củi, mùi khói bay lên thơm mùi rơm rạ. | 3

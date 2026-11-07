@@ -3,14 +3,14 @@
 ĐÀN GHI TA | Nhạc cụ sáu dây ôm ngang đùi. | 2 | GUITAR, ĐÀN GUITAR, GHI TA
 ĐÀN PIANO | Phím đen phím trắng. | 2 | PIANO, DƯƠNG CẦM
 ĐÀN BẦU | Nhạc cụ một dây của Việt Nam. | 2
-ĐÀN TRANH | Đàn có mười sáu dây, gảy bằng móng. | 3
-ĐÀN NHỊ | Hai dây, kéo bằng vĩ. | 3 | ĐÀN CÒ
-ĐÀN T'RƯNG | Ống tre gõ của Tây Nguyên. | 3 | TRƯNG
+ĐÀN TRANH | Nhạc cụ gảy bằng móng, tiếng trong như nước chảy, hay đệm cho ca trù và chầu văn. | 3
+ĐÀN NHỊ | Nhạc cụ kéo vĩ, tiếng nỉ non như khóc, hay đệm cho chèo và cải lương. | 3 | ĐÀN CÒ
+ĐÀN T'RƯNG | Nhạc cụ của đồng bào Tây Nguyên, gõ ống tre dài ngắn khác nhau thành giai điệu. | 3 | TRƯNG
 SÁO TRÚC | Thổi bằng miệng, làm từ ống tre. | 2 | SÁO
 KÈN | Thổi vào kêu to, có loại bằng đồng trong đám rước. | 1
 TRỐNG | Gõ tùng tùng. | 1
-CỒNG CHIÊNG | Nhạc cụ đồng của đồng bào Tây Nguyên. | 3
-VĨ CẦM | Nhạc cụ kẹp dưới cằm, kéo vĩ. | 3 | VIOLIN
+CỒNG CHIÊNG | Bộ nhạc cụ đồng của Tây Nguyên, đánh trong lễ hội, tiếng vang cả núi rừng, UNESCO vinh danh. | 3
+VĨ CẦM | Nhạc cụ bốn dây tựa vai, nghệ sĩ kéo cây gậy nhỏ, hay chơi bản nhạc cổ điển. | 3 | VIOLIN
 MICRO | Cầm hát karaoke. | 1 | MIC
 LOA | Phát ra âm thanh to. | 1
 KARAOKE | Hát theo lời chạy trên màn hình. | 1
@@ -18,58 +18,58 @@ BOLERO | Dòng nhạc trữ tình các cô chú mê. | 2
 NHẠC RAP | Đọc nhanh có vần, có beat. | 2 | RAP
 NHẠC VÀNG | Nhạc trữ tình xưa. | 2
 QUAN HỌ | Dân ca Bắc Ninh, liền anh liền chị. | 2
-CẢI LƯƠNG | Nghệ thuật sân khấu Nam Bộ, có vọng cổ. | 3
+CẢI LƯƠNG | Sân khấu Nam Bộ, nghệ sĩ ca vọng cổ, câu chuyện buồn hay làm khán giả rơi nước mắt. | 3
 CHÈO | Sân khấu dân gian Bắc Bộ, có vai hề. | 2
-CA TRÙ | Hát có đàn đáy, phách, trống chầu. | 3
-HÁT XẨM | Hát rong ngày xưa của người khiếm thị. | 3
-VỌNG CỔ | Bài bản nổi tiếng của cải lương. | 3
-ĐỜN CA TÀI TỬ | Nghệ thuật âm nhạc miền Tây được UNESCO công nhận. | 3
+CA TRÙ | Nghệ thuật hát ả đào xưa, có phách gõ nhịp, trống chầu chấm câu, UNESCO công nhận. | 3
+HÁT XẨM | Tiếng ca rong của người mù xưa, đàn nhị đệm, xin tiền qua từng con phố Hà Nội. | 3
+VỌNG CỔ | Bản nhạc buồn nổi tiếng Nam Bộ, nghệ sĩ ca dài hơi, câu chuyện tình dang dở. | 3
+ĐỜN CA TÀI TỬ | Nghệ thuật miền Tây, nghệ sĩ vừa đàn vừa hát, UNESCO công nhận di sản năm 2013. | 3
 RU CON | Mẹ hát à ơi cho bé ngủ. | 2 | HÁT RU
 NỐT NHẠC | Đồ, rê, mi, pha, son, la, si. | 2
 CA SĨ | Người đi hát. | 1
 BAN NHẠC | Nhóm chơi nhạc cùng nhau. | 2
-DÀN HỢP XƯỚNG | Rất nhiều người cùng hát nhiều bè. | 3
-NHẠC TRƯỞNG | Người cầm đũa chỉ huy dàn nhạc. | 3
+DÀN HỢP XƯỚNG | Đông người cùng hát nhiều bè, đứng trên bục xếp tầng, có người cầm đũa chỉ huy. | 3
+NHẠC TRƯỞNG | Người đứng trước dàn giao hưởng vung cây gậy nhỏ, cả trăm nghệ sĩ cùng theo nhịp của người ấy. | 3
 SÂN KHẤU | Nơi ca sĩ đứng biểu diễn. | 1
-BUỔI HÒA NHẠC | Đêm nhạc lớn có nhiều nghệ sĩ. | 3 | CONCERT
+BUỔI HÒA NHẠC | Đêm biểu diễn lớn, khán giả mua vé, nghệ sĩ hát liên tục, đèn sân khấu đổi màu theo từng bài. | 3 | CONCERT
 MV | Video ca nhạc. | 1 | MUSIC VIDEO
 TRIỆU VIEW | Video có lượt xem khủng. | 2
 BẢN HIT | Bài hát ai cũng thuộc. | 2 | HIT
 LỜI BÀI HÁT | Chữ chạy trên màn hình karaoke. | 2
 ĐIỆP KHÚC | Đoạn lặp lại nhiều lần trong bài hát. | 2
-NHẢY HIP HOP | Điệu nhảy đường phố. | 3 | HIPHOP
+NHẢY HIP HOP | Điệu múa đường phố, xoay người trên sàn, đội mũ lưỡi trai, nhạc beat mạnh. | 3 | HIPHOP
 BA LÊ | Múa nhón chân, váy xòe. | 2 | BALLET
 MÚA | Biểu diễn bằng động tác cơ thể. | 1
 VẼ TRANH | Dùng cọ và màu. | 1
 CỌ VẼ | Cây bút có lông chấm màu. | 2
-GIÁ VẼ | Khung ba chân đặt tranh. | 3
-TRANH ĐÔNG HỒ | Tranh dân gian in trên giấy dó, có đám cưới chuột. | 3
-GIẤY DÓ | Giấy truyền thống làm từ vỏ cây. | 3
-SƠN MÀI | Tranh phủ nhiều lớp nhựa cây rồi mài bóng. | 3
-ĐIÊU KHẮC | Nghệ thuật tạc tượng. | 3
+GIÁ VẼ | Khung ba chân họa sĩ đặt tấm vải lên, đứng tô ngoài trời hay trong phòng tranh. | 3
+TRANH ĐÔNG HỒ | Tác phẩm dân gian làng nghề Bắc Ninh, in bằng ván khắc gỗ, nổi tiếng cảnh đám cưới chuột. | 3
+GIẤY DÓ | Loại vật liệu truyền thống làm từ vỏ một loài cây, dùng in tranh dân gian và viết thư pháp. | 3
+SƠN MÀI | Nghệ thuật phủ nhiều lớp nhựa cây rồi đánh bóng, tranh lên màu sâu, hay có khảm trai. | 3
+ĐIÊU KHẮC | Nghệ thuật dùng đục chạm vào đá, gỗ, biến khối thô thành hình người hình thú. | 3
 TƯỢNG | Hình người làm bằng đá hay đồng. | 1 | BỨC TƯỢNG
 GỐM SỨ | Bát Tràng nổi tiếng nghề này. | 2
 THÊU | Dùng kim chỉ tạo hình trên vải. | 2
 ĐAN LEN | Đan áo mùa đông bằng hai que. | 2
-ORIGAMI | Nghệ thuật gấp giấy Nhật Bản. | 3 | GẤP GIẤY
+ORIGAMI | Nghệ thuật Nhật Bản xếp một tờ mỏng thành hạc, hoa, không cần cắt dán. | 3 | GẤP GIẤY
 CHỤP ẢNH | Bấm máy ghi lại khoảnh khắc. | 1
 QUAY PHIM | Ghi hình động. | 1
 > Đây là thứ thuộc về phim ảnh, sách truyện.
-RẠP CHIẾU PHIM | Mua vé bắp nước ngồi xem màn hình lớn. | 3 | RẠP PHIM
+RẠP CHIẾU PHIM | Nơi mua vé bắp nước ngồi xem màn hình lớn, đèn tắt, cả phòng cùng cười cùng khóc. | 3 | RẠP PHIM
 PHIM HOẠT HÌNH | Phim vẽ cho trẻ em. | 2 | HOẠT HÌNH
 PHIM KINH DỊ | Xem mà sợ, che mắt. | 2
 PHIM HÀI | Xem cười đau bụng. | 1
-DIỄN VIÊN CHÍNH | Người đóng vai quan trọng nhất phim. | 3
+DIỄN VIÊN CHÍNH | Người đóng vai quan trọng nhất phim, tên xuất hiện đầu tiên trong phần giới thiệu. | 3
 ĐẠO DIỄN | Người hô "diễn" và "cắt". | 2
 KỊCH BẢN | Văn bản ghi lời thoại cho diễn viên. | 2
 TRUYỆN TRANH | Sách có hình vẽ, khung thoại. | 2 | MANGA
 TIỂU THUYẾT | Truyện dài nhiều chương. | 2
 THƠ | Có vần có điệu, lục bát. | 1
 LỤC BÁT | Thể thơ câu sáu câu tám. | 2
-TRUYỆN KIỀU | Tác phẩm nổi tiếng của Nguyễn Du. | 3 | KIỀU
-DẾ MÈN | Nhân vật phiêu lưu ký của Tô Hoài. | 3
+TRUYỆN KIỀU | Tác phẩm Nguyễn Du viết bằng lục bát, kể đời nàng họ Vương ba chìm bảy nổi. | 3 | KIỀU
+DẾ MÈN | Nhân vật phiêu lưu ký của Tô Hoài, chàng côn trùng đi khắp nơi, kết bạn với anh bạn Trũi. | 3
 TẤM CÁM | Truyện cổ tích có con gà, chiếc hài, quả thị. | 2
-SỌ DỪA | Chàng trai hình quả dừa trong cổ tích. | 3
-THÁNH GIÓNG | Cậu bé vươn vai thành tráng sĩ cưỡi ngựa sắt. | 3
-SƠN TINH | Thần núi đánh nhau với Thủy Tinh. | 3
+SỌ DỪA | Chàng trai cổ tích chỉ có đầu tròn lăn lóc, cưới được công chúa nhờ chăm chỉ chăn bò. | 3
+THÁNH GIÓNG | Cậu bé ba tuổi vươn vai hóa tráng sĩ, cưỡi ngựa sắt nhổ tre đánh giặc Ân. | 3
+SƠN TINH | Thần núi dâng lễ voi chín ngà, gà chín cựa, đánh nhau với thần nước vì công chúa. | 3
 CÂY KHẾ | Truyện ăn một quả trả cục vàng. | 2

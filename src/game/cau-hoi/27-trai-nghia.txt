@@ -67,9 +67,9 @@ XẤU | Ngược nghĩa với từ: đẹp. | 1
 KHÔ | Ngược nghĩa với từ: ướt. | 1
 NÔNG | Ngược nghĩa với từ: sâu. | 2 | CẠN
 SÂU | Ngược nghĩa với từ: nông. | 2
-YÊN TĨNH | Ngược nghĩa với từ: ồn ào. | 3 | IM LẶNG, YÊN LẶNG
-LƯỜI BIẾNG | Ngược nghĩa với từ: chăm chỉ. | 3 | LƯỜI, LƯỜI NHÁC
-CHĂM CHỈ | Ngược nghĩa với từ: lười biếng. | 3 | SIÊNG NĂNG, CHĂM
+YÊN TĨNH | Giờ đọc sách trong thư viện, mọi người chỉ thì thầm, căn phòng này vắng hẳn tiếng động. | 3 | IM LẶNG, YÊN LẶNG
+LƯỜI BIẾNG | Cả ngày chỉ nằm dài xem ti vi, bài tập không động tới, tính nết này của bạn nhỏ là gì? | 3 | LƯỜI, LƯỜI NHÁC
+CHĂM CHỈ | Bạn ấy ngày nào cũng dậy sớm học bài, làm bài đầy đủ, thầy cô khen bạn ấy thế nào? | 3 | SIÊNG NĂNG, CHĂM
 DỮ | Ngược nghĩa với từ: hiền. | 2 | HUNG DỮ, DỮ TỢN
 HIỀN | Ngược nghĩa với từ: dữ. | 2 | HIỀN LÀNH
 ĐEN | Ngược nghĩa với từ: trắng. | 1
@@ -89,3 +89,14 @@ TRÁI | Ngược nghĩa với từ: phải (bên phải). | 1
 PHẢI | Ngược nghĩa với bên tay trái. | 1
 CON GÁI | Ngược nghĩa với từ: con trai. | 1 | GÁI
 TRẢ LỜI | Ngược nghĩa với từ: hỏi. | 2 | ĐÁP
+# Thêm câu khó (độ 3) — từ trái nghĩa.
+KHIÊM TỐN | Được điểm mười, bạn ấy chỉ cười nhẹ, không khoe khoang với ai, tính nết này gọi là gì? | 3
+DŨNG CẢM | Thấy bạn bị ngã, em chạy tới đỡ dậy dù trời đang tối, ai cũng khen em thế nào? | 3
+NHÚT NHÁT | Đứng trước lớp, em run run không dám nói, cứ nép sau lưng bạn, tính em thế nào? | 3
+THẬT THÀ | Làm vỡ lọ hoa, em tự nhận với mẹ thay vì đổ cho em trai, mẹ khen em thế nào? | 3
+KIÊN NHẪN | Ngồi cả buổi chiều tập viết từng nét, sai lại viết lại không cáu gắt, bạn ấy thế nào? | 3
+ĐOÀN KẾT | Cả lớp cùng nhau dọn sân trường, người quét người xúc, không ai bỏ mặc ai, tinh thần này là gì? | 3
+TIẾT KIỆM | Tiền mừng tuổi em bỏ ống heo, không mua đồ linh tinh, mẹ khen em biết thế nào? | 3
+LỄ PHÉP | Gặp người lớn, em cúi đầu chào hỏi, nói năng nhỏ nhẹ, ai cũng khen em thế nào? | 3
+KHOAN DUNG | Bạn làm hỏng bút của em, em cười bảo không sao và cho mượn cây khác, lòng em thế nào? | 3
+HIẾU THẢO | Mẹ ốm, em nấu cháo, đút từng thìa rồi ngồi quạt cho mẹ ngủ, tấm lòng này là gì? | 3

@@ -10,12 +10,23 @@ HUẾ | Cố đô có Đại Nội và sông Hương. | 1 | THÀNH PHỐ HUẾ
 QUẢNG NINH | Tỉnh có Vịnh Hạ Long nổi tiếng thế giới. | 2
 THANH HÓA | Tỉnh có Thành nhà Hồ xây bằng đá. | 2
 NGHỆ AN | Tỉnh quê hương của Bác Hồ, có làng Sen. | 2
-HÀ TĨNH | Tỉnh quê hương của đại thi hào Nguyễn Du. | 3
+HÀ TĨNH | Miền Trung, nơi có ngã ba Đồng Lộc, mười cô gái thanh niên xung phong đã ngã xuống năm 1968. | 3
 CAO BẰNG | Tỉnh có thác Bản Giốc và hang Pác Bó. | 2
-LẠNG SƠN | Tỉnh có ải Chi Lăng, nơi chém tướng giặc Liễu Thăng. | 3
+LẠNG SƠN | Tỉnh biên giới phía Bắc, có chợ Kỳ Lừa họp từ thế kỷ 17 và động Tam Thanh trong lòng núi đá. | 3
 ĐIỆN BIÊN | Tỉnh gắn với chiến thắng lừng lẫy năm 1954. | 2
-SƠN LA | Tỉnh có cao nguyên Mộc Châu trồng nhiều chè. | 3
+SƠN LA | Tỉnh Tây Bắc có nhà máy thủy điện lớn nhất Đông Nam Á trên sông Đà, gần biên giới với Lào. | 3
 HỒ CHÍ MINH | Thành phố lớn nhất nước, có chợ Bến Thành. | 1 | SÀI GÒN, TP HỒ CHÍ MINH
 ĐÀ NẴNG | Thành phố có cầu Rồng biết phun lửa. | 1
 HẢI PHÒNG | Thành phố cảng, có đảo Cát Bà. | 2
 CẦN THƠ | Thành phố miền Tây có chợ nổi Cái Răng. | 2
+# Thêm câu khó (độ 3) — tỉnh, thành sau sáp nhập 1/7/2025 (Nghị quyết 202/2025/QH15).
+LAI CHÂU | Tỉnh Tây Bắc có đèo Ô Quy Hồ, một trong tứ đại đỉnh đèo, giáp biên giới với Trung Quốc. | 3
+QUẢNG TRỊ | Tỉnh miền Trung có thành cổ và cầu Hiền Lương, nơi vĩ tuyến 17 từng chia cắt hai miền. | 3
+BẮC NINH | Tỉnh nhỏ nhất nước, có làng gốm Phù Lãng và đền Đô thờ các vua nhà Lý. | 3
+HƯNG YÊN | Tỉnh có phố Hiến xưa từng là thương cảng sầm uất, chỉ sau Thăng Long. | 3
+NINH BÌNH | Tỉnh có khu Tràng An, nơi quay phim Kong: Skull Island, và cố đô Hoa Lư. | 3
+LÀO CAI | Tỉnh biên giới có cửa khẩu Hà Khẩu và ruộng bậc thang Y Tý, giáp Vân Nam, Trung Quốc. | 3
+TUYÊN QUANG | Tỉnh có cây đa Tân Trào, nơi Bác Hồ ở và làm việc trong năm 1945. | 3
+LÂM ĐỒNG | Tỉnh Tây Nguyên có thác Pongour bảy tầng và đỉnh Langbiang, trồng nhiều hoa và rau ôn đới. | 3
+ĐỒNG THÁP | Tỉnh miền Tây có vườn quốc gia Tràm Chim, nơi sếu đầu đỏ về mỗi mùa nước nổi. | 3
+CÀ MAU | Tỉnh cực nam của Tổ quốc, có rừng đước Năm Căn và nghề nuôi tôm lớn nhất vùng. | 3

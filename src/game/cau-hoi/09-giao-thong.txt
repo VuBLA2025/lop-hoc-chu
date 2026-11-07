@@ -6,13 +6,13 @@ XE MÁY | Phương tiện phổ biến nhất ở Việt Nam. | 1
 XE BUÝT | Chở nhiều người, dừng ở trạm. | 2 | XE BUS
 XE KHÁCH | Chở người đi tỉnh xa. | 2
 XE TẢI | Chở hàng hóa nặng. | 2
-XE CỨU THƯƠNG | Hú còi chở người bệnh tới viện. | 3
-XE CỨU HỎA | Màu đỏ, có thang và vòi nước. | 3
-XE ĐẠP ĐIỆN | Xe không cần đạp, sạc pin là chạy. | 3
+XE CỨU THƯƠNG | Phương tiện ra đời từ cáng ngựa chở binh sĩ thời Napoleon, nay sơn trắng, ưu tiên qua đèn đỏ. | 3
+XE CỨU HỎA | Phương tiện màu đỏ, chở vòi rồng dài hàng trăm mét, lính chữa cháy đu thang lên tầng cao. | 3
+XE ĐẠP ĐIỆN | Phương tiện hai bánh chạy bằng pin, vặn tay ga rồi đi, hết pin thì dắt bộ. | 3
 XE LĂN | Xe dành cho người không đi được. | 2
 XÍCH LÔ | Xe ba bánh chở khách du lịch phố cổ. | 2
 TÀU HỎA | Chạy trên đường ray, kêu xình xịch. | 2 | XE LỬA
-TÀU ĐIỆN NGẦM | Chạy dưới lòng đất, gọi là metro. | 3 | METRO
+TÀU ĐIỆN NGẦM | Hệ thống vận chuyển dưới lòng đất đầu tiên mở ở London năm 1863, chạy bằng hơi nước thời đó. | 3 | METRO
 MÁY BAY | Bay trên trời chở khách. | 1
 TRỰC THĂNG | Có cánh quạt quay trên nóc. | 2
 TÀU THỦY | Đi trên biển, to lớn. | 2
@@ -20,13 +20,13 @@ THUYỀN | Chèo trên sông. | 1
 CANO | Chạy vút trên mặt nước, có động cơ. | 2 | CA NÔ
 XUỒNG | Thuyền nhỏ miền Tây. | 2
 BÈ | Kết tre nứa nổi trên mặt nước. | 2
-KHINH KHÍ CẦU | Quả bóng khổng lồ bay lên nhờ khí nóng. | 3
-TÀU NGẦM | Lặn sâu dưới biển. | 3
+KHINH KHÍ CẦU | Phương tiện bay của anh em Montgolfier năm 1783, chở gà, vịt và cừu trong chuyến đầu tiên. | 3
+TÀU NGẦM | Phương tiện quân sự lặn sâu, nhà văn Jules Verne tưởng tượng ra con Nautilus chạy bằng điện. | 3
 TÊN LỬA | Phóng lên vũ trụ. | 2
 ĐÈN ĐỎ | Gặp thì phải dừng lại. | 1
 ĐÈN XANH | Gặp thì được đi. | 1
 ĐÈN VÀNG | Đi chậm lại, chuẩn bị dừng. | 2
-VẠCH KẺ ĐƯỜNG | Sọc trắng cho người đi bộ qua đường. | 3 | VẠCH QUA ĐƯỜNG
+VẠCH KẺ ĐƯỜNG | Sọc trắng trên mặt nhựa, người Anh vẽ lần đầu năm 1951, dân gian ví như vằn ngựa vằn. | 3 | VẠCH QUA ĐƯỜNG
 VỈA HÈ | Phần đường dành cho người đi bộ, giờ toàn quán trà đá. | 2
 NGÃ TƯ | Chỗ bốn con đường gặp nhau. | 2
 BÙNG BINH | Vòng xuyến giữa ngã đường. | 2 | VÒNG XUYẾN
@@ -51,25 +51,25 @@ LỐP XE | Vỏ cao su bọc quanh bánh. | 2 | VỎ XE
 THỦNG LỐP | Cán đinh, xe xẹp, phải đi vá. | 2 | THỦNG SĂM
 GỬI XE | Đưa xe cho người trông, nhận vé. | 2
 VÉ XE | Tờ giấy nhận khi gửi xe hay đi buýt. | 2
-DÂY AN TOÀN | Thắt vào khi ngồi ô tô. | 3
+DÂY AN TOÀN | Vật thắt ngang người khi ngồi trong ô tô, Nils Bohlin phát minh kiểu ba điểm năm 1959. | 3
 GRAB | Ứng dụng gọi xe màu xanh lá. | 2
-XE ĐẠP ĐÔI | Hai người cùng đạp trên một xe. | 3
-VÁN TRƯỢT | Tấm ván có bánh, đứng lên lướt đi. | 3 | SKATEBOARD
-XE TRƯỢT | Đứng một chân đẩy, có tay lái. | 3 | XE SCOOTER
-TÀU LƯỢN | Trò chơi lao vun vút ở công viên. | 3 | TÀU LƯỢN SIÊU TỐC
+XE ĐẠP ĐÔI | Phương tiện hai bánh, hai yên, hai người cùng ngồi, cặp tình nhân hay thuê dạo quanh hồ. | 3
+VÁN TRƯỢT | Món đồ chơi California thập niên 1950, làm từ tấm lướt sóng gắn bánh xe patin. | 3 | SKATEBOARD
+XE TRƯỢT | Món đồ chơi hai bánh nhỏ, người Đức chế tạo năm 1817, đứng một chân đẩy, nay gấp gọn được. | 3 | XE SCOOTER
+TÀU LƯỢN | Trò chơi công viên, đường ray thép uốn khúc, người chơi lao xuống dốc gần như thẳng đứng. | 3 | TÀU LƯỢN SIÊU TỐC
 ĐU QUAY | Vòng tròn khổng lồ quay chậm ở công viên. | 2
 CÁP TREO | Cabin treo trên dây đưa người lên núi. | 2
-TÀU VŨ TRỤ | Đưa phi hành gia lên trời. | 3
+TÀU VŨ TRỤ | Phương tiện chở Yuri Gagarin bay quanh Trái Đất năm 1961, mang tên Vostok 1. | 3
 ĐƯỜNG RAY | Hai thanh sắt song song cho tàu chạy. | 2
 GA TÀU | Nơi chờ lên tàu hỏa. | 2
-LÀN ĐƯỜNG | Phần đường chia cho từng loại xe. | 3
+LÀN ĐƯỜNG | Phần mặt nhựa chia cho từng loại phương tiện, xe máy hay chạy sang phần của ô tô. | 3
 ĐI BỘ | Không dùng xe, chỉ dùng chân. | 1
 CẢNH SÁT | Đứng ngã tư, vẫy xe vào kiểm tra. | 2
-MŨ XE ĐẠP | Đội khi đạp xe đường dài. | 3
-XE ĐẠP THỂ THAO | Xe đạp có nhiều số, lốp to. | 3
-XE CÔNG NÔNG | Máy cày ở quê kéo thùng hàng. | 3
+MŨ XE ĐẠP | Vật đội đầu nhẹ, nhiều lỗ thoáng, dân đua đường dài đội để giảm chấn thương khi ngã. | 3
+XE ĐẠP THỂ THAO | Phương tiện hai bánh có tới 21 số, khung nhôm nhẹ, lốp gai leo đồi núi. | 3
+XE CÔNG NÔNG | Phương tiện đầu nổ ồn ào, chở gạch cát ở làng quê, người lái ngồi phơi nắng không cabin. | 3
 MÁY CÀY | Thay con trâu cày ruộng. | 2
 XE BÒ | Bò kéo thùng gỗ ở quê. | 2
 XE NGỰA | Ngựa kéo, chở người thời xưa. | 2
-TÀU CAO TỐC | Tàu chạy hơn ba trăm cây số một giờ. | 3
+TÀU CAO TỐC | Phương tiện đường sắt Nhật Bản ra mắt năm 1964, tên Shinkansen, chạy hơn 300 cây số một giờ. | 3
 XE ĐIỆN | Xe chạy pin, không xả khói. | 2

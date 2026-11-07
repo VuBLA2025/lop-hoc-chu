@@ -10,7 +10,7 @@ MẸ | "Nghĩa ... như nước trong nguồn chảy ra." | 1
 BẦU | "... ơi thương lấy bí cùng." | 1
 NGỰA | "Một con ... đau, cả tàu bỏ cỏ." | 2
 CHÙA | "Bụt ... nhà không thiêng." | 2
-TÂM | "Lực bất tòng ...": muốn lắm mà sức không theo kịp. | 3
+TÂM | Cảnh người muốn giúp mà sức không đủ, lòng có mà lực chẳng theo. | 3
 TRE | "... già măng mọc." | 1
 NGAY | "Ăn ... nói thật, mọi tật mọi lành." | 2
 ĐÈN | "Gần mực thì đen, gần ... thì rạng." | 1
@@ -36,22 +36,22 @@ HỌC | "... ăn ... nói, ... gói ... mở." | 1
 ĂN | "... trông nồi, ngồi trông hướng." | 1
 CHÂN | "... cứng đá mềm": đồng lòng thì việc gì cũng xong. | 2
 > Đây là một câu thành ngữ, tục ngữ.
-NƯỚC CHẢY ĐÁ MÒN | Kiên trì mãi thì việc khó cũng xong. | 3
-CÓ CÔNG MÀI SẮT | Vế đầu của câu "... có ngày nên kim." | 3
-TIÊN HỌC LỄ | Vế đầu khẩu hiệu treo trên bảng lớp mình. | 3
-HẬU HỌC VĂN | Vế sau khẩu hiệu treo trên bảng lớp mình. | 3
-ĐI MỘT NGÀY ĐÀNG | "... học một sàng khôn." | 3
-MƯA DẦM THẤM LÂU | Dạy từ từ mà ngấm sâu. | 3
-NƯỚC ĐỔ ĐẦU VỊT | Nói mãi mà không vào đầu. | 3
-ĐÀN GẢY TAI TRÂU | Nói chuyện với người không hiểu gì. | 3
-CƯỚP CƠM CHIM | Lấy của người yếu thế, chim cũng không tha. | 3
-MÈO MÙ VỚ CÁ RÁN | Gặp may bất ngờ, không giỏi mà vẫn trúng. | 3
-CHÓ CẮN ÁO RÁCH | Đã khổ lại còn khổ thêm. | 3
-GIẬU ĐỔ BÌM LEO | Thấy người sa cơ thì xúm vào bắt nạt. | 3
-TRÈO CAO TÉ ĐAU | Tham vọng quá sức thì ngã nặng. | 3 | TRÈO CAO NGÃ ĐAU
-CHỊ NGÃ EM NÂNG | Anh em đùm bọc nhau. | 3
-ĂN CHÁO ĐÁ BÁT | Được giúp rồi quay lại phản bội. | 3
-NÓI ÍT HIỂU NHIỀU | Người khôn không cần nói dài. | 3
+NƯỚC CHẢY ĐÁ MÒN | Giọt nhỏ rơi mãi một chỗ, cuối cùng cũng khoét thủng được thứ cứng nhất. | 3
+CÓ CÔNG MÀI SẮT | Chuyện cậu bé kiên trì chà một thỏi kim loại, minh chứng rằng bền bỉ biến việc khó thành việc xong. | 3
+TIÊN HỌC LỄ | Nửa đầu khẩu hiệu treo trên bảng lớp: trước khi mở sách, cần biết cư xử cho phải phép. | 3
+HẬU HỌC VĂN | Nửa sau khẩu hiệu treo trên bảng lớp: sau phần lễ phép, mới tới phần chữ nghĩa trong sách vở. | 3
+ĐI MỘT NGÀY ĐÀNG | Câu khuyên bước ra khỏi nhà còn hơn ngồi đọc sách cả năm: càng xa quê càng mở mang đầu óc. | 3
+MƯA DẦM THẤM LÂU | Kiểu dạy dỗ như giọt nhỏ rơi mãi, ngấm dần từng chút chứ không ào một lúc. | 3
+NƯỚC ĐỔ ĐẦU VỊT | Cảnh rót bao nhiêu lời vào tai ai mà trượt hết ra ngoài, như rơi trên bộ lông chống thấm. | 3
+ĐÀN GẢY TAI TRÂU | Cảnh chơi nhạc hay cho con vật chỉ biết gặm cỏ nghe, phí cả công sức. | 3
+CƯỚP CƠM CHIM | Kẻ tham lam đến mức giành cả phần ăn của loài nhỏ bé nhất, người ta mắng là không còn lương tâm. | 3
+MÈO MÙ VỚ CÁ RÁN | Con vật mắt kém mà tình cờ chụp trúng món ngon đang chiên giòn, ai cũng bảo là số đỏ. | 3
+CHÓ CẮN ÁO RÁCH | Đã nghèo túng mà còn bị con vật giữ nhà ngoạm thêm một phát, họa vô đơn chí. | 3
+GIẬU ĐỔ BÌM LEO | Cảnh hàng rào nghiêng ngả là dây dại cũng đè lên, kẻ yếu ngã thì kẻ khác tranh nhau chà đạp. | 3
+TRÈO CAO TÉ ĐAU | Càng leo lên chỗ chót vót quá sức, lúc rơi xuống càng ê ẩm, tham vọng hại thân. | 3 | TRÈO CAO NGÃ ĐAU
+CHỊ NGÃ EM NÂNG | Khi người lớn trong nhà vấp chân, người nhỏ đỡ dậy: tình ruột thịt đùm bọc lúc hoạn nạn. | 3
+ĂN CHÁO ĐÁ BÁT | Kẻ vừa được cho no bụng rồi quay lại đập vỡ đồ của người giúp mình, vong ơn bội nghĩa. | 3
+NÓI ÍT HIỂU NHIỀU | Người khôn chỉ cần nghe vài lời đã nắm được cả ý, không cần ai giải thích dài dòng. | 3
 CHẬM MÀ CHẮC | Từ từ mà chắc ăn. | 2
-KHÔN NHÀ DẠI CHỢ | Ở nhà thì giỏi, ra ngoài thì lóng ngóng. | 3
-GẦN NHÀ XA NGÕ | Ở gần nhau mà ít gặp. | 3
+KHÔN NHÀ DẠI CHỢ | Trong bốn bức tường thì lanh lợi tháo vát, ra tới nơi đông người lại lúng túng không biết làm gì. | 3
+GẦN NHÀ XA NGÕ | Hai hộ sát vách mà cả năm chẳng gặp mặt, lối vào quanh co như cách vạn dặm. | 3

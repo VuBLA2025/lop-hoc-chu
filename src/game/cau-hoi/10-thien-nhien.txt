@@ -11,17 +11,17 @@ MƯA ĐÁ | Mưa ra cục nước đá. | 2
 SẤM SÉT | Đùng đoàng chớp lóe trong cơn giông. | 2 | SẤM, SÉT
 GIÓ | Không nhìn thấy nhưng làm lá bay. | 1
 BÃO | Gió giật mạnh, mưa lớn, thổi tốc mái nhà. | 1
-LỐC XOÁY | Cột gió xoáy cuốn mọi thứ lên trời. | 3
+LỐC XOÁY | Cột gió mạnh nhất đo được 486 cây số một giờ ở Oklahoma năm 1999, thang đo Fujita xếp hạng sức mạnh. | 3
 SƯƠNG MÙ | Trắng xóa buổi sáng, nhìn không rõ đường. | 2
 TUYẾT | Bông trắng lạnh rơi mùa đông xứ lạnh. | 1
 BĂNG | Nước đông cứng lại. | 1
-GIÓ MÙA ĐÔNG BẮC | Đợt gió lạnh tràn về miền Bắc. | 3
+GIÓ MÙA ĐÔNG BẮC | Luồng không khí lạnh từ Siberia tràn xuống, mang theo rét đậm và ẩm ướt cho miền xuôi. | 3
 NẮNG NÓNG | Trời bốn mươi độ, ra đường như lò nướng. | 2
 LŨ LỤT | Nước dâng ngập nhà cửa. | 2 | LŨ, LỤT
 HẠN HÁN | Lâu ngày không mưa, ruộng nứt nẻ. | 2
 ĐỘNG ĐẤT | Mặt đất rung lắc dữ dội. | 2
 NÚI LỬA | Phun dung nham nóng chảy. | 2
-SÓNG THẦN | Sóng biển khổng lồ sau động đất. | 3
+SÓNG THẦN | Cơn nước khổng lồ ập vào bờ sau động đất dưới đáy biển, người Nhật gọi bằng tên tsunami, năm 2004 gây thảm họa lớn. | 3
 NÚI | Cao hơn đồi, có đỉnh. | 1
 ĐỒI | Thấp hơn núi, người ta trồng chè trên đó. | 1
 SÔNG | Dòng nước chảy ra biển. | 1
@@ -35,7 +35,7 @@ BÃI BIỂN | Chỗ nằm phơi nắng xây lâu đài cát. | 2
 HANG ĐỘNG | Lỗ lớn trong núi, có thạch nhũ. | 2 | HANG
 SA MẠC | Toàn cát, nóng, ít mưa. | 2
 RỪNG | Nhiều cây, nhiều thú. | 1 | KHU RỪNG
-RỪNG NHIỆT ĐỚI | Rừng rậm nóng ẩm như Amazon. | 3
+RỪNG NHIỆT ĐỚI | Hệ sinh thái ẩm ướt quanh xích đạo, chứa hơn nửa số loài sinh vật dù chỉ chiếm 6% diện tích đất. | 3
 ĐỒNG LÚA | Cánh đồng xanh rì ở quê. | 2 | CÁNH ĐỒNG
 ĐẤT | Ta đứng trên nó, cây mọc từ nó. | 1
 ĐÁ | Cứng, có loại cuội, có loại granit. | 1 | HÒN ĐÁ
@@ -58,19 +58,19 @@ MÙA MƯA | Miền Nam có hai mùa, đây là một. | 2
 MÙA KHÔ | Miền Nam có hai mùa, mùa nắng ráo. | 2
 TRÁI ĐẤT | Hành tinh xanh ta đang sống. | 2
 SAO HỎA | Hành tinh đỏ. | 2
-SAO KIM | Hành tinh sáng nhất, còn gọi sao Mai. | 3
-SAO MỘC | Hành tinh lớn nhất hệ Mặt Trời. | 3
-SAO THỔ | Hành tinh có vành đai đẹp nhất. | 3
+SAO KIM | Hành tinh nóng nhất hệ Mặt Trời, 465 độ C, buổi sáng gọi Mai, buổi chiều gọi Hôm. | 3
+SAO MỘC | Hành tinh lớn nhất hệ Mặt Trời, cơn bão Đốm Đỏ Lớn xoáy trên đó hơn 300 năm. | 3
+SAO THỔ | Hành tinh thứ sáu tính từ Mặt Trời, vành đai làm từ băng và đá, dày chỉ khoảng 10 mét. | 3
 SAO BĂNG | Vệt sáng vụt qua trời đêm, ước một điều. | 2
-NGÂN HÀ | Dải sáng trắng vắt ngang trời đêm. | 3 | DẢI NGÂN HÀ
-NHẬT THỰC | Mặt trăng che mặt trời giữa ban ngày. | 3
-NGUYỆT THỰC | Bóng trái đất che mặt trăng. | 3
+NGÂN HÀ | Dải sao chứa Mặt Trời, đường kính khoảng 100.000 năm ánh sáng, có 100-400 tỉ ngôi sao. | 3 | DẢI NGÂN HÀ
+NHẬT THỰC | Hiện tượng ban ngày tối sầm vài phút, người xưa tưởng rồng nuốt Mặt Trời, kính chuyên dụng mới xem được. | 3
+NGUYỆT THỰC | Hiện tượng trăng tròn chuyển màu đỏ như máu, xảy ra khi Trái Đất đứng giữa Mặt Trời và Mặt Trăng. | 3
 VŨ TRỤ | Bao la, chứa mọi vì sao. | 2
 NHIỆT ĐỘ | Đo bằng độ C. | 2
-DỰ BÁO THỜI TIẾT | Xem sau thời sự để biết mai mưa hay nắng. | 3
-SƯƠNG MUỐI | Lớp băng trắng phủ cây trên núi khi rét đậm. | 3
-RÉT ĐẬM | Dưới mười lăm độ, học sinh được nghỉ. | 3 | RÉT HẠI
-GIÓ LÀO | Gió khô nóng thổi miền Trung mùa hè. | 3
-TRIỀU CƯỜNG | Nước biển dâng cao ngập phố. | 3
-THẠCH NHŨ | Đá rủ xuống trong hang động. | 3
-MẠCH NƯỚC NGẦM | Nước chảy dưới lòng đất. | 3 | NƯỚC NGẦM
+DỰ BÁO THỜI TIẾT | Bản tin cuối chương trình tin tức, dùng vệ tinh và siêu máy tính để đoán mưa nắng ngày mai. | 3
+SƯƠNG MUỐI | Lớp tinh thể trắng phủ trên lá và mái nhà vùng núi cao, xuất hiện khi nhiệt độ xuống dưới 0 độ C. | 3
+RÉT ĐẬM | Đợt lạnh dưới 15 độ C kéo dài, học sinh mầm non và tiểu học được nghỉ học theo quy định. | 3 | RÉT HẠI
+GIÓ LÀO | Luồng khô nóng vượt dãy Trường Sơn, làm cây héo, nhà khí tượng gọi bằng tên phơn Tây Nam. | 3
+TRIỀU CƯỜNG | Hiện tượng nước biển dâng cao nhất vào ngày rằm và mùng một, gây ngập đường ở Sài Gòn mỗi năm. | 3
+THẠCH NHŨ | Cấu trúc đá vôi rủ từ trần hang, mọc dài chỉ vài milimét mỗi năm, tạo thành sau hàng nghìn năm. | 3
+MẠCH NƯỚC NGẦM | Dòng chảy ẩn dưới lòng đất, người dân khoan giếng để lấy lên tưới ruộng mùa khô. | 3 | NƯỚC NGẦM

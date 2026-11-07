@@ -11,24 +11,24 @@ MÀU ĐEN | Màu bảng lớp mình. | 1 | ĐEN
 MÀU TRẮNG | Màu áo dài của cô. | 1 | TRẮNG
 MÀU XÁM | Màu tro, mây u ám. | 2 | XÁM, MÀU GHI
 MÀU BẠC | Màu nhẫn bạc, tóc già. | 2 | BẠC
-CẦU VỒNG BẢY SẮC | Đỏ, cam, vàng, lục, lam, chàm, tím. | 3
+CẦU VỒNG BẢY SẮC | Dải màu xuất hiện sau cơn mưa, khi nắng chiếu qua giọt nước còn lơ lửng. | 3
 > Đây là kiến thức hình học.
 HÌNH TRÒN | Hình không có góc nào. | 1
 HÌNH VUÔNG | Bốn cạnh bằng nhau, bốn góc vuông. | 1
 HÌNH TAM GIÁC | Có ba cạnh ba góc. | 2
-HÌNH CHỮ NHẬT | Hai cạnh dài, hai cạnh ngắn, như cái bảng. | 3
+HÌNH CHỮ NHẬT | Bốn cạnh đối diện bằng nhau, góc nào cũng vuông, như mặt bàn lớp học. | 3
 HÌNH THOI | Bốn cạnh bằng nhau nhưng nghiêng. | 2
 HÌNH THANG | Có hai cạnh đáy song song. | 2
-NGÔI SAO NĂM CÁNH | Hình trên lá cờ Việt Nam. | 3
+NGÔI SAO NĂM CÁNH | Biểu tượng nhọn trên lá cờ, vàng trên nền đỏ, trẻ em vẽ đầu tiên khi học vẽ cờ. | 3
 HÌNH TRÁI TIM | Hình biểu tượng tình yêu. | 2
-KHỐI LẬP PHƯƠNG | Hình hộp sáu mặt vuông như con xúc xắc. | 3
+KHỐI LẬP PHƯƠNG | Hộp sáu mặt đều là hình vuông, như viên xúc xắc hay cục rubik. | 3
 HÌNH CẦU | Hình tròn như quả bóng. | 2 | KHỐI CẦU
-HÌNH NÓN | Giống cái nón lá, đáy tròn đỉnh nhọn. | 3 | KHỐI NÓN
+HÌNH NÓN | Đáy tròn đỉnh nhọn, như chiếc kem ốc quế úp ngược hay mái chóp tháp. | 3 | KHỐI NÓN
 ĐƯỜNG THẲNG | Kẻ bằng thước không cong. | 2
 ĐƯỜNG CONG | Uốn lượn, không thẳng. | 2
 GÓC VUÔNG | Chín mươi độ, như góc bảng. | 2
-ĐƯỜNG KÍNH | Đoạn qua tâm hình tròn. | 3
-BÁN KÍNH | Từ tâm tới đường tròn. | 3
+ĐƯỜNG KÍNH | Đoạn thẳng dài nhất trong hình tròn, đi qua tâm, gấp đôi đoạn từ tâm ra mép. | 3
+BÁN KÍNH | Đoạn từ tâm ra mép hình tròn, bằng một nửa đoạn dài nhất qua tâm. | 3
 CHU VI | Tổng độ dài các cạnh. | 2
 DIỆN TÍCH | Tính bằng mét vuông. | 2
 > Đây là con số hoặc phép tính.
@@ -43,7 +43,7 @@ PHÉP CỘNG | Một với một thành hai. | 2
 PHÉP TRỪ | Lấy đi bớt. | 2
 PHÉP NHÂN | Bảng cửu chương. | 2
 PHÉP CHIA | Chia đều cho mọi người. | 2
-BẢNG CỬU CHƯƠNG | Học thuộc từ hai nhân một tới chín nhân mười. | 3
+BẢNG CỬU CHƯƠNG | Bài học thuộc từ hai nhân một tới chín nhân mười, ai thuộc lòng là tính nhẩm nhanh như chớp. | 3
 SỐ CHẴN | Số chia hết cho hai. | 2
 SỐ LẺ | Số không chia hết cho hai. | 2
 PHÂN SỐ | Một phần hai, ba phần tư. | 2
@@ -61,8 +61,8 @@ TUẦN | Bảy ngày. | 1
 THÁNG | Khoảng ba mươi ngày. | 1
 NĂM | Mười hai tháng. | 1
 THẾ KỶ | Một trăm năm. | 2 | THẾ KỈ
-NĂM NHUẬN | Năm tháng hai có hai mươi chín ngày. | 3
-KÍ LÔ GAM | Đơn vị đo cân nặng. | 3 | KILOGAM, CÂN, KÝ
+NĂM NHUẬN | Tháng hai có thêm một ngày, cứ bốn lần đón Tết mới gặp một lần để bù lịch. | 3
+KÍ LÔ GAM | Đơn vị đo khối lượng, người ta hay hỏi "nặng bao nhiêu" rồi đáp bằng đơn vị này, viết tắt là kg. | 3 | KILOGAM, CÂN, KÝ
 MÉT | Đơn vị đo chiều dài. | 1
 CÂY SỐ | Một nghìn mét. | 2 | KI LÔ MÉT, KM
 LÍT | Đơn vị đo chai nước. | 1
@@ -73,6 +73,6 @@ HƯỚNG ĐÔNG | Nơi mặt trời mọc. | 2 | ĐÔNG
 HƯỚNG TÂY | Nơi mặt trời lặn. | 2 | TÂY
 BÊN TRÁI | Ngược với bên phải. | 1 | TRÁI
 TRÊN DƯỚI | Hai hướng đối nhau theo chiều đứng. | 2
-SỐ LA MÃ | Kiểu chữ số I, V, X trên đồng hồ cổ. | 3
-MÁY TÍNH BỎ TÚI | Cầm tay bấm cộng trừ nhân chia. | 3
-THƯỚC ĐO GÓC | Hình bán nguyệt có độ. | 3
+SỐ LA MÃ | Kiểu chữ I, V, X trên mặt đồng hồ cổ và chương sách, không dùng chữ Ả Rập. | 3
+MÁY TÍNH BỎ TÚI | Thiết bị cầm tay bấm cộng trừ nhân chia, học sinh mang vào phòng thi môn toán. | 3
+THƯỚC ĐO GÓC | Dụng cụ hình bán nguyệt có vạch chia, dùng để vẽ và xác định mức nghiêng trong giờ hình học. | 3

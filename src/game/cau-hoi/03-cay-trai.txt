@@ -21,7 +21,7 @@ QUẢ MẬN | Miền Bắc màu tím chua, miền Nam đỏ giòn. | 2 | MẬN, 
 QUẢ NHO | Mọc thành chùm, làm rượu vang. | 1 | NHO
 DÂU TÂY | Quả đỏ có hạt li ti ngoài vỏ, trồng ở Đà Lạt. | 2
 VÚ SỮA | Bóp mềm rồi mút, nước trắng như sữa. | 2
-MÃNG CẦU | Vỏ có mắt, ruột trắng nhiều hạt đen. | 3 | NA
+MÃNG CẦU | Vỏ sần có mắt, ruột trắng nhiều hạt đen, dầm đường đá là món giải khát miền Tây. | 3 | NA
 QUẢ LÊ | Giòn nhiều nước, hình như cái hồ lô. | 2 | LÊ
 QUẢ HỒNG | Chín đỏ mềm, ăn vào mùa thu. | 2 | HỒNG
 QUẢ CÓC | Chua giòn, ăn với muối tôm. | 2 | CÓC
@@ -39,16 +39,16 @@ CỦ TỎI | Ma cà rồng sợ nhất. | 2 | TỎI
 CỦ GỪNG | Cay nồng, pha trà uống ấm bụng. | 2 | GỪNG
 BẮP CẢI | Lá cuộn tròn thành bắp. | 2
 RAU MUỐNG | Rau luộc chấm nước tương, món quốc dân. | 2
-SU HÀO | Củ xanh nhạt, xào hoặc nấu canh. | 3
+SU HÀO | Củ xanh nhạt thân phình tròn, miền Bắc hay nấu canh xương hoặc xào. | 3
 BÍ ĐỎ | Ma Halloween khoét làm đèn. | 2 | BÍ NGÔ
-MƯỚP ĐẮNG | Ăn đắng nhưng mát, còn gọi là khổ qua. | 3 | KHỔ QUA
+MƯỚP ĐẮNG | Món xanh sần nấu canh nhồi thịt, vị lạ miệng lúc đầu nhưng càng ăn càng ghiền. | 3 | KHỔ QUA
 > Đây là một loại cây.
 CÂY TRE | Mọc quanh lũy làng, Thánh Gióng nhổ đánh giặc. | 2 | TRE
 CÂY ĐA | Cây cổ thụ đầu làng, có rễ buông thõng. | 2 | ĐA
 CÂY PHƯỢNG | Nở đỏ rực mùa hè, báo hiệu nghỉ học. | 2 | HOA PHƯỢNG
-CÂY BÀNG | Lá đỏ mùa đông, trồng ở sân trường. | 3 | BÀNG
+CÂY BÀNG | Loài trồng ở sân trường, lá to chuyển đỏ mỗi mùa đông rồi rụng đầy sân. | 3 | BÀNG
 CÂY THÔNG | Lá kim, trang trí ngày Noel. | 2 | THÔNG
-CÂY XƯƠNG RỒNG | Cây đầy gai sống ở sa mạc. | 3 | XƯƠNG RỒNG
+CÂY XƯƠNG RỒNG | Loài đầy gai sống ở sa mạc, thân mọng nước, có loại nở hoa chỉ một đêm. | 3 | XƯƠNG RỒNG
 CÂY LÚA | Cây cho ra hạt gạo. | 1 | LÚA
 CÂY NGÔ | Bắp có râu, luộc hay nướng đều ngon. | 2 | BẮP, CÂY BẮP
 CÂY MÍA | Ép lấy nước ngọt uống mùa hè. | 2 | MÍA
@@ -58,27 +58,27 @@ HOA HỒNG | Đẹp mà có gai, tặng người yêu. | 1
 HOA MAI | Hoa vàng chưng Tết miền Nam. | 2
 HOA ĐÀO | Hoa hồng chưng Tết miền Bắc. | 2
 HOA CÚC | Hoa vàng nhiều cánh nhỏ, nở mùa thu. | 2
-HOA HƯỚNG DƯƠNG | Luôn quay theo mặt trời. | 3
+HOA HƯỚNG DƯƠNG | Loài luôn quay theo mặt trời, hạt của nó ép dầu hoặc rang ăn vặt. | 3
 HOA LAN | Hoa quý, treo chậu ở hiên nhà. | 2
-HOA SỮA | Mùa thu Hà Nội thơm nồng mùi hoa này. | 3
-HOA BAN | Hoa trắng của núi rừng Tây Bắc. | 3
-HOA GẠO | Hoa đỏ nở tháng ba trên cây cao đầu làng. | 3
-HOA MƯỜI GIỜ | Hoa nhỏ nở đúng giữa buổi sáng. | 3
-HOA TULIP | Hoa nổi tiếng của Hà Lan. | 3 | TULIP
-HOA OẢI HƯƠNG | Hoa tím nổi tiếng ở Pháp, còn gọi lavender. | 3 | LAVENDER
+HOA SỮA | Mùa thu Hà Nội thơm nồng mùi này khắp phố, ai say xe thường sợ mùi ấy. | 3
+HOA BAN | Loài trắng của núi rừng Tây Bắc, nở rộ mỗi độ xuân về, có lễ hội riêng mang tên nó. | 3
+HOA GẠO | Loài đỏ nở tháng ba trên cây cao đầu làng, gắn với câu ca tháng ba về. | 3
+HOA MƯỜI GIỜ | Loài nhỏ nhiều màu sắc, chỉ bung cánh khi nắng lên giữa buổi sáng. | 3
+HOA TULIP | Loài nổi tiếng xứ Hà Lan, từng có cơn sốt mua bán củ giống đắt hơn nhà. | 3 | TULIP
+HOA OẢI HƯƠNG | Loài tím nổi tiếng vùng Provence nước Pháp, phơi khô bỏ tủ cho thơm quần áo. | 3 | LAVENDER
 > Đây là một loại cây cỏ.
-CÂY CAU | Thân thẳng tắp, quả ăn với trầu. | 3 | CAU
-LÁ TRẦU | Lá têm với cau, mở đầu câu chuyện. | 3 | TRẦU
+CÂY CAU | Thân thẳng tắp trước sân nhà, quả ăn với lá trầu mở đầu buổi trò chuyện. | 3 | CAU
+LÁ TRẦU | Miếng xanh têm với quả cau, mở đầu câu chuyện, bà xưa nhai cho đỏ môi. | 3 | TRẦU
 CÂY DỪA | Thân cao, quả cho nước ngọt mát. | 2
 NẤM | Mọc sau mưa, có loại ăn được, có loại độc. | 2
 CỎ | Mọc khắp sân, trâu bò thích gặm. | 1
 RÊU | Lớp xanh trơn mọc trên đá ẩm. | 2
 > Đây là một loại quả.
-QUẢ ĐÀO | Tôn Ngộ Không ăn trộm ở vườn của Vương Mẫu. | 3 | ĐÀO TIÊN
+QUẢ ĐÀO | Tôn Ngộ Không ăn trộm ở vườn Vương Mẫu, ai ăn vào trường sinh bất lão. | 3 | ĐÀO TIÊN
 > Đây là một loại hạt hoặc củ.
-HẠT ĐIỀU | Hạt rang muối, đặc sản Bình Phước. | 3 | ĐIỀU
-HẠT SEN | Nấu chè, giúp ngủ ngon. | 3
+HẠT ĐIỀU | Loại rang muối giòn bùi, đặc sản Bình Phước, mọc trên quả có hình giống trái tim. | 3 | ĐIỀU
+HẠT SEN | Loại nấu chè long nhãn, nằm trong đài hoa, giúp ngủ ngon theo Đông y. | 3
 ĐẬU PHỘNG | Rang lên ăn với xôi, còn gọi lạc. | 2 | LẠC, CỦ LẠC
-CỦ SẮN | Luộc chấm đường, còn gọi khoai mì. | 3 | SẮN, KHOAI MÌ
+CỦ SẮN | Loại luộc chấm đường tuổi thơ, bột của nó làm bánh và trân châu. | 3 | SẮN, KHOAI MÌ
 > Đây là một loại quả.
 QUẢ BƠ | Xay sinh tố béo ngậy. | 2 | BƠ

@@ -183,7 +183,7 @@ function Board({ v, now }: { v: StageView; now: number }) {
           {v.boardShown && <Slots slots={v.slots} reveal={v.phase === 'reveal'} />}
           {v.boardShown && v.math && v.phase !== 'reveal' && <div className="mt-2 text-center text-[28px] opacity-80">Gõ số vào bình luận</div>}
           {v.phase === 'bonus' && (
-            <div className="mt-auto text-center text-[28px] text-[#ffe680]">{v.math ? 'Thêm 10 giây, nhẩm lẹ lên!' : 'Cô mở thêm 1 chữ, thêm 10 giây!'}</div>
+            <div className="mt-auto text-center text-[28px] text-[#ffe680]">{v.math ? 'Thêm 10 giây, nhẩm lẹ lên!' : 'Thêm 10 giây! Thả tim đủ 200 hoặc tặng 5 xu để mở 1 chữ!'}</div>
           )}
         </div>
       )}
@@ -506,6 +506,7 @@ function GiftPerks({ v }: { v: StageView }) {
         <div>🌸 1 xu: hoa lên bàn cô</div>
         <div>💬 {GAME.giftThankCoins} xu: cô gọi tên cảm ơn</div>
         <div>💡 {GAME.hintGiftCoins} xu: cô mở 1 chữ</div>
+        <div>❤️ {v.hintLikes}/{v.hintLikesTarget} tim: cô mở 1 chữ</div>
         <div>⭐ {GAME.giftDoubleCoins} xu: cô mở 2 chữ</div>
         <div>
           👑 {GAME.bigGiftCoins} xu: khen to + {GAME.giftHonorPoints} điểm

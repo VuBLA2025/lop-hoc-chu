@@ -9,7 +9,7 @@ BÀ NGOẠI | Mẹ của mẹ. | 2
 ANH TRAI | Con trai lớn hơn mình cùng bố mẹ. | 2
 CHỊ GÁI | Con gái lớn hơn mình cùng bố mẹ. | 2
 EM BÉ | Mới sinh, khóc oe oe. | 1
-CÔ RUỘT | Em gái của bố. | 3 | CÔ
+CÔ RUỘT | Dịp giỗ tổ, người này ngồi mâm bên nội, hay được cháu nhờ giấu kẹo khỏi bố mẹ. | 3 | CÔ
 CHÚ | Em trai của bố. | 1
 BÁC | Anh hoặc chị của bố mẹ. | 1
 DÌ | Em gái của mẹ. | 1
@@ -19,9 +19,9 @@ THÍM | Vợ của chú. | 2
 DƯỢNG | Chồng của dì. | 2
 CHÁU | Con của anh chị em mình. | 1
 CHẮT | Con của cháu. | 2
-ANH HỌ | Con trai của bác, lớn hơn mình. | 3
+ANH HỌ | Người cùng về quê ăn giỗ, tuổi lớn hơn mình nhưng không ở chung nhà, hay được giao trông em. | 3
 SINH ĐÔI | Hai anh em sinh cùng lúc, giống nhau như đúc. | 2
-CON ĐẦU LÒNG | Đứa con sinh ra đầu tiên. | 3
+CON ĐẦU LÒNG | Đứa trẻ khiến cả nhà tập bế, tập pha sữa, ông bà tranh nhau đặt tên. | 3
 CON ÚT | Đứa nhỏ nhất nhà, hay được cưng. | 2 | ÚT
 CON MỘT | Không có anh chị em. | 2
 GIA ĐÌNH | Bố mẹ và các con. | 1
@@ -64,14 +64,26 @@ THẬT THÀ | Không nói dối. | 2 | TRUNG THỰC
 NÓI DỐI | Nói không đúng sự thật, mũi Pinocchio dài ra. | 2
 HÀI HƯỚC | Hay pha trò làm người khác cười. | 2 | VUI TÍNH
 KEO KIỆT | Giữ tiền khư khư, không chịu chi. | 2 | KẸT XỈ
-HÀO PHÓNG | Rộng rãi, hay cho người khác. | 3
+HÀO PHÓNG | Người lì xì dày cộp cho cả xóm trẻ con, mời cơm không bao giờ để khách phải trả tiền. | 3
 NHÚT NHÁT | Không dám nói chuyện với người lạ. | 2
 TỰ TIN | Dám đứng lên phát biểu trước lớp. | 2
 NÓNG TÍNH | Hay nổi cáu. | 2
-LẠC QUAN | Luôn nghĩ tích cực. | 3
-KIÊN NHẪN | Chờ đợi không vội vàng. | 3
+LẠC QUAN | Người trượt điểm vẫn cười bảo lần sau gỡ, trời mưa thì bảo mát, kẹt xe thì nghe thêm một bài nhạc. | 3
+KIÊN NHẪN | Người ngồi gỡ rối cả cuộn len, chờ em tập xe đạp ngã mười lần vẫn không giục. | 3
 TÒ MÒ | Thích biết chuyện của người khác. | 2
 ĐÃNG TRÍ | Hay quên trước quên sau. | 2 | HAY QUÊN
 HAY KHÓC | Khóc nhè suốt ngày. | 2 | MÍT ƯỚT
-LÉM LỈNH | Nhanh nhảu, tinh nghịch. | 3
-ĐỎNG ĐẢNH | Hay làm nũng, thất thường. | 3
+LÉM LỈNH | Đứa trẻ trả lời cô giáo một câu khiến cả lớp bật cười, mắt liếc nhanh rồi giả vờ ngây thơ. | 3
+ĐỎNG ĐẢNH | Người sáng đòi ăn phở, trưa lại chê phở ngán, chiều dỗi chỉ vì trời đổ mưa bất chợt. | 3
+CHỊ DÂU | Người mới về nhà mình dịp Tết, được giao gói bánh chưng, trẻ con gọi bằng tên của chồng mình. | 3
+EM DÂU | Người trẻ nhất trong dàn vợ của các anh trai, hay bị trêu là út ít, được người lớn cưng nhất nhà. | 3
+ANH RỂ | Người đàn ông hay chở cả nhà đi chơi Tết, được trẻ con quý vì hay mua đồ chơi. | 3
+CHÁU NỘI | Đứa trẻ mang họ của bố, Tết được ông bà lì xì đầu tiên, hay ngủ lại nhà ông bà bên bố. | 3
+CHÁU NGOẠI | Đứa trẻ mang họ của mẹ, về quê bên mẹ hay được bà nấu món ngon, Tết lì xì sau các anh chị bên nội. | 3
+BỐ DƯỢNG | Người đàn ông về sống cùng mẹ sau này, không sinh ra mình nhưng vẫn dạy mình học bài mỗi tối. | 3
+MẸ KẾ | Người phụ nữ về sống cùng bố sau này, hay bị truyện cổ tích vẽ xấu nhưng ngoài đời thương con chồng. | 3
+THÔNG GIA | Hai nhà kết nghĩa sau đám cưới, gặp nhau gọi nhau bằng danh xưng riêng, hay rủ nhau đi ăn giỗ. | 3
+CÔ HỌ | Người phụ nữ vai vế ngang hàng với bố, tuổi sàn sàn nhau, ngày giỗ tổ hay ngồi mâm người lớn. | 3
+DÌ RUỘT | Người hay lén cho cháu tiền ăn vặt, giống mẹ như đúc, Tết hay gọi điện hỏi thăm cháu đầu tiên. | 3
+GIA PHẢ | Cuốn sổ ghi tên các đời trong họ, ngày giỗ tổ mang ra đọc, ai cũng phải giữ gìn cẩn thận. | 3
+GIỖ TỔ | Ngày cả họ tụ về nhà thờ họ, thắp hương cho người đã khuất, ăn cỗ chung một mâm lớn. | 3

@@ -357,15 +357,17 @@ export const LINES = {
     'Còn nửa thời gian. Cô ngồi chờ mà nóng ruột quá.',
   ] as L0,
 
+  // Hết giờ chưa ai đúng: chỉ thêm mười giây, KHÔNG tự mở chữ nữa.
+  // Muốn mở chữ thì cả lớp thả tim đủ 200 hoặc tặng quà từ 5 xu (xem likeHint, giftHint).
   bonus: [
-    'Khó quá hả cả lớp? Cô mở thêm một chữ, cho thêm mười giây nữa nè.',
-    'Thôi được rồi, cô thương, cô mở một chữ. Mười giây nữa thôi đó.',
-    'Cả lớp bí rồi. Cô cho gợi ý thêm một chữ, nhanh lên!',
-    'Hết giờ mà chưa ai đúng. Cô nhá hàng thêm một chữ, mười giây nữa.',
-    'Cô mở thêm một chữ nè. Vậy mà còn không ra thì cô đi về.',
-    'Bí thật hả? Cô cho thêm một chữ với mười giây. Ráng lên.',
-    'Lớp mình làm cô lo quá. Thêm một chữ, thêm mười giây.',
-    'Gợi ý thêm một chữ. Câu này mà sai nữa là về chép phạt hết.',
+    'Khó quá hả cả lớp? Cô cho thêm mười giây nữa nè, muốn mở chữ thì thả tim hoặc tặng quà nha.',
+    'Thôi được rồi, cô thương, cô cho mười giây nữa. Chữ thì cả lớp tự mở bằng tim với quà nha.',
+    'Cả lớp bí rồi. Cô cho thêm mười giây, nhanh lên!',
+    'Hết giờ mà chưa ai đúng. Thêm mười giây nữa, ráng lên!',
+    'Cô cho thêm mười giây nè. Vậy mà còn không ra thì cô đi về.',
+    'Bí thật hả? Cô cho thêm mười giây. Thả tim đủ 200 là có chữ gợi ý đó.',
+    'Lớp mình làm cô lo quá. Thêm mười giây, thêm cơ hội.',
+    'Thêm mười giây nữa nè. Câu này mà sai nữa là về chép phạt hết.',
   ] as L0,
 
   // ---------- Hiện đáp án ----------
@@ -563,10 +565,16 @@ export const LINES = {
     (n) => `Cảm ơn ${n}! Thêm một chữ trên bảng rồi, ai đoán ra nào?`,
     (n) => `${n} bao cả lớp một chữ. Cảm ơn bạn đi các bạn nhỏ.`,
   ] as L1,
+  // Đủ 200 tim trong 1 câu: cô mở thêm một chữ cho cả lớp
+  likeHint: [
+    'Đủ 200 tim rồi, cô mở thêm một chữ cho cả lớp nè.',
+    'Cả lớp thả tim giỏi quá, thêm một chữ trên bảng rồi nè.',
+    'Tim bay đầy lớp, cô thưởng cả lớp một chữ gợi ý.',
+  ] as L0,
   // Câu khó chưa ai đúng: cô rủ cả lớp tặng quà mở chữ (nói chen, 1 lần mỗi câu)
   giftPromptHard: [
-    'Câu này khó quá, chưa ai đúng. Bạn nào tặng cô 10 xu là cô mở thêm một chữ nè.',
-    'Cả lớp bí rồi nè. Tặng cô 10 xu, cô mở chữ giúp các bạn nhỏ nha.',
+    'Câu này khó quá, chưa ai đúng. Bạn nào tặng cô 5 xu là cô mở thêm một chữ nè.',
+    'Cả lớp bí rồi nè. Tặng cô 5 xu, cô mở chữ giúp các bạn nhỏ nha.',
     'Câu khó này, bạn nào thương cô thì tặng quà, cô mở thêm một chữ liền.',
   ],
   // Đủ mục tiêu quà cả lớp: câu tiếp theo thành câu vàng

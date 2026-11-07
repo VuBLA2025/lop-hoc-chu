@@ -191,6 +191,10 @@ export class Classroom {
   tiles: string[] = [];
   revealed = new Set<number>(); // vị trí chữ đã mở (tính trên đáp án bỏ khoảng trắng)
   private bonusUsed = false;
+  /** Tim thật đã nhận trong câu đang hỏi (đếm lại mỗi câu): đủ GAME.hintLikes thì cô mở 1 chữ */
+  private likesThisQ = 0;
+  /** Số chữ đã mở nhờ tim trong câu này (mỗi mốc 200 tim mở 1 chữ) */
+  private hintLikesOpened = 0;
   private quietSaid = false;
   correct: Answerer[] = [];
   private tried = new Set<string>(); // ai đã trả lời câu này (đúng hay sai)
@@ -405,17 +409,19 @@ export class Classroom {
     const perCat = (c: string) => taken.filter((q) => q.category === c).length;
     const prev = taken[taken.length - 1]?.category;
     const slot = (SLOTS as readonly string[]).includes(difficulty) ? difficulty : undefined;
-    const kind = (q: Question) => q.slot === slot && !this.banned.has(q.id) && !used.has(q.id);
+    // Bản khó (GAME.hardOnly): câu đố mẹo / lịch sử / tiếng Anh cũng chỉ bốc câu độ khó.
+    // Câu chữ thường đã do roundPlan toàn 'hard' quyết. Kiểm tra miệng lúc ra chơi vẫn dùng câu dễ như cũ.
+    const kind = (q: Question) => q.slot === slot && (!slot || !GAME.hardOnly || q.difficulty === 'hard') && !this.banned.has(q.id) && !used.has(q.id);
     let pool = this.bank.filter((q) => kind(q) && (slot || q.difficulty === difficulty));
     // chủ đề cả lớp bình chọn: lấy trong chủ đề đó trước (cùng độ khó, hết thì khác độ khó)
     const fav = topic ? pool.filter((q) => q.category === topic) : [];
-    const favAny = topic && !fav.length ? this.bank.filter((q) => kind(q) && q.category === topic) : [];
+    const favAny = topic && !fav.length ? this.bank.filter((q) => kind(q) && q.category === topic && (!GAME.hardOnly || q.difficulty === 'hard')) : [];
     if (fav.length || favAny.length) pool = fav.length ? fav : favAny;
     else {
       const nice = pool.filter((q) => q.category !== prev && perCat(q.category) < 2);
       if (nice.length) pool = nice;
     }
-    if (!pool.length) pool = this.bank.filter((q) => kind(q));
+    if (!pool.length) pool = this.bank.filter((q) => kind(q) && (slot || q.difficulty === difficulty));
     if (!pool.length) return null;
     // xáo trước rồi xếp theo lần hỏi gần nhất: câu chưa hỏi bao giờ lên đầu, thứ tự trong file không ảnh hưởng
     const at = (q: Question) => this.history[q.id] ?? 0;
@@ -584,6 +590,8 @@ export class Classroom {
     this.giftPrompted = false;
     this.revealed = new Set();
     this.bonusUsed = false;
+    this.likesThisQ = 0;
+    this.hintLikesOpened = 0;
     this.quietSaid = false;
     this.correct = [];
     this.tried = new Set();
@@ -737,12 +745,12 @@ export class Classroom {
       this.award(s, GAME.giftHonorPoints, now, true);
       return this.mainOf([this.t(this.line('giftHonor', e.spoken, String(GAME.giftHonorPoints)), true)]);
     }
-    // 20 xu lúc chưa ai đúng: mở 2 chữ cho cả lớp
+    // 10 xu lúc chưa ai đúng: mở 2 chữ cho cả lớp
     if (asking && coins >= GAME.giftDoubleCoins && this.correct.length === 0) {
       const opened = (this.revealOne() ? 1 : 0) + (this.revealOne() ? 1 : 0);
       if (opened > 0) return this.mainOf([this.t(this.line('giftDouble', e.spoken), true)]);
     }
-    // 10 xu lúc chưa ai đúng: mở 1 chữ cho cả lớp
+    // 5 xu lúc chưa ai đúng: mở 1 chữ cho cả lớp
     if (asking && coins >= GAME.hintGiftCoins && this.correct.length === 0 && this.revealOne()) {
       return this.mainOf([this.t(this.line('giftHint', e.spoken), true)]);
     }
@@ -774,9 +782,20 @@ export class Classroom {
       this.recess.hearts += count * GAME.heartBoost;
       return [];
     }
-    if (!reachedClap) return [];
+    const out: Say[] = [];
+    // Đang hỏi câu chữ, chưa ai đúng: đếm tim thật trong câu này, đủ 200 tim thì cô mở 1 chữ.
+    // Câu toán không mở số. Hết chữ được mở thì tim vẫn đếm nhưng không mở thêm.
+    if ((this.phase === 'question' || this.phase === 'bonus') && !this.q?.math && this.correct.length === 0) {
+      this.likesThisQ += count;
+      while (this.likesThisQ >= (this.hintLikesOpened + 1) * GAME.hintLikes && this.revealOne()) {
+        this.hintLikesOpened++;
+        out.push({ ...this.line0('likeHint'), ttl: 6000 });
+      }
+    }
+    if (!reachedClap) return out;
     this.clapUntil = now + GAME.clapSec * 1000;
-    return [this.line0('clap')];
+    out.push(this.line0('clap'));
+    return out;
   }
 
   private reveal(now: number): Say[] {
@@ -1060,8 +1079,8 @@ export class Classroom {
       case 'question':
         if (this.correct.length === 0 && !this.bonusUsed) {
           this.bonusUsed = true;
-          // câu toán không mở số, chỉ cho thêm giờ
-          if (!this.q?.math) this.revealOne();
+          // Hết giờ chưa ai đúng: chỉ cho thêm giờ, KHÔNG tự mở chữ nữa.
+          // Muốn mở chữ thì cả lớp thả tim đủ 200 hoặc tặng quà từ 5 xu (xem like() và gift()).
           this.setPhase('bonus', now, GAME.bonusSec);
           return this.mainOf([this.line0(this.q?.math ? 'mathBonus' : 'bonus')]);
         }
@@ -1232,6 +1251,9 @@ export class Classroom {
       praiseTop: this.phase === 'praise' ? this.seats(3).filter((s) => s.score > 0).map(({ username, nickname, score, desk }) => ({ username, nickname, score, desk })) : [],
       correctTop: this.correct.slice(0, 3).map(({ username, nickname, avatar, points }) => ({ username, nickname, avatar, points })),
       correctCount: this.correct.length,
+      // Tiến độ mở chữ bằng tim trong câu đang hỏi: đủ hintLikesTarget tim thì cô mở 1 chữ
+      hintLikes: this.likesThisQ,
+      hintLikesTarget: GAME.hintLikes,
       seats: seated.slice(0, GAME.seats).map(pub),
       standing: seated.slice(GAME.seats).map(pub), // không có ghế: đứng ngoài cửa hóng, vẫn tính điểm
       sessionTop: this.sessionTop(5).map(({ username, nickname, session }) => ({ username, nickname, session })),

@@ -10,7 +10,7 @@ import { LINES, PICK_TOPICS, POLLS } from './loi-thoai';
 
 const dir = path.join(import.meta.dirname, 'cau-hoi');
 const BANK = parseBank(Object.fromEntries(fs.readdirSync(dir).map((f) => [f, fs.readFileSync(path.join(dir, f), 'utf8')])));
-const mk = (answer: string, d: Question['difficulty'] = 'easy', id = answer): Question => ({ id, answer, clue: 'gợi ý', kind: 'Đây là thử.', category: 'x', difficulty: d });
+const mk = (answer: string, d: Question['difficulty'] = 'hard', id = answer): Question => ({ id, answer, clue: 'gợi ý', kind: 'Đây là thử.', category: 'x', difficulty: d });
 const who = (i: number) => ({ username: `u${i}`, nickname: `Bạn ${i}`, spoken: `Bạn ${i}`, avatar: '' });
 const chat = (c: Classroom, i: number, comment: string, createTime: number, now: number) => c.chat({ ...who(i), comment, createTime }, now);
 let t = 1_000_000;
@@ -122,17 +122,27 @@ for (const q of BANK) {
   assert.equal(c.correct.length, 1, `${q.id}: gõ đúng đáp án mà không được tính`);
 }
 
-// ---------- không ai đúng: mở 1 chữ + thêm giờ ----------
+// ---------- không ai đúng: KHÔNG tự mở chữ nữa, chỉ thêm giờ; mở chữ phải đủ 200 tim hoặc quà 5 xu ----------
 {
   const c = new Classroom([mk('BẢNG ĐEN')], t);
   c.newRound(t);
   c.tick((t += GAME.introSec * 1000));
   c.tick((t += GAME.questionSec * 1000));
   assert.equal(c.phase, 'bonus');
-  assert.equal(c.revealed.size, 1);
+  assert.equal(c.revealed.size, 0, 'hết giờ chưa ai đúng thì không tự mở chữ');
   c.tick((t += GAME.bonusSec * 1000));
   assert.equal(c.phase, 'reveal');
-  // quà to mở chữ, không mở quá (số chữ - 2)
+  // đủ 200 tim trong câu thì cô mở 1 chữ; chưa đủ 200 thì không mở
+  const l = new Classroom([mk('BẢNG ĐEN')], t);
+  l.newRound(t);
+  l.tick((t += GAME.introSec * 1000));
+  l.like(GAME.hintLikes - 1, t, false);
+  assert.equal(l.revealed.size, 0, 'chưa đủ 200 tim thì chưa mở chữ');
+  l.like(1, t, false);
+  assert.equal(l.revealed.size, 1, 'đủ 200 tim thì mở 1 chữ');
+  l.like(GAME.hintLikes, t, false);
+  assert.equal(l.revealed.size, 2, 'thêm 200 tim nữa thì mở thêm 1 chữ');
+  // quà 5 xu mở chữ, không mở quá (số chữ - 2)
   const g = new Classroom([mk('BẢNG ĐEN')], t);
   g.newRound(t);
   g.tick((t += GAME.introSec * 1000));
@@ -141,7 +151,7 @@ for (const q of BANK) {
   assert.equal(g.flowers, 20);
 }
 
-// ---------- tiết thật: 20 câu, 5 dễ 6 vừa 5 khó + 4 câu toán (câu 5, 10, 15, 19); câu 20 nhân đôi; chuỗi 3 câu ----------
+// ---------- tiết thật: 20 câu, 10 câu chữ khó + 2 anh + 2 mẹo + 2 sử (đều khó) + 4 câu toán khó (câu 5, 10, 15, 19); câu 20 nhân đôi; chuỗi 3 câu ----------
 {
   const c = new Classroom(BANK, t);
   c.newRound(t);
@@ -221,11 +231,11 @@ for (const lv of [1, 2, 3, 4] as const) {
   const history: Record<string, number> = {};
   const c = new Classroom(BANK, t, Math.random, history);
   const asked = new Set<string>();
-  // chưa tới lúc hết câu dễ / câu đố mẹo (loại nào ít hơn thì hết trước)
+  // Bản khó: câu chữ thường toàn độ khó, câu có slot cũng chỉ bốc câu độ khó nên
+  // số tiết không lặp bị giới hạn bởi loại slot khó ít nhất (đố mẹo khó: 20 câu, 2 câu/tiết)
   const perRound = (d: string) => GAME.roundPlan.filter((x) => x === d).length;
-  const easy = BANK.filter((q) => q.difficulty === 'easy' && !q.slot).length;
-  const ofSlot = (s: string) => BANK.filter((q) => q.slot === s).length;
-  const rounds = Math.min(Math.floor(easy / perRound('easy')), ...['meo', 'su', 'anh'].map((s) => Math.floor(ofSlot(s) / perRound(s)))) - 2;
+  const ofSlotHard = (s: string) => BANK.filter((q) => q.slot === s && q.difficulty === 'hard').length;
+  const rounds = Math.min(...['meo', 'su', 'anh'].map((s) => Math.floor(ofSlotHard(s) / perRound(s)))) - 2;
   for (let r = 0; r < rounds; r++) {
     c.newRound((t += 1000));
     for (const id of c.usedLog.splice(0)) {

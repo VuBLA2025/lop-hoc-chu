@@ -13,21 +13,31 @@ MỸ THUẬT | Môn vẽ tranh, tô màu. | 2 | MĨ THUẬT
 ÂM NHẠC | Môn tập hát, học nốt nhạc. | 1 | NHẠC
 TIN HỌC | Môn học máy tính. | 2 | TIN
 NGOẠI NGỮ | Môn học tiếng nước ngoài. | 2
-GIÁO DỤC CÔNG DÂN | Môn dạy đạo đức, pháp luật. | 3 | GDCD
-CÔNG NGHỆ | Môn học trồng cây, nấu ăn, lắp mạch điện. | 3
+GIÁO DỤC CÔNG DÂN | Tiết học bàn về quyền trẻ em và luật đi đường, thầy cô hay cho tình huống để cả lớp tranh luận. | 3 | GDCD
+CÔNG NGHỆ | Tiết học trồng rau trên luống, nấu món đơn giản, lắp mạch cho bóng sáng, cuối kỳ nộp sản phẩm tự làm. | 3
 ĐẠO ĐỨC | Môn dạy lễ phép ở tiểu học. | 2
 TẬP VIẾT | Môn tô chữ trong vở ô li. | 2
 CHÍNH TẢ | Cô đọc cả lớp viết, sai dấu là trừ điểm. | 2
 KỂ CHUYỆN | Tiết học đứng trước lớp kể lại câu chuyện. | 2
 KHOA HỌC | Môn tìm hiểu tự nhiên ở lớp bốn, lớp năm. | 2
 HÌNH HỌC | Phần toán về tam giác, đường tròn. | 2
-ĐẠI SỐ | Phần toán có x, y, phương trình. | 3
+ĐẠI SỐ | Phần học tìm ẩn x, giải phương trình bậc hai, đồ thị parabol vẽ trên giấy kẻ ô vuông. | 3
 TIẾNG ANH | Môn học có "hello", "how are you". | 1
-QUỐC PHÒNG | Môn học tháo lắp súng, đi đều bước ở cấp ba. | 3 | GIÁO DỤC QUỐC PHÒNG
-LUYỆN TỪ VÀ CÂU | Phân môn tiếng Việt học danh từ, động từ. | 3
+QUỐC PHÒNG | Tiết học đi đều bước ngoài sân nắng, tập ngắm bắn, học đội hình đội ngũ, thi gấp chăn vuông góc. | 3 | GIÁO DỤC QUỐC PHÒNG
+LUYỆN TỪ VÀ CÂU | Phân môn tiếng Việt ghép chữ thành dòng văn, tìm cặp nghĩa giống, nghĩa ngược nhau, sửa lỗi sai cho đúng ngữ pháp. | 3
 TẬP ĐỌC | Đứng lên đọc to bài văn trong sách. | 2
-TẬP LÀM VĂN | Phân môn viết bài văn ngắn. | 3
+TẬP LÀM VĂN | Phân môn viết bài tả cảnh sân trường, mở bài thân bài kết bài, cô chấm cả chữ đẹp lẫn ý hay. | 3
 THỦ CÔNG | Môn cắt dán giấy màu. | 2
 HÁT NHẠC | Tiết cả lớp vỗ tay hát theo cô. | 2
-LÝ THUYẾT | Phần học trên sách, chưa thực hành. | 3
-THỰC HÀNH | Phần làm thật trong phòng thí nghiệm. | 3
+LÝ THUYẾT | Phần học ngồi nghe giảng và ghi chép, thi viết trên giấy, chưa được chạm tay vào dụng cụ thí nghiệm. | 3
+THỰC HÀNH | Phần học xắn tay làm thật, cân đo đong đếm, báo cáo kết quả, điểm dựa vào thao tác chứ không chỉ bài viết. | 3
+SỐ HỌC | Phần đếm que tính lớp một, chia thập phân lớp năm, bảng cửu chương thuộc lòng từ hồi bé. | 3
+LƯỢNG GIÁC | Phần học về sin cos tan, dùng để tính chiều cao ngọn tháp mà không cần leo lên. | 3
+GIẢI TÍCH | Phần học về đạo hàm và nguyên hàm, lớp mười hai nào cũng phải vượt qua trước kỳ thi tốt nghiệp. | 3
+XÁC SUẤT | Phần học tính khả năng xảy ra, tung đồng xu hay rút thăm đều dùng tới nó. | 3
+NGỮ PHÁP | Phần học về thành phần câu, đặt dấu câu cho đúng, viết sai là cô gạch đỏ cả bài. | 3
+THIÊN VĂN HỌC | Bộ môn về sao và hành tinh, dùng kính ngắm bầu trời đêm, người mới hay nhầm với chiêm tinh. | 3
+HÓA HỮU CƠ | Phần học về hợp chất chứa cacbon, rượu bia và nhựa đều từ đây mà ra. | 3
+CƠ HỌC | Phần nghiên cứu về lực và chuyển động, rơi tự do hay va chạm đều tuân theo quy tắc riêng. | 3
+QUANG HỌC | Phần nghiên cứu về ánh sáng, gương cầu hay thấu kính đều nằm trong chương này. | 3
+ĐỊA CHẤT | Bộ môn nghiên cứu đá và vỏ Trái Đất, đi thực tế nhặt mẫu đá, đoán tuổi qua lớp đất. | 3

@@ -1,33 +1,33 @@
 # Khoa học, công nghệ
 > Đây là thứ thuộc về khoa học, công nghệ.
 KÍNH LÚP | Phóng to chữ nhỏ, có cán cầm. | 2
-KÍNH HIỂN VI | Nhìn thấy vi khuẩn. | 3
-KÍNH THIÊN VĂN | Ngắm sao trên trời. | 3
+KÍNH HIỂN VI | Dụng cụ Leeuwenhoek mài từ thủy tinh để soi giọt nước, mở ra thế giới sinh vật mắt thường không thấy. | 3
+KÍNH THIÊN VĂN | Ống dài Galileo chĩa lên trời năm 1610, thấy vệt sọc của sao Mộc và núi lồi lõm trên Mặt Trăng. | 3
 NAM CHÂM | Hút sắt. | 2
 ĐIỆN | Chạy trong dây, làm sáng bóng đèn. | 1
 PIN | Cục nhỏ lắp vào điều khiển tivi. | 1
-TRỌNG LỰC | Lực làm quả táo rơi xuống đất. | 3 | LỰC HẤP DẪN
+TRỌNG LỰC | Thứ khiến Newton băn khoăn dưới gốc cây táo, giữ Mặt Trăng quay quanh Trái Đất không rơi đi. | 3 | LỰC HẤP DẪN
 ÁNH SÁNG | Đi nhanh nhất vũ trụ. | 2
 ÂM THANH | Tai nghe được, truyền qua không khí. | 2
 NHIỆT | Năng lượng làm nóng. | 2
 NƯỚC SÔI | Một trăm độ C. | 2
-NƯỚC ĐÓNG BĂNG | Không độ C. | 3 | ĐÓNG BĂNG
+NƯỚC ĐÓNG BĂNG | Chất lỏng để ngoài trời lạnh, mặt hồ hóa thành sân trượt, câu cá phải khoan lỗ. | 3 | ĐÓNG BĂNG
 BỐC HƠI | Nước biến thành hơi khi nóng. | 2 | BAY HƠI
 TAN CHẢY | Kem để ngoài nắng bị vậy. | 2
-NGUYÊN TỬ | Hạt nhỏ xíu tạo nên mọi vật. | 3
-PHÂN TỬ | Gồm nhiều nguyên tử liên kết. | 3
+NGUYÊN TỬ | Hạt Democritus tưởng tượng cách đây hai nghìn năm, hạt nhân ở giữa, lớp vỏ bay quanh như vệ tinh nhỏ. | 3
+PHÂN TỬ | Nhóm nhỏ gồm hai chất khí kết lại thành thứ ta uống mỗi ngày, công thức chỉ có ba ký hiệu. | 3
 VI KHUẨN | Sinh vật nhỏ xíu, có loại có lợi, có loại gây bệnh. | 2
 VIRUS | Gây cảm cúm, nhỏ hơn vi khuẩn. | 2 | VI RÚT
-QUANG HỢP | Cây xanh dùng ánh sáng tạo thức ăn. | 3
+QUANG HỢP | Quá trình lá cây hứng nắng để nấu ăn, thải ra thứ con người hít thở, nhà kính trồng rau nhờ nó. | 3
 HẠT GIỐNG | Gieo xuống đất sẽ nảy mầm. | 2
 NẢY MẦM | Hạt đậu nứt vỏ mọc chồi. | 2
 RỄ CÂY | Phần cây hút nước dưới đất. | 2 | RỄ
 LÁ CÂY | Màu xanh, quang hợp. | 1
 KHỦNG LONG | Bò sát khổng lồ tuyệt chủng. | 2
-HÓA THẠCH | Xương động vật cổ hóa đá. | 3
-TIẾN HÓA | Thuyết của Darwin. | 3
+HÓA THẠCH | Vật nằm trong đá hàng triệu năm, thợ mỏ đào được xương cá trên núi cao, bảo tàng trưng bày cả bộ xương. | 3
+TIẾN HÓA | Thuyết Darwin viết sau chuyến đi biển năm năm, chim sẻ đảo Galápagos mỏ khác nhau từng đảo. | 3
 ROBOT | Máy móc biết làm việc như người. | 1 | RÔ BỐT
-TRÍ TUỆ NHÂN TẠO | Máy biết suy nghĩ, viết tắt AI. | 3 | AI
+TRÍ TUỆ NHÂN TẠO | Cỗ máy học từ hàng triệu câu chữ, năm 1997 thắng kiện tướng cờ vua, nay viết văn và vẽ tranh. | 3 | AI
 CHATGPT | Trợ lý AI trò chuyện nổi tiếng. | 2
 MÁY ẢNH | Chụp hình, có ống kính. | 2
 MÁY IN | In tài liệu ra giấy. | 2
@@ -37,8 +37,8 @@ EMAIL | Thư điện tử. | 1 | THƯ ĐIỆN TỬ
 MẬT KHẨU | Dãy ký tự bí mật để đăng nhập. | 2 | PASSWORD
 ỨNG DỤNG | Phần mềm tải về điện thoại. | 2 | APP
 PHẦN MỀM | Chương trình chạy trên máy tính. | 2
-VIRUS MÁY TÍNH | Chương trình độc hại. | 3
-ĐIỆN TOÁN ĐÁM MÂY | Lưu dữ liệu trên mạng. | 3 | CLOUD
+VIRUS MÁY TÍNH | Chương trình lạ tự nhân bản, khóa màn hình đòi tiền chuộc, thiết bị chạy chậm dần rồi treo cứng. | 3
+ĐIỆN TOÁN ĐÁM MÂY | Kho lưu trữ không nằm trong nhà, ảnh chụp xong tự lên mạng, mất thiết bị vẫn lấy lại được. | 3 | CLOUD
 BLUETOOTH | Kết nối không dây tai nghe. | 2
 USB | Thanh nhỏ cắm máy tính lưu dữ liệu. | 2
 MÀN HÌNH | Phần hiển thị hình ảnh. | 1
@@ -49,21 +49,21 @@ CHUYỂN KHOẢN | Gửi tiền qua ngân hàng bằng điện thoại. | 2
 GPS | Định vị chỉ đường. | 2 | ĐỊNH VỊ
 VỆ TINH | Bay quanh trái đất, truyền sóng. | 2
 ĐIỆN GIÓ | Cánh quạt khổng lồ ven biển. | 2
-THỦY ĐIỆN | Nhà máy điện từ đập nước. | 3
+THỦY ĐIỆN | Nhà máy chặn dòng sông làm hồ lớn, nước xả qua tuabin quay, Hòa Bình và Sơn La nổi tiếng về nó. | 3
 Ô NHIỄM | Khói bụi, rác thải làm bẩn môi trường. | 2
-RÁC THẢI NHỰA | Túi ni lông trăm năm không phân hủy. | 3
+RÁC THẢI NHỰA | Thứ trôi nổi thành đảo giữa biển, rùa biển tưởng là sứa mà nuốt, trăm năm vẫn chưa phân hủy. | 3
 TÁI CHẾ | Biến đồ cũ thành đồ mới. | 2
-TIẾT KIỆM ĐIỆN | Ra khỏi phòng nhớ tắt đèn. | 3
-PHÒNG THÍ NGHIỆM | Nơi làm thí nghiệm, có ống nghiệm. | 3
+TIẾT KIỆM ĐIỆN | Thói quen tắt đèn khi ra khỏi phòng, dùng bóng led thay bóng sợi đốt, cuối tháng hóa đơn nhẹ hẳn. | 3
+PHÒNG THÍ NGHIỆM | Nơi áo blouse trắng, mùi hóa chất, ống thủy tinh sôi sùng sục, bảng nội quy dán ngay cửa ra vào. | 3
 ỐNG NGHIỆM | Ống thủy tinh nhỏ trong giờ hóa. | 2
-BẢNG TUẦN HOÀN | Bảng xếp các nguyên tố hóa học. | 3
+BẢNG TUẦN HOÀN | Mendeleev sắp xếp năm 1869, ô trống ngày ấy nay đã có tên, học sinh treo nó trên tường lớp học. | 3
 NƯỚC MUỐI | Súc miệng sát khuẩn. | 2
 AXIT | Chất chua, có thể ăn mòn. | 2 | A XÍT
 KIM LOẠI | Sắt, đồng, nhôm. | 2
 NHỰA | Vật liệu làm chai nước, đồ chơi. | 1
 THỦY TINH | Làm cốc, trong suốt dễ vỡ. | 2
 CAO SU | Làm lốp xe, dây thun. | 2
-XE TỰ LÁI | Ô tô không cần người cầm lái. | 3
-THỰC TẾ ẢO | Đeo kính vào như đang ở thế giới khác. | 3 | VR
-NHÀ PHÁT MINH | Edison là một người như vậy. | 3
-BÓNG ĐÈN SỢI ĐỐT | Phát minh nổi tiếng của Edison. | 3
+XE TỰ LÁI | Phương tiện không cần tay người cầm vô lăng, phanh gấp khi gặp chướng ngại, camera quét đường liên tục. | 3
+THỰC TẾ ẢO | Thế giới đeo kính vào là thấy, đứng yên một chỗ mà leo núi, lặn biển, nhà ga vũ trụ đều đi được. | 3 | VR
+NHÀ PHÁT MINH | Người thức trắng đêm thử hàng nghìn sợi dây tóc, bằng sáng chế chất đầy ngăn kéo, có phòng làm việc mang tên Menlo Park. | 3
+BÓNG ĐÈN SỢI ĐỐT | Vật Edison thử hơn nghìn lần mới sáng bền, bên trong có dây tóc mảnh như tóc, nóng lên thì phát sáng. | 3

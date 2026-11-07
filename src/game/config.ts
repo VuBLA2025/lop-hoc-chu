@@ -8,13 +8,15 @@ export const GAME = {
 
   // ---------- Một tiết học ----------
   questionsPerRound: 20,
-  // 10 câu chữ (4 dễ, 2 vừa, 4 khó) + 4 câu toán nhẩm khó dần ở câu 5, 10, 15, 19
-  // + 2 câu tiếng Anh ở câu 3, 12 + 2 câu đố mẹo ở câu 7, 13 + 2 câu lịch sử ở câu 9, 17 (chủ kênh chốt 2026-11-04).
+  // BẢN KHÓ 2026-11-07 (theo ý đại ca): giữ nguyên cấu trúc tiết cũ
+  // (vị trí toán/anh/mẹo/sử như cũ), nhưng BỘ ĐỀ TOÀN CÂU KHÓ: 10 câu chữ đều độ khó,
+  // câu đố mẹo / lịch sử / tiếng Anh chỉ bốc câu độ khó, câu toán chỉ dùng cấp 3-4 (khó).
   // Câu 20 là câu hỏi vàng nhân đôi điểm.
+  hardOnly: true,
   roundPlan: [
-    'easy', 'easy', 'anh', 'easy', 'math1',
-    'easy', 'meo', 'medium', 'su', 'math2',
-    'medium', 'anh', 'meo', 'hard', 'math3',
+    'hard', 'hard', 'anh', 'hard', 'math3',
+    'hard', 'meo', 'hard', 'su', 'math4',
+    'hard', 'anh', 'meo', 'hard', 'math3',
     'hard', 'su', 'hard', 'math4', 'hard',
   ] as const,
   introSec: 8, // cô giới thiệu đầu tiết
@@ -40,7 +42,7 @@ export const GAME = {
   sleepAfterMs: 5 * 60_000, // ngồi im chừng này thì ngủ gật 💤, thỉnh thoảng cô gọi dậy
   standChance: 0.3, // lúc trêu bạn trả lời sai: tỉ lệ cô phạt lên bục đứng (học sinh cá biệt)
   standSec: 45,
-  bonusSec: 10, // hết giờ chưa ai đúng: mở 1 chữ, thêm chừng này giây
+  bonusSec: 10, // hết giờ chưa ai đúng: chỉ thêm giờ, KHÔNG tự mở chữ nữa (mở chữ chỉ khi đủ 200 tim hoặc quà 5 xu)
   praiseEvery: 5, // cứ 5 câu cô dừng lại điểm danh bạn nhỏ giỏi, tặng quà top 3 (câu 5, 10, 15)
   praiseSec: 8, // đọc xong còn dừng chừng này giây để các bạn nhỏ chào cô, thả tim rồi mới ra câu tiếp
   giftChance: 0.4, // tỉ lệ cô thưởng quà cho bạn đúng đầu tiên / đúng 3 câu liền
@@ -90,8 +92,9 @@ export const GAME = {
   joinKeywords: ['vaolop'],
 
   // ---------- Quà / tim ----------
-  hintGiftCoins: 10, // quà từ 10 xu: cô mở thêm 1 chữ cho cả lớp (khi chưa ai đúng)
-  giftDoubleCoins: 20, // quà từ 20 xu: cô mở 2 chữ cho cả lớp (khi chưa ai đúng)
+  hintLikes: 200, // đủ từng này tim thật trong 1 câu (chưa ai đúng) thì cô mở thêm 1 chữ cho cả lớp
+  hintGiftCoins: 5, // quà từ 5 xu: cô mở thêm 1 chữ cho cả lớp (khi chưa ai đúng)
+  giftDoubleCoins: 10, // quà từ 10 xu: cô mở 2 chữ cho cả lớp (khi chưa ai đúng)
   giftThankCoins: 5, // quà từ 5 xu: cô gọi tên cảm ơn (không cần chờ lượt)
   likesPerClap: 300, // đủ 300 tim: cả lớp vỗ tay
   clapSec: 5,

@@ -26,15 +26,15 @@ BEE | Con ong tiếng Anh là gì? | 1
 ANT | Con kiến tiếng Anh là gì? | 1
 BUTTERFLY | Con bươm bướm tiếng Anh là gì? | 2
 TURTLE | Con rùa tiếng Anh là gì? | 2 | TORTOISE
-GIRAFFE | Con hươu cao cổ tiếng Anh là gì? | 3
+GIRAFFE | The animal with the longest neck reaches leaves at the top of the trees. | 3
 PENGUIN | Con chim cánh cụt tiếng Anh là gì? | 2
-DOLPHIN | Con cá heo tiếng Anh là gì? | 3
+DOLPHIN | A smart sea animal that jumps out of the waves and makes a clicking sound. | 3
 SHARK | Con cá mập tiếng Anh là gì? | 2
 CRAB | Con cua tiếng Anh là gì? | 2
 SHEEP | Con cừu tiếng Anh là gì? | 2 | LAMB
 GOAT | Con dê tiếng Anh là gì? | 2
 ZEBRA | Con ngựa vằn tiếng Anh là gì? | 2
-KANGAROO | Con chuột túi tiếng Anh là gì? | 3
+KANGAROO | This animal hops on two big back legs and carries its baby in a pouch. | 3
 OWL | Con cú mèo tiếng Anh là gì? | 2
 SPIDER | Con nhện tiếng Anh là gì? | 2
 RED | Màu đỏ tiếng Anh là gì? | 1
@@ -59,12 +59,12 @@ EIGHT | Số tám tiếng Anh là gì? | 1
 NINE | Số chín tiếng Anh là gì? | 1
 TEN | Số mười tiếng Anh là gì? | 1
 TWENTY | Số hai mươi tiếng Anh là gì? | 2
-ONE HUNDRED | Số một trăm tiếng Anh là gì? | 3 | HUNDRED, A HUNDRED
+ONE HUNDRED | The number that is ten times ten. | 3 | HUNDRED, A HUNDRED
 APPLE | Quả táo tiếng Anh là gì? | 1
 BANANA | Quả chuối tiếng Anh là gì? | 1
 MANGO | Quả xoài tiếng Anh là gì? | 2
 GRAPE | Quả nho tiếng Anh là gì? | 2 | GRAPES
-WATERMELON | Quả dưa hấu tiếng Anh là gì? | 3
+WATERMELON | A big round fruit, green outside and red inside, full of black seeds. | 3
 LEMON | Quả chanh tiếng Anh là gì? | 2 | LIME
 MILK | Sữa tiếng Anh là gì? | 1
 WATER | Nước uống tiếng Anh là gì? | 1
@@ -143,7 +143,7 @@ MOUNTAIN | Ngọn núi tiếng Anh là gì? | 2
 CLOUD | Đám mây tiếng Anh là gì? | 2
 SNOW | Tuyết tiếng Anh là gì? | 2
 WIND | Cơn gió tiếng Anh là gì? | 2
-RAINBOW | Cầu vồng tiếng Anh là gì? | 3
+RAINBOW | It appears in the sky after rain, with many colors in an arch. | 3
 HELLO | Xin chào tiếng Anh là gì? | 1 | HI
 THANK YOU | Cảm ơn tiếng Anh là gì? | 1 | THANKS
 SORRY | Xin lỗi tiếng Anh là gì? | 1
@@ -157,7 +157,7 @@ BIG | To, lớn tiếng Anh là gì? | 1 | LARGE
 SMALL | Nhỏ, bé tiếng Anh là gì? | 1 | LITTLE
 HOT | Nóng tiếng Anh là gì? | 1
 COLD | Lạnh tiếng Anh là gì? | 1
-BEAUTIFUL | Xinh đẹp tiếng Anh là gì? | 3 | PRETTY
+BEAUTIFUL | It describes something lovely to look at, like a sunset over the sea. | 3 | PRETTY
 RUN | Chạy tiếng Anh là gì? | 1
 JUMP | Nhảy lên cao tiếng Anh là gì? | 1
 SWIM | Bơi tiếng Anh là gì? | 1
@@ -174,9 +174,30 @@ SMILE | Mỉm cười tiếng Anh là gì? | 2
 WALK | Đi bộ tiếng Anh là gì? | 2
 FLY | Bay tiếng Anh là gì? | 2
 COOK | Nấu ăn tiếng Anh là gì? | 2
-MONDAY | Thứ hai tiếng Anh là gì? | 3
-SUNDAY | Chủ nhật tiếng Anh là gì? | 3
+MONDAY | The first day of the school week, right after the weekend. | 3
+SUNDAY | The last day of the weekend, when many families go to church or rest. | 3
 MORNING | Buổi sáng tiếng Anh là gì? | 2
 NIGHT | Ban đêm tiếng Anh là gì? | 2
-TODAY | Hôm nay tiếng Anh là gì? | 3
+TODAY | Not yesterday and not tomorrow — this day, right now. | 3
 BIRTHDAY | Sinh nhật tiếng Anh là gì? | 2
+# Thêm câu khó (độ 3).
+OCTOPUS | A sea animal with eight arms that can change its color. | 3
+WHALE | The biggest animal in the sea; it breathes air through a hole on its back. | 3
+CAMEL | A desert animal with one or two humps on its back. | 3
+CROCODILE | A river animal with a long mouth full of sharp teeth. | 3
+HEDGEHOG | A small animal covered in sharp spines that rolls into a ball. | 3
+SQUIRREL | A small animal with a big tail that climbs trees and eats nuts. | 3
+PEACOCK | A bird whose tail opens like a fan full of colorful eyes. | 3
+VOLCANO | A mountain that can throw out hot lava and ash. | 3
+LIGHTNING | A bright flash in the sky during a storm, just before the thunder. | 3
+UMBRELLA | You open it when it rains to stay dry. | 3
+TELESCOPE | A tool that helps you see the stars far away. | 3
+MICROSCOPE | A tool that helps you see very tiny things. | 3
+ASTRONAUT | A person who travels in space in a rocket. | 3
+LIBRARY | A quiet place where you can borrow books to read at home. | 3
+HOSPITAL | A place where sick people go to get better, with doctors and nurses. | 3
+AIRPORT | A place where planes take off and land. | 3
+CHOCOLATE | A sweet brown food made from cocoa beans. | 3
+STRAWBERRY | A small red fruit with tiny seeds on the outside. | 3
+PINEAPPLE | A yellow fruit with a spiky top and sweet flesh. | 3
+CASTLE | A big stone home of a king or queen long ago. | 3

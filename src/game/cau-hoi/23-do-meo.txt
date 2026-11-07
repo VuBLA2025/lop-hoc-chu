@@ -1,6 +1,6 @@
 # Đố mẹo
 # Câu đố mẹo: chỉ hỏi ở câu 7 và câu 13 của mỗi tiết (GAME.roundPlan 'meo'), không lẫn vào câu chữ thường.
-# Mỗi dòng: ĐÁP ÁN | câu đố | độ khó (để 2) | cách trả lời khác cũng tính đúng (cách nhau dấu phẩy)
+# Mỗi dòng: ĐÁP ÁN | câu đố | độ khó (2, câu khó để 3) | cách trả lời khác cũng tính đúng (cách nhau dấu phẩy)
 > Câu đố mẹo nè, cẩn thận bị cô lừa nha.
 QUẦN ĐẢO | Quần gì rộng nhất thế giới? | 2
 XÃ HỘI | Xã gì đông dân nhất? | 2
@@ -103,3 +103,23 @@ BÓNG ĐÁ | Môn gì hai mươi hai người tranh nhau một quả bóng? | 2 
 NHÀ VỆ SINH | Phòng gì ai cũng phải vào mà chẳng ai muốn ở lâu? | 2 | PHÒNG VỆ SINH, TOILET, WC
 CHỮ O | Chữ cái gì tròn như quả trứng? | 2 | O
 TRÁI ĐẤT | Quả gì to nhất mà không ai ăn được? | 2 | QUẢ ĐẤT
+CÁI BÀN | Thứ gì bốn chân đứng giữa nhà, bữa nào cũng bày cơm lên mặt mình? | 3
+CON KIẾN | Loài nào bé tí mà tha được hạt gạo to hơn mình, đi thành hàng dài không bao giờ lạc? | 3
+CÁI NỒI | Thứ gì bụng to ngồi trên bếp, ngày nào cũng sôi sùng sục mà không kêu ca? | 3
+QUẢ TÁO | Thứ gì đỏ như má em bé, cắn một miếng nghe giòn tan, nàng Bạch Tuyết từng ăn phải? | 3
+CON CÁ | Loài nào sống dưới nước, không bao giờ nhắm mắt ngủ, bơi suốt ngày không biết mệt? | 3
+SỢI DÂY | Thứ gì cột được mọi thứ, thả diều hay buộc hàng đều cần tới nó? | 3
+CÁI LY | Thứ gì trong suốt, đựng nước mà không uống giọt nào, vỡ ra thì kêu loảng xoảng? | 3
+CÁI NÓN | Thứ gì che nắng che mưa, đội lên đầu mà không phải mũ, làm bằng lá cọ? | 3
+NGÔI SAO | Thứ gì đêm nào cũng lấp lánh trên trời, ước một điều rồi nhắm mắt lại? | 3
+CON SÂU | Loài nào ăn lá cả ngày, ngủ một giấc trong kén rồi hóa thành bướm bay đi? | 3
+CÁI MÀN | Thứ gì buông xuống mỗi tối, muỗi không chui vào được, ngủ ngon nhờ có nó? | 3
+BỨC TRANH | Thứ gì treo trên tường, có núi có sông mà không ướt chân, nhìn mãi không chán? | 3
+CON THUYỀN | Thứ gì chở người qua sông, không bánh xe không động cơ, chỉ nhờ mái chèo đẩy đi? | 3
+CÁI VÕNG | Thứ gì treo giữa hai cây, nằm đung đưa ngủ trưa, càng nằm càng êm? | 3
+QUẢ CAM | Thứ gì vỏ vàng, múi mọng nước, vắt ra uống vừa chua vừa ngọt? | 3
+CON BƯỚM | Loài nào đôi cánh đầy màu sắc, đậu lên hoa mà không ăn hoa, bay đi khi trời nắng? | 3
+CÁI ĐÈN PIN | Thứ gì nhỏ gọn cầm tay, tối thui bật lên là sáng, hết năng lượng thì tắt ngóm? | 3
+SỐ HAI | Thứ nào đứng sau thứ đầu tiên, cặp vịt giống hệt nhau hay được ví với nó? | 3 | HAI, 2
+CÂY TRE | Thứ gì thẳng tắp, gió thổi vẫn đứng vững, làm nhà làm đũa đều dùng tới? | 3
+CON RẮN | Loài nào không chân mà bò nhanh, lưỡi chẻ đôi, gặp nó ai cũng tránh xa? | 3

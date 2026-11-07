@@ -10,59 +10,59 @@ HỘI AN | Phố cổ đèn lồng ở Quảng Nam. | 2
 NHA TRANG | Thành phố biển nổi tiếng ở Khánh Hòa. | 2
 VŨNG TÀU | Thành phố biển gần Sài Gòn nhất, có tượng Chúa. | 2
 PHÚ QUỐC | Hòn đảo lớn nhất Việt Nam. | 2
-CÔN ĐẢO | Quần đảo có nhà tù xưa, nay là nơi du lịch. | 3
+CÔN ĐẢO | Nơi Võ Thị Sáu yên nghỉ, từng giam giữ tù chính trị suốt hơn một thế kỷ. | 3
 HẠ LONG | Vịnh có hàng nghìn đảo đá, di sản thế giới. | 2
 SA PA | Thị trấn trong sương ở Lào Cai, có ruộng bậc thang. | 2
-MỘC CHÂU | Cao nguyên hoa mận trắng, đồi chè xanh ở Sơn La. | 3
+MỘC CHÂU | Cao nguyên Tây Bắc, tháng giêng trắng xóa hoa mận, đồi chè xanh mướt. | 3
 HÀ GIANG | Tỉnh cực Bắc, có cột cờ Lũng Cú. | 2
 CÀ MAU | Mũi đất cực Nam Tổ quốc. | 2
 CẦN THƠ | Thủ phủ miền Tây, có chợ nổi Cái Răng. | 2
 SÔNG HỒNG | Con sông nước đỏ nặng phù sa chảy qua Hà Nội. | 2
 SÔNG HƯƠNG | Dòng sông thơ mộng chảy qua Huế. | 2
-SÔNG CỬU LONG | Chín nhánh sông đổ ra biển ở miền Tây. | 3 | SÔNG MÊ KÔNG
+SÔNG CỬU LONG | Dòng nước bắt nguồn từ cao nguyên Tây Tạng, chia nhánh ở đồng bằng miền Tây trước khi ra biển. | 3 | SÔNG MÊ KÔNG
 HỒ GƯƠM | Hồ có tháp Rùa giữa lòng Hà Nội. | 2 | HỒ HOÀN KIẾM
 HỒ TÂY | Hồ lớn nhất Hà Nội, có bánh tôm. | 2
 VĂN MIẾU | Trường đại học đầu tiên của Việt Nam. | 2 | QUỐC TỬ GIÁM
 LĂNG BÁC | Nơi viếng Bác ở quảng trường Ba Đình. | 2
-CHỢ BẾN THÀNH | Khu chợ có tháp đồng hồ ở Sài Gòn. | 3
-DINH ĐỘC LẬP | Xe tăng húc đổ cổng ngày ba mươi tháng tư. | 3
-NHÀ THỜ ĐỨC BÀ | Nhà thờ gạch đỏ ở trung tâm Sài Gòn. | 3
+CHỢ BẾN THÀNH | Khu mua bán trăm tuổi có tháp đồng hồ bốn mặt, biểu tượng in trên nhiều bưu thiếp xưa. | 3
+DINH ĐỘC LẬP | Tòa nhà Thống Nhất xưa, nơi chiếc xe tăng 390 tiến vào trưa 30-4-1975. | 3
+NHÀ THỜ ĐỨC BÀ | Công trình gạch đỏ hơn trăm tuổi, tháp chuông đôi cao 57 mét giữa trung tâm Sài Gòn. | 3
 PHỐ CỔ | Khu ba mươi sáu phố phường Hà Nội. | 2
 FANSIPAN | Nóc nhà Đông Dương. | 2 | PHAN XI PĂNG
-CẦU LONG BIÊN | Cây cầu sắt cũ bắc qua sông Hồng. | 3
+CẦU LONG BIÊN | Khung sắt trăm tuổi do Pháp xây, từng bị bom đánh sập nhiều nhịp, nay chỉ còn xe máy qua lại. | 3
 CẦU VÀNG | Cây cầu có đôi bàn tay khổng lồ ở Bà Nà. | 2
 BÀ NÀ | Khu du lịch trên núi ở Đà Nẵng, đi cáp treo. | 2
-MŨI NÉ | Đồi cát bay ở Phan Thiết. | 3
+MŨI NÉ | Vùng biển Bình Thuận được dân chơi diều lướt sóng quốc tế tìm đến mỗi mùa gió. | 3
 PHONG NHA | Động nổi tiếng ở Quảng Bình. | 2 | PHONG NHA KẺ BÀNG
-SƠN ĐOÒNG | Hang động lớn nhất thế giới. | 3
+SƠN ĐOÒNG | Hang sâu Quảng Bình, bên trong có rừng riêng, sông ngầm và mây mù, đoàn thám hiểm Anh tìm thấy năm 2009. | 3
 TÂY NGUYÊN | Vùng đất đỏ ba dan, cà phê, cồng chiêng. | 2
-BUÔN MA THUỘT | Thủ phủ cà phê Việt Nam. | 3
+BUÔN MA THUỘT | Thành phố Tây Nguyên, nơi khởi đầu chiến dịch giải phóng miền Nam tháng 3-1975, ngã sáu xe tăng nổi tiếng. | 3
 MIỀN TÂY | Vùng sông nước, xuồng ba lá, đờn ca tài tử. | 2
 HOÀNG SA | Quần đảo của Việt Nam thuộc Đà Nẵng. | 2
 TRƯỜNG SA | Quần đảo của Việt Nam thuộc Khánh Hòa. | 2
 NGHỆ AN | Quê Bác Hồ, nói giọng "mô tê răng rứa". | 2
 THANH HÓA | Quê nem chua, xứ Thanh. | 2
 QUẢNG NINH | Tỉnh có vịnh Hạ Long, than đá. | 2
-LẠNG SƠN | Tỉnh biên giới, có nàng Tô Thị, vịt quay. | 3
-CAO BẰNG | Có thác Bản Giốc. | 3
+LẠNG SƠN | Tỉnh biên giới phía Bắc, cửa ải nổi tiếng từng chặn quân xâm lược, có phố Kỳ Lừa sầm uất. | 3
+CAO BẰNG | Tỉnh biên giới phía Bắc, phần lớn diện tích đồi núi, giáp Trung Quốc với hơn 300 cây số đường biên. | 3
 NINH BÌNH | Tràng An, Tam Cốc, cố đô Hoa Lư. | 2
 BẮC NINH | Quê quan họ, liền anh liền chị. | 2
-HƯNG YÊN | Đất nhãn lồng. | 3
-PHÚ THỌ | Có đền Hùng, giỗ tổ mùng mười tháng ba. | 3
-QUẢNG BÌNH | Vương quốc hang động. | 3
-QUẢNG NAM | Có phố cổ Hội An và mì Quảng. | 3
-BÌNH ĐỊNH | Đất võ, quê Quang Trung. | 3
-KHÁNH HÒA | Tỉnh có Nha Trang, yến sào. | 3
-LÂM ĐỒNG | Tỉnh có Đà Lạt. | 3
+HƯNG YÊN | Tỉnh đồng bằng sông Hồng, phố Hiến từng sầm uất thứ hai chỉ sau Thăng Long. | 3
+PHÚ THỌ | Tỉnh miền núi phía Bắc, di chỉ khảo cổ Sơn Vi có niên đại hàng chục nghìn năm. | 3
+QUẢNG BÌNH | Tỉnh miền Trung, quê hương Đại tướng Võ Nguyên Giáp, đường Hồ Chí Minh chạy qua phía tây. | 3
+QUẢNG NAM | Tỉnh miền Trung, thánh địa Mỹ Sơn của vương quốc Champa xưa, sông Thu Bồn chảy qua. | 3
+BÌNH ĐỊNH | Tỉnh duyên hải miền Trung, tháp Chăm đôi và tháp Bánh Ít đứng trên đồi từ thế kỷ 11. | 3
+KHÁNH HÒA | Tỉnh duyên hải, vịnh Vân Phong nước sâu, đảo Hòn Tre có cáp treo vượt biển dài nhất Việt Nam. | 3
+LÂM ĐỒNG | Cao nguyên phía Nam, thác Pongour bảy tầng, đồi chè Cầu Đất và hồ nước trong veo dưới chân núi. | 3
 BẾN TRE | Xứ dừa. | 2
-AN GIANG | Có núi Cấm, rừng tràm Trà Sư. | 3
-KIÊN GIANG | Tỉnh có đảo Phú Quốc. | 3
-TÂY NINH | Có núi Bà Đen, bánh tráng phơi sương. | 3
-CỦ CHI | Địa đạo nổi tiếng gần Sài Gòn. | 3
-ĐIỆN BIÊN PHỦ | Chiến thắng lừng lẫy năm châu chấn động địa cầu năm 1954. | 3
+AN GIANG | Tỉnh miền Tây giáp Campuchia, chợ nổi Long Xuyên họp trên sông Hậu mỗi sáng sớm. | 3
+KIÊN GIANG | Tỉnh miền Tây giáp biển, Hà Tiên có núi Đá Dựng, cửa khẩu Xà Xía sang Campuchia. | 3
+TÂY NINH | Tỉnh biên giới giáp Campuchia, Tòa Thánh Cao Đài kiến trúc độc đáo, hồ Dầu Tiếng rộng lớn. | 3
+CỦ CHI | Huyện ngoại thành, hệ thống hầm dài hơn 200 cây số, đối phương từng gọi bằng tên đất thép. | 3
+ĐIỆN BIÊN PHỦ | Thung lũng Mường Thanh, tướng De Castries đầu hàng ngày 7-5-1954 sau 56 ngày đêm. | 3
 BA ĐÌNH | Quảng trường nơi Bác đọc Tuyên ngôn Độc lập. | 2
 > Đây là thứ gắn với đất nước Việt Nam.
-MÚA RỐI NƯỚC | Loại hình biểu diễn trên mặt ao, có chú Tễu. | 3
+MÚA RỐI NƯỚC | Nghệ thuật sân khấu làng Đào Thục, nhân vật gỗ điều khiển dưới mặt ao, nhạc chầu văn đệm theo. | 3
 ÁO DÀI | Trang phục truyền thống, cô giáo hay mặc màu trắng. | 2
 NÓN LÁ | Đội đầu che nắng, hình chóp, làm bằng lá. | 2
 QUỐC KỲ | Lá cờ đỏ sao vàng. | 2 | CỜ ĐỎ SAO VÀNG
@@ -70,9 +70,9 @@ QUỐC CA | Bài "Tiến quân ca" hát khi chào cờ. | 2
 TIỀN ĐỒNG | Đơn vị tiền tệ của Việt Nam. | 2 | ĐỒNG
 > Đây là địa danh của Việt Nam.
 CHỢ NỔI | Chợ họp trên ghe thuyền ở miền Tây. | 2
-RUỘNG BẬC THANG | Ruộng lúa xếp tầng trên sườn núi. | 3
-CỘT CỜ LŨNG CÚ | Nơi cắm cờ ở cực Bắc. | 3
-CHÙA MỘT CỘT | Ngôi chùa đứng trên một trụ đá giữa hồ. | 3
-CHÙA HƯƠNG | Đi lễ đầu xuân, đi đò suối Yến. | 3
-NÚI BÀ ĐEN | Nóc nhà Nam Bộ ở Tây Ninh. | 3
-ĐẢO LÝ SƠN | Vương quốc tỏi ở Quảng Ngãi. | 3 | LÝ SƠN
+RUỘNG BẬC THANG | Cánh đồng xếp tầng men sườn núi ở Hoàng Su Phì, mùa lúa chín vàng cả thung lũng. | 3
+CỘT CỜ LŨNG CÚ | Đỉnh núi Rồng cao 1.470 mét ở Hà Giang, lá quốc kỳ 54 mét vuông tung bay trên cực Bắc. | 3
+CHÙA MỘT CỘT | Công trình Lý Thái Tông xây năm 1049, hình đóa sen nở trên mặt hồ, từng bị phá hủy rồi dựng lại. | 3
+CHÙA HƯƠNG | Quần thể hang động đá vôi ở Mỹ Đức, lễ hội dài nhất cả nước, kéo dài suốt ba tháng đầu năm. | 3
+NÚI BÀ ĐEN | Đỉnh cao 986 mét, cáp treo lên chùa Linh Sơn, mây phủ quanh năm ở tỉnh biên giới phía Nam. | 3
+ĐẢO LÝ SƠN | Hòn đất núi lửa giữa biển, miệng núi Thới Lới, vách đá trầm tích triệu năm ở Quảng Ngãi. | 3 | LÝ SƠN

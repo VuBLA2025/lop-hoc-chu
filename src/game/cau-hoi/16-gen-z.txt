@@ -26,7 +26,7 @@ CRUSH | Người mình thầm thương trộm nhớ. | 1
 THẢ THÍNH | Nói ngọt để làm quen. | 1
 ĐỘC THÂN | Chưa có người yêu, ế. | 1 | Ế
 NGƯỜI YÊU CŨ | Người từng yêu, giờ là quá khứ. | 2 | NYC
-FRIENDZONE | Thích người ta mà người ta chỉ coi là bạn. | 3
+FRIENDZONE | Cảnh tỏ tình xong bị trả lời "mình làm bạn nhé", từ đó chỉ được nhắn tin chúc ngủ ngon. | 3
 TOXIC | Mối quan hệ độc hại. | 2
 FLEX | Khoe khoang của cải. | 2
 CHILL | Thư giãn, thoải mái. | 1
@@ -37,12 +37,12 @@ TRÀ XANH | Cô gái chen vào chuyện tình người khác. | 2
 SỐNG CHẬM | Lối sống không vội vàng, healing. | 2
 HEALING | Đi đâu đó chữa lành tâm hồn. | 2 | CHỮA LÀNH
 CHECK IN | Chụp ảnh đánh dấu nơi mình tới. | 2
-OOTD | Bộ đồ hôm nay mặc. | 3
+OOTD | Ảnh chụp nguyên set đồ trước gương, đăng kèm caption khoe phối đồ hôm nay. | 3
 SKINCARE | Chăm sóc da mỗi tối, mười bước. | 2
 MAKEUP | Trang điểm. | 1 | TRANG ĐIỂM
 NAIL | Sơn vẽ móng tay. | 1
-BUBBLE TEA | Tên tiếng Anh của trà sữa trân châu. | 3
-MÌ CAY BẢY CẤP ĐỘ | Thử thách ăn cay nổi tiếng. | 3
+BUBBLE TEA | Món đồ uống giới trẻ check-in, ly nhựa to, ống hút bự, hạt đen dai dai hút lên sột soạt. | 3
+MÌ CAY BẢY CẤP ĐỘ | Thử thách ăn nóng nổi tiếng: tô rực lửa, ai ăn hết nấc cao nhất thì được quay clip khoe. | 3
 GAME THỦ | Người chơi game chuyên nghiệp. | 2
 GANK | Rình phục kích đánh lén trong game. | 2
 FEED | Chết liên tục cho đối thủ ăn mạng. | 2
@@ -53,14 +53,14 @@ AFK | Treo máy, bỏ đi giữa trận. | 2
 LAG | Mạng chậm, giật hình. | 1
 WIFI | Mạng không dây, câu đầu tiên hỏi khi vào quán. | 1
 PASS WIFI | Thứ đầu tiên hỏi khi vào quán cà phê. | 2 | MẬT KHẨU WIFI
-SẠC DỰ PHÒNG | Cục pin mang theo cứu điện thoại. | 3 | PIN DỰ PHÒNG
+SẠC DỰ PHÒNG | Cục cứu tinh mang theo mỗi khi điện thoại báo đỏ, hết năng lượng giữa buổi là cả đám xúm vào mượn. | 3 | PIN DỰ PHÒNG
 ẢNH ĐẠI DIỆN | Hình hiện cạnh tên tài khoản. | 2 | AVATAR
 BÌNH LUẬN | Gõ chữ vào khung chat dưới video. | 1 | COMMENT
 NHẮN TIN | Gửi chữ qua điện thoại. | 1 | CHAT
 GỌI VIDEO | Gọi điện mà nhìn thấy mặt nhau. | 2 | VIDEO CALL
 BẠN GÁI | Người yêu là nữ. | 1 | NGƯỜI YÊU
-FOMO | Sợ bị bỏ lỡ, thấy ai cũng đi thì cũng muốn đi. | 3
-OVERTHINKING | Nghĩ quá nhiều đến mất ngủ. | 3 | NGHĨ NHIỀU
+FOMO | Cảm giác bồn chồn khi thấy bạn bè check-in chỗ hot mà mình ở nhà lướt điện thoại. | 3
+OVERTHINKING | Nằm trằn trọc tới 3 giờ sáng vì một câu nói vu vơ của crush chiều nay. | 3 | NGHĨ NHIỀU
 DEADLINE | Hạn chót nộp bài. | 1
 CÀY PHIM | Xem liền mấy tập phim thâu đêm. | 2
 CHỐT ĐƠN | Người bán hàng online hay nói. | 2
@@ -68,9 +68,19 @@ SĂN SALE | Canh giờ mua hàng giảm giá. | 2
 FREESHIP | Miễn phí vận chuyển. | 2
 GIỎ HÀNG | Nơi để đồ định mua mà chưa mua. | 2
 ĐẶT ĐỒ ĂN | Bấm điện thoại là shipper mang tới. | 2
-CHỤP ẢNH THẺ | Chụp kiểu photobooth bốn tấm dọc. | 3 | PHOTOBOOTH
-MBTI | Bài test tính cách mười sáu nhóm. | 3
+CHỤP ẢNH THẺ | Kiểu bốn tấm dọc trong buồng nhỏ, dán lên sổ lưu bút và hồ sơ, hay làm cùng hội bạn. | 3 | PHOTOBOOTH
+MBTI | Bài test tính cách mười sáu nhóm, giới trẻ hỏi nhau "cậu là E hay I" khi mới quen. | 3
 CUNG HOÀNG ĐẠO | Bạch Dương, Kim Ngưu, Song Tử... | 2
 TAROT | Bói bài vẽ hình phương Tây. | 2
 FAN CỨNG | Người theo dõi lâu năm, trung thành. | 2
 GEN Z | Thế hệ sinh khoảng năm 1997 tới 2012. | 2
+LOWKEY | Kiểu khoe mà như không khoe, đăng story chỉ cho vài người thân xem. | 3
+RED FLAG | Dấu hiệu cảnh báo trong tình yêu: nhắn tin lúc hai giờ sáng rồi biến mất cả tuần. | 3
+GREEN FLAG | Dấu hiệu tốt trong tình yêu: nhớ bạn thích uống gì và chủ động nhắn chúc ngủ ngon. | 3
+DELULU | Kiểu tự huyễn hoặc rằng crush thích mình chỉ vì người ta trả lời story bằng một icon. | 3
+SIGMA | Kiểu người lạnh lùng độc lập, không cần ai, hay được ghép nhạc edit ngầu trên TikTok. | 3
+AURA | Thứ toát ra từ một người khiến ai cũng ngoái nhìn, giới trẻ hay chấm điểm bằng con số. | 3
+SKIBIDI | Từ vô nghĩa nổi lên từ video đầu người trong bồn cầu, trẻ con hét lên khắp nơi. | 3
+NPC | Kiểu người sống như nhân vật phụ trong game, chỉ biết gật đầu lặp lại vài câu thoại. | 3
+GLOW UP | Quá trình lột xác ngoại hình sau vài năm, ảnh cũ và ảnh mới như hai người khác nhau. | 3
+RIZZ | Khả năng tán tỉnh đỉnh cao, chỉ vài câu là crush đổ, hay được chấm điểm trên TikTok. | 3

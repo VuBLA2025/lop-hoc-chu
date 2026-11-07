@@ -280,6 +280,32 @@ hình lúc chuyển câu → làm cả 3:
   nguyên; (3) `server.ts`: bộ nhớ đệm giọng 200 → 500 câu. Không mở
   thêm kết nối Edge song song (dễ bị chặn 429 hơn).
 
+- **2026-11-07: BỘ ĐỀ TOÀN CÂU KHÓ + mở chữ chỉ khi đủ 200 tim hoặc quà 5 xu**
+  (đại ca chê câu hỏi dễ quá, rồi chốt "đẩy lên live giữ tiết học như cũ,
+  nhưng bộ đề toàn bộ câu khó; đợi đủ 200 tim hoặc 5 xu mới mở gợi ý"):
+  (1) Viết lại gợi ý cho cả 520 câu độ 3 theo kiểu gián tiếp + thêm 134 câu
+  khó mới → tổng 2.210 câu (dễ 572, vừa 984, khó 654); Đố mẹo 0 → 20 câu khó,
+  Tiếng kêu 0 → 15. Bản gốc sao lưu ở `backup-20261107/cau-hoi-goc-20261107`
+  (chỉ có local, không push lên Git). (2) Giữ nguyên cấu trúc tiết (20 câu,
+  vị trí toán/anh/mẹo/sử như cũ) nhưng bộ đề toàn câu khó: roundPlan 10 câu
+  chữ đều 'hard', câu mẹo/sử/anh chỉ bốc câu độ khó (`GAME.hardOnly`),
+  câu toán chỉ dùng cấp 3-4 (nhân chia, hai bước). (3) Không tự mở chữ khi
+  hết giờ nữa: bonus chỉ thêm 10 giây; đủ 200 tim thật trong 1 câu thì cô
+  mở 1 chữ (mỗi mốc 200 tim mở thêm 1 chữ, đếm lại mỗi câu, câu toán không
+  mở số), quà 5 xu mở 1 chữ, quà 10 xu mở 2 chữ (`hintGiftCoins` 10 → 5,
+  `giftDoubleCoins` 20 → 10). Lời cô + chữ trên stage + bảng "Tặng quà được
+  gì" đều đổi theo (hiện tiến độ tim `X/200`). LƯU Ý: `hintGiftCoins` /
+  `giftDoubleCoins` còn bị `data/game-settings.json` trên volume ghi đè —
+  sau deploy phải POST /api/settings (PANEL_KEY, Chrome UA) để đổi số live
+  thành 5/10, giữ nguyên các số khác (nhạc live đang 50, không phải 12).
+  Kiểm chứng: bank.check + quiz.check pass, `npm run build` + `tsc`
+  pass, push GitHub commit fa41f1b9, deploy 5wcY67Ju done, bundle mới
+  index-BalZfeOi.js chứa `hardOnly`, `hintLikes:200`, panel/stage 200,
+  /api/tiktok/status 200, /api/settings live 5/10, cả 8 game đều 200.
+  Chưa kiểm chứng trong live thật: câu khó có làm lớp bí quá không, 200 tim
+  / 5 xu mở chữ có chạy đúng nhịp không, đố mẹo khó chỉ có 20 câu nên lặp
+  lại sau ~10 tiết.
+
 ## Chưa kiểm chứng
 
 - Nghe giọng cô giáo + nhạc nền bằng tai trên thiết bị thật (đặc biệt qua
